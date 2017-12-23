@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac
+# Install script for directory: C:/Users/Etienne/IMACMAN/IMACMAN/glimac
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

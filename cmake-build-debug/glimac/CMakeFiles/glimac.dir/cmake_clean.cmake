@@ -9,7 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/glimac.dir/src/Sphere.cpp.obj"
   "CMakeFiles/glimac.dir/src/TrackballCamera.cpp.obj"
   "CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.obj"
-  "CMakeFiles/glimac.dir/__/version1/test.cpp.obj"
+  "CMakeFiles/glimac.dir/__/IMACMAN/test.cpp.obj"
   "libglimac.pdb"
   "libglimac.a"
 )

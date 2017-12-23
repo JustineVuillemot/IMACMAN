@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2
+"C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Etienne\IMACMAN\IMACMAN
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/cmake-build-debug
+-- Build files have been written to: C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug

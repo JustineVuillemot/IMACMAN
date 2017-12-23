@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/version1
+# Install script for directory: C:/Users/Etienne/IMACMAN/IMACMAN/version1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
