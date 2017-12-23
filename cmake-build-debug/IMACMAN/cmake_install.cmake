@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN
+# Install script for directory: C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/IMACMAN
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

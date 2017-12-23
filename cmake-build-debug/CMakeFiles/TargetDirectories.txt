@@ -1,9 +1,9 @@
-C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/edit_cache.dir
-C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir
-C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/rebuild_cache.dir
-C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir
-C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir
-C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/CMakeFiles/edit_cache.dir
-C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/CMakeFiles/rebuild_cache.dir
+C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/edit_cache.dir
+C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir
+C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/rebuild_cache.dir
+C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir
+C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir
+C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/CMakeFiles/edit_cache.dir
+C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/CMakeFiles/rebuild_cache.dir
