@@ -151,6 +151,168 @@ __/IMACMAN/test.cpp.s:
 	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/IMACMAN/test.cpp.s
 .PHONY : __/IMACMAN/test.cpp.s
 
+__/Prog/src/Buffer.obj: __/Prog/src/Buffer.cpp.obj
+
+.PHONY : __/Prog/src/Buffer.obj
+
+# target to build an object file
+__/Prog/src/Buffer.cpp.obj:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Buffer.cpp.obj
+.PHONY : __/Prog/src/Buffer.cpp.obj
+
+__/Prog/src/Buffer.i: __/Prog/src/Buffer.cpp.i
+
+.PHONY : __/Prog/src/Buffer.i
+
+# target to preprocess a source file
+__/Prog/src/Buffer.cpp.i:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Buffer.cpp.i
+.PHONY : __/Prog/src/Buffer.cpp.i
+
+__/Prog/src/Buffer.s: __/Prog/src/Buffer.cpp.s
+
+.PHONY : __/Prog/src/Buffer.s
+
+# target to generate assembly for a file
+__/Prog/src/Buffer.cpp.s:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Buffer.cpp.s
+.PHONY : __/Prog/src/Buffer.cpp.s
+
+__/Prog/src/IBO.obj: __/Prog/src/IBO.cpp.obj
+
+.PHONY : __/Prog/src/IBO.obj
+
+# target to build an object file
+__/Prog/src/IBO.cpp.obj:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/IBO.cpp.obj
+.PHONY : __/Prog/src/IBO.cpp.obj
+
+__/Prog/src/IBO.i: __/Prog/src/IBO.cpp.i
+
+.PHONY : __/Prog/src/IBO.i
+
+# target to preprocess a source file
+__/Prog/src/IBO.cpp.i:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/IBO.cpp.i
+.PHONY : __/Prog/src/IBO.cpp.i
+
+__/Prog/src/IBO.s: __/Prog/src/IBO.cpp.s
+
+.PHONY : __/Prog/src/IBO.s
+
+# target to generate assembly for a file
+__/Prog/src/IBO.cpp.s:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/IBO.cpp.s
+.PHONY : __/Prog/src/IBO.cpp.s
+
+__/Prog/src/Program.obj: __/Prog/src/Program.cpp.obj
+
+.PHONY : __/Prog/src/Program.obj
+
+# target to build an object file
+__/Prog/src/Program.cpp.obj:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.obj
+.PHONY : __/Prog/src/Program.cpp.obj
+
+__/Prog/src/Program.i: __/Prog/src/Program.cpp.i
+
+.PHONY : __/Prog/src/Program.i
+
+# target to preprocess a source file
+__/Prog/src/Program.cpp.i:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.i
+.PHONY : __/Prog/src/Program.cpp.i
+
+__/Prog/src/Program.s: __/Prog/src/Program.cpp.s
+
+.PHONY : __/Prog/src/Program.s
+
+# target to generate assembly for a file
+__/Prog/src/Program.cpp.s:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.s
+.PHONY : __/Prog/src/Program.cpp.s
+
+__/Prog/src/Texture.obj: __/Prog/src/Texture.cpp.obj
+
+.PHONY : __/Prog/src/Texture.obj
+
+# target to build an object file
+__/Prog/src/Texture.cpp.obj:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.obj
+.PHONY : __/Prog/src/Texture.cpp.obj
+
+__/Prog/src/Texture.i: __/Prog/src/Texture.cpp.i
+
+.PHONY : __/Prog/src/Texture.i
+
+# target to preprocess a source file
+__/Prog/src/Texture.cpp.i:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.i
+.PHONY : __/Prog/src/Texture.cpp.i
+
+__/Prog/src/Texture.s: __/Prog/src/Texture.cpp.s
+
+.PHONY : __/Prog/src/Texture.s
+
+# target to generate assembly for a file
+__/Prog/src/Texture.cpp.s:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.s
+.PHONY : __/Prog/src/Texture.cpp.s
+
+__/Prog/src/VAO.obj: __/Prog/src/VAO.cpp.obj
+
+.PHONY : __/Prog/src/VAO.obj
+
+# target to build an object file
+__/Prog/src/VAO.cpp.obj:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.obj
+.PHONY : __/Prog/src/VAO.cpp.obj
+
+__/Prog/src/VAO.i: __/Prog/src/VAO.cpp.i
+
+.PHONY : __/Prog/src/VAO.i
+
+# target to preprocess a source file
+__/Prog/src/VAO.cpp.i:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.i
+.PHONY : __/Prog/src/VAO.cpp.i
+
+__/Prog/src/VAO.s: __/Prog/src/VAO.cpp.s
+
+.PHONY : __/Prog/src/VAO.s
+
+# target to generate assembly for a file
+__/Prog/src/VAO.cpp.s:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.s
+.PHONY : __/Prog/src/VAO.cpp.s
+
+__/Prog/src/VBO.obj: __/Prog/src/VBO.cpp.obj
+
+.PHONY : __/Prog/src/VBO.obj
+
+# target to build an object file
+__/Prog/src/VBO.cpp.obj:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VBO.cpp.obj
+.PHONY : __/Prog/src/VBO.cpp.obj
+
+__/Prog/src/VBO.i: __/Prog/src/VBO.cpp.i
+
+.PHONY : __/Prog/src/VBO.i
+
+# target to preprocess a source file
+__/Prog/src/VBO.cpp.i:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VBO.cpp.i
+.PHONY : __/Prog/src/VBO.cpp.i
+
+__/Prog/src/VBO.s: __/Prog/src/VBO.cpp.s
+
+.PHONY : __/Prog/src/VBO.s
+
+# target to generate assembly for a file
+__/Prog/src/VBO.cpp.s:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VBO.cpp.s
+.PHONY : __/Prog/src/VBO.cpp.s
+
 src/Cone.obj: src/Cone.cpp.obj
 
 .PHONY : src/Cone.obj
@@ -433,6 +595,24 @@ help:
 	@echo ... __/IMACMAN/test.obj
 	@echo ... __/IMACMAN/test.i
 	@echo ... __/IMACMAN/test.s
+	@echo ... __/Prog/src/Buffer.obj
+	@echo ... __/Prog/src/Buffer.i
+	@echo ... __/Prog/src/Buffer.s
+	@echo ... __/Prog/src/IBO.obj
+	@echo ... __/Prog/src/IBO.i
+	@echo ... __/Prog/src/IBO.s
+	@echo ... __/Prog/src/Program.obj
+	@echo ... __/Prog/src/Program.i
+	@echo ... __/Prog/src/Program.s
+	@echo ... __/Prog/src/Texture.obj
+	@echo ... __/Prog/src/Texture.i
+	@echo ... __/Prog/src/Texture.s
+	@echo ... __/Prog/src/VAO.obj
+	@echo ... __/Prog/src/VAO.i
+	@echo ... __/Prog/src/VAO.s
+	@echo ... __/Prog/src/VBO.obj
+	@echo ... __/Prog/src/VBO.i
+	@echo ... __/Prog/src/VBO.s
 	@echo ... src/Cone.obj
 	@echo ... src/Cone.i
 	@echo ... src/Cone.s

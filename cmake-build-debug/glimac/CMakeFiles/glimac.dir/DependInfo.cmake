@@ -5,6 +5,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/test.cpp" "C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir/__/IMACMAN/test.cpp.obj"
+  "C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/Buffer.cpp" "C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir/__/Prog/src/Buffer.cpp.obj"
+  "C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/IBO.cpp" "C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir/__/Prog/src/IBO.cpp.obj"
+  "C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/Program.cpp" "C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.obj"
+  "C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/Texture.cpp" "C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.obj"
+  "C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/VAO.cpp" "C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.obj"
+  "C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/VBO.cpp" "C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir/__/Prog/src/VBO.cpp.obj"
   "C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/Cone.cpp" "C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Cone.cpp.obj"
   "C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/FreeflyCamera.cpp" "C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.obj"
   "C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/Geometry.cpp" "C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.obj"

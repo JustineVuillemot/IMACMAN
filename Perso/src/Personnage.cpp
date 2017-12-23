@@ -2,7 +2,7 @@
 // Created by Alexian on 16/12/2017.
 //
 
-#include "Personnage.h"
+#include "../include/Personnage.h"
 
 void Personnage::deplacement() {
 

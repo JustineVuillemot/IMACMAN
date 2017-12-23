@@ -67,7 +67,7 @@ void Sphere::build(GLfloat r, GLsizei discLat, GLsizei discLong) {
     }
     
     // Attention ! dans cette implantation on duplique beaucoup de sommets. Une meilleur stratégie est de passer
-    // par un Index Buffer Object, que nous verrons dans les prochains TDs
+    // par un Index Prog Object, que nous verrons dans les prochains TDs
 }
 
 }

@@ -16,7 +16,7 @@ include_directories(${SDL_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLEW_INCLUDE_DIR}
 set(ALL_LIBRARIES mingw32 glimac SDL glew32s opengl32 glu32 freeglut) #add the libraries options in the LIB_LIST variable
 add_subdirectory(glimac)
 
-file(GLOB TP_DIRECTORIES "version*")
+file(GLOB TP_DIRECTORIES "IMACMAN")
 
 foreach(TP ${TP_DIRECTORIES})
     add_subdirectory(${TP})

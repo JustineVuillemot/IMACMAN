@@ -40,6 +40,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/JetBrains/CLion 2017.2.3/bin/cmake/share/cmake-3.9/Modules/ProcessorCount.cmake"
   "../CMake/FindGLEW.cmake"
   "../CMakeLists.txt"
+  "../IMACMAN/CMakeLists.txt"
   "CMakeFiles/3.9.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.9.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.9.4/CMakeRCCompiler.cmake"
@@ -57,9 +58,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "glimac/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "IMACMAN/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
+  "IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/DependInfo.cmake"
+  "IMACMAN/CMakeFiles/IMACMAN_test.dir/DependInfo.cmake"
   )

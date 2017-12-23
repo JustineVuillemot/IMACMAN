@@ -5,7 +5,7 @@
 		<Option title="ImacGL"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\glimac\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\glimac\;CMake Files\IMACMAN\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug"/>
@@ -85,8 +85,160 @@
 					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/glimac/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="IMACMAN_SDLtemplate">
+				<Option output="C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/IMACMAN_SDLtemplate.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MinGW/include/SDL"/>
+					<Add directory="C:/Users/Etienne/IMACMAN/IMACMAN/glimac/include"/>
+					<Add directory="C:/Users/Etienne/IMACMAN/IMACMAN/third-party/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 IMACMAN_SDLtemplate"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="IMACMAN_SDLtemplate/fast">
+				<Option output="C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/IMACMAN_SDLtemplate.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MinGW/include/SDL"/>
+					<Add directory="C:/Users/Etienne/IMACMAN/IMACMAN/glimac/include"/>
+					<Add directory="C:/Users/Etienne/IMACMAN/IMACMAN/third-party/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 IMACMAN_SDLtemplate/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="IMACMAN_test">
+				<Option output="C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/IMACMAN_test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MinGW/include/SDL"/>
+					<Add directory="C:/Users/Etienne/IMACMAN/IMACMAN/glimac/include"/>
+					<Add directory="C:/Users/Etienne/IMACMAN/IMACMAN/third-party/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 IMACMAN_test"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="IMACMAN_test/fast">
+				<Option output="C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/IMACMAN_test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MinGW/include/SDL"/>
+					<Add directory="C:/Users/Etienne/IMACMAN/IMACMAN/glimac/include"/>
+					<Add directory="C:/Users/Etienne/IMACMAN/IMACMAN/third-party/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 IMACMAN_test/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Etienne/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/SDLtemplate.cpp">
+			<Option target="IMACMAN_SDLtemplate"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/Shaders/triangle.fs.glsl">
+			<Option target="IMACMAN_SDLtemplate"/>
+			<Option target="IMACMAN_test"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/Shaders/triangle.vs.glsl">
+			<Option target="IMACMAN_SDLtemplate"/>
+			<Option target="IMACMAN_test"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/cmake-build-debug/shaders/triangle.fs.glsl">
+			<Option target="IMACMAN_SDLtemplate"/>
+			<Option target="IMACMAN_test"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/cmake-build-debug/shaders/triangle.vs.glsl">
+			<Option target="IMACMAN_SDLtemplate"/>
+			<Option target="IMACMAN_test"/>
+		</Unit>
 		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/test.cpp">
+			<Option target="glimac"/>
+			<Option target="IMACMAN_test"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/Prog/include/Buffer.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/Prog/include/IBO.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/Prog/include/Program.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/Prog/include/Texture.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/Prog/include/VAO.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/Prog/include/VBO.hpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/Buffer.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/IBO.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/Program.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/Texture.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/VAO.cpp">
+			<Option target="glimac"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/VBO.cpp">
 			<Option target="glimac"/>
 		</Unit>
 		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/glimac/include/glimac/BBox.hpp">
@@ -172,6 +324,9 @@
 		</Unit>
 		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/glimac/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\glimac\"/>
+		</Unit>
+		<Unit filename="C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\IMACMAN\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

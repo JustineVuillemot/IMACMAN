@@ -24,7 +24,7 @@
 
 
 /************************************************************************
- * 2002-Apr-22, José Fonseca:
+ * 2002-Apr-22, Josï¿½ Fonseca:
  *   Removed non Win32 system-specific stuff
  *
  * 2002-Apr-17, Marcus Geelnard:
@@ -1024,13 +1024,13 @@ GLAPI void APIENTRY glFinish( void );
 GLAPI void APIENTRY glFlush( void );
 GLAPI void APIENTRY glHint( GLenum target, GLenum mode );
 
-/* Depth Buffer */
+/* Depth Prog */
 GLAPI void APIENTRY glClearDepth( GLclampd depth );
 GLAPI void APIENTRY glDepthFunc( GLenum func );
 GLAPI void APIENTRY glDepthMask( GLboolean flag );
 GLAPI void APIENTRY glDepthRange( GLclampd near_val, GLclampd far_val );
 
-/* Accumulation Buffer */
+/* Accumulation Prog */
 GLAPI void APIENTRY glClearAccum( GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha );
 GLAPI void APIENTRY glAccum( GLenum op, GLfloat value );
 

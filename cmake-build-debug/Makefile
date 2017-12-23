@@ -122,6 +122,32 @@ glimac/fast:
 	$(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/build
 .PHONY : glimac/fast
 
+#=============================================================================
+# Target rules for targets named IMACMAN_SDLtemplate
+
+# Build rule for target.
+IMACMAN_SDLtemplate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 IMACMAN_SDLtemplate
+.PHONY : IMACMAN_SDLtemplate
+
+# fast build rule for target.
+IMACMAN_SDLtemplate/fast:
+	$(MAKE) -f IMACMAN\CMakeFiles\IMACMAN_SDLtemplate.dir\build.make IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/build
+.PHONY : IMACMAN_SDLtemplate/fast
+
+#=============================================================================
+# Target rules for targets named IMACMAN_test
+
+# Build rule for target.
+IMACMAN_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 IMACMAN_test
+.PHONY : IMACMAN_test
+
+# fast build rule for target.
+IMACMAN_test/fast:
+	$(MAKE) -f IMACMAN\CMakeFiles\IMACMAN_test.dir\build.make IMACMAN/CMakeFiles/IMACMAN_test.dir/build
+.PHONY : IMACMAN_test/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -131,6 +157,8 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... glimac
+	@echo ... IMACMAN_SDLtemplate
+	@echo ... IMACMAN_test
 .PHONY : help
 
 

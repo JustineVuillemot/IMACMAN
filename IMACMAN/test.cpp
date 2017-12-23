@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
      * HERE SHOULD COME THE INITIALIZATION CODE
      *********************************/
 
-    /*Création d'un seul VBO (Vertex Buffer Objet stocké dans
+    /*Création d'un seul VBO (Vertex Prog Objet stocké dans
     le GPU et contient les sommets des triangles et ses attributs,
     genre coords, couleurs, normales)*/
 
