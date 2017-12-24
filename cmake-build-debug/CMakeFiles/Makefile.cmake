@@ -65,5 +65,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
   "IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/DependInfo.cmake"
+  "IMACMAN/CMakeFiles/IMACMAN_TEST_VBOVAOIBO.dir/DependInfo.cmake"
   "IMACMAN/CMakeFiles/IMACMAN_test.dir/DependInfo.cmake"
   )

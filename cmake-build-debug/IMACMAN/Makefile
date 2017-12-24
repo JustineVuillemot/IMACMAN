@@ -125,6 +125,21 @@ IMACMAN_SDLtemplate/fast:
 .PHONY : IMACMAN_SDLtemplate/fast
 
 # Convenience name for target.
+IMACMAN/CMakeFiles/IMACMAN_TEST_VBOVAOIBO.dir/rule:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 IMACMAN/CMakeFiles/IMACMAN_TEST_VBOVAOIBO.dir/rule
+.PHONY : IMACMAN/CMakeFiles/IMACMAN_TEST_VBOVAOIBO.dir/rule
+
+# Convenience name for target.
+IMACMAN_TEST_VBOVAOIBO: IMACMAN/CMakeFiles/IMACMAN_TEST_VBOVAOIBO.dir/rule
+
+.PHONY : IMACMAN_TEST_VBOVAOIBO
+
+# fast build rule for target.
+IMACMAN_TEST_VBOVAOIBO/fast:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f IMACMAN\CMakeFiles\IMACMAN_TEST_VBOVAOIBO.dir\build.make IMACMAN/CMakeFiles/IMACMAN_TEST_VBOVAOIBO.dir/build
+.PHONY : IMACMAN_TEST_VBOVAOIBO/fast
+
+# Convenience name for target.
 IMACMAN/CMakeFiles/IMACMAN_test.dir/rule:
 	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 IMACMAN/CMakeFiles/IMACMAN_test.dir/rule
 .PHONY : IMACMAN/CMakeFiles/IMACMAN_test.dir/rule
@@ -166,6 +181,33 @@ SDLtemplate.cpp.s:
 	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f IMACMAN\CMakeFiles\IMACMAN_SDLtemplate.dir\build.make IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.s
 .PHONY : SDLtemplate.cpp.s
 
+TEST_VBOVAOIBO.obj: TEST_VBOVAOIBO.cpp.obj
+
+.PHONY : TEST_VBOVAOIBO.obj
+
+# target to build an object file
+TEST_VBOVAOIBO.cpp.obj:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f IMACMAN\CMakeFiles\IMACMAN_TEST_VBOVAOIBO.dir\build.make IMACMAN/CMakeFiles/IMACMAN_TEST_VBOVAOIBO.dir/TEST_VBOVAOIBO.cpp.obj
+.PHONY : TEST_VBOVAOIBO.cpp.obj
+
+TEST_VBOVAOIBO.i: TEST_VBOVAOIBO.cpp.i
+
+.PHONY : TEST_VBOVAOIBO.i
+
+# target to preprocess a source file
+TEST_VBOVAOIBO.cpp.i:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f IMACMAN\CMakeFiles\IMACMAN_TEST_VBOVAOIBO.dir\build.make IMACMAN/CMakeFiles/IMACMAN_TEST_VBOVAOIBO.dir/TEST_VBOVAOIBO.cpp.i
+.PHONY : TEST_VBOVAOIBO.cpp.i
+
+TEST_VBOVAOIBO.s: TEST_VBOVAOIBO.cpp.s
+
+.PHONY : TEST_VBOVAOIBO.s
+
+# target to generate assembly for a file
+TEST_VBOVAOIBO.cpp.s:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f IMACMAN\CMakeFiles\IMACMAN_TEST_VBOVAOIBO.dir\build.make IMACMAN/CMakeFiles/IMACMAN_TEST_VBOVAOIBO.dir/TEST_VBOVAOIBO.cpp.s
+.PHONY : TEST_VBOVAOIBO.cpp.s
+
 test.obj: test.cpp.obj
 
 .PHONY : test.obj
@@ -200,12 +242,16 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... IMACMAN_SDLtemplate
+	@echo ... IMACMAN_TEST_VBOVAOIBO
 	@echo ... IMACMAN_test
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... SDLtemplate.obj
 	@echo ... SDLtemplate.i
 	@echo ... SDLtemplate.s
+	@echo ... TEST_VBOVAOIBO.obj
+	@echo ... TEST_VBOVAOIBO.i
+	@echo ... TEST_VBOVAOIBO.s
 	@echo ... test.obj
 	@echo ... test.i
 	@echo ... test.s

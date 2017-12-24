@@ -16,6 +16,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.obj"
   "CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.obj"
   "CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.obj"
+  "CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj"
   "libglimac.pdb"
   "libglimac.a"
 )

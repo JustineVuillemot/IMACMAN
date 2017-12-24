@@ -136,6 +136,19 @@ IMACMAN_SDLtemplate/fast:
 .PHONY : IMACMAN_SDLtemplate/fast
 
 #=============================================================================
+# Target rules for targets named IMACMAN_TEST_VBOVAOIBO
+
+# Build rule for target.
+IMACMAN_TEST_VBOVAOIBO: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 IMACMAN_TEST_VBOVAOIBO
+.PHONY : IMACMAN_TEST_VBOVAOIBO
+
+# fast build rule for target.
+IMACMAN_TEST_VBOVAOIBO/fast:
+	$(MAKE) -f IMACMAN\CMakeFiles\IMACMAN_TEST_VBOVAOIBO.dir\build.make IMACMAN/CMakeFiles/IMACMAN_TEST_VBOVAOIBO.dir/build
+.PHONY : IMACMAN_TEST_VBOVAOIBO/fast
+
+#=============================================================================
 # Target rules for targets named IMACMAN_test
 
 # Build rule for target.
@@ -158,6 +171,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... glimac
 	@echo ... IMACMAN_SDLtemplate
+	@echo ... IMACMAN_TEST_VBOVAOIBO
 	@echo ... IMACMAN_test
 .PHONY : help
 

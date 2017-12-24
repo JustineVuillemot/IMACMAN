@@ -481,6 +481,31 @@ glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.obj.provides: glimac/CMakeF
 glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.obj.provides.build: glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.obj
 
 
+glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj: glimac/CMakeFiles/glimac.dir/flags.make
+glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj: glimac/CMakeFiles/glimac.dir/includes_CXX.rsp
+glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj: ../IMACMAN/TEST_VBOVAOIBO.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj"
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug\glimac && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\glimac.dir\__\IMACMAN\TEST_VBOVAOIBO.cpp.obj -c C:\Users\Etienne\IMACMAN\IMACMAN\IMACMAN\TEST_VBOVAOIBO.cpp
+
+glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.i"
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug\glimac && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Etienne\IMACMAN\IMACMAN\IMACMAN\TEST_VBOVAOIBO.cpp > CMakeFiles\glimac.dir\__\IMACMAN\TEST_VBOVAOIBO.cpp.i
+
+glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.s"
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug\glimac && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Etienne\IMACMAN\IMACMAN\IMACMAN\TEST_VBOVAOIBO.cpp -o CMakeFiles\glimac.dir\__\IMACMAN\TEST_VBOVAOIBO.cpp.s
+
+glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj.requires:
+
+.PHONY : glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj.requires
+
+glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj.provides: glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj.requires
+	$(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj.provides.build
+.PHONY : glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj.provides
+
+glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj.provides.build: glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj
+
+
 # Object files for target glimac
 glimac_OBJECTS = \
 "CMakeFiles/glimac.dir/src/Cone.cpp.obj" \
@@ -499,7 +524,8 @@ glimac_OBJECTS = \
 "CMakeFiles/glimac.dir/__/Prog/src/VBO.cpp.obj" \
 "CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.obj" \
 "CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.obj" \
-"CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.obj"
+"CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.obj" \
+"CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj"
 
 # External object files for target glimac
 glimac_EXTERNAL_OBJECTS =
@@ -521,9 +547,10 @@ glimac/libglimac.a: glimac/CMakeFiles/glimac.dir/__/Prog/src/VBO.cpp.obj
 glimac/libglimac.a: glimac/CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.obj
 glimac/libglimac.a: glimac/CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.obj
 glimac/libglimac.a: glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.obj
+glimac/libglimac.a: glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj
 glimac/libglimac.a: glimac/CMakeFiles/glimac.dir/build.make
 glimac/libglimac.a: glimac/CMakeFiles/glimac.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX static library libglimac.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX static library libglimac.a"
 	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug\glimac && $(CMAKE_COMMAND) -P CMakeFiles\glimac.dir\cmake_clean_target.cmake
 	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug\glimac && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\glimac.dir\link.txt --verbose=$(VERBOSE)
 
@@ -549,6 +576,7 @@ glimac/CMakeFiles/glimac.dir/requires: glimac/CMakeFiles/glimac.dir/__/Prog/src/
 glimac/CMakeFiles/glimac.dir/requires: glimac/CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.obj.requires
 glimac/CMakeFiles/glimac.dir/requires: glimac/CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.obj.requires
 glimac/CMakeFiles/glimac.dir/requires: glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.obj.requires
+glimac/CMakeFiles/glimac.dir/requires: glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj.requires
 
 .PHONY : glimac/CMakeFiles/glimac.dir/requires
 

@@ -1,2 +1,16 @@
-#include "../include/Buffer.hpp"
-#include "../include/IBO.hpp"
+#include "Buffer.hpp"
+#include "IBO.hpp"
+
+IBO::IBO(){
+    glGenBuffers(1, &m_ID);
+}
+
+IBO::~IBO(){}
+
+void IBO::bind(){
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ID);
+}
+
+void IBO::debind(){
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+}

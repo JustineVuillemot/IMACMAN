@@ -6,6 +6,28 @@
 
 #IncludeRegexTransform: 
 
+../Prog/include/Buffer.hpp
+GL/glew.h
+-
+glimac/common.hpp
+-
+iostream
+-
+vector
+-
+
+../Prog/include/IBO.hpp
+
+../Prog/include/VAO.hpp
+VBO.hpp
+../Prog/include/VBO.hpp
+IBO.hpp
+../Prog/include/IBO.hpp
+
+../Prog/include/VBO.hpp
+Buffer.hpp
+../Prog/include/Buffer.hpp
+
 ../glimac/include/glimac/BBox.hpp
 glm.hpp
 ../glimac/include/glimac/glm.hpp
@@ -840,6 +862,36 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../third-party/include/glm/detail/func_vector_relational.hpp
 
+C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/TEST_VBOVAOIBO.cpp
+iostream
+-
+fstream
+-
+GL/glew.h
+-
+GL/glut.h
+-
+memory
+-
+SDL/SDL.h
+-
+glimac/Sphere.hpp
+-
+glimac/Program.hpp
+-
+glimac/Image.hpp
+-
+glimac/SDLWindowManager.hpp
+-
+Buffer.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/Buffer.hpp
+VBO.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/VBO.hpp
+VAO.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/VAO.hpp
+IBO.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/IBO.hpp
+
 C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/test.cpp
 iostream
 -
@@ -866,47 +918,41 @@ windows.h
 unistd.h
 -
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Buffer.cpp
-Buffer.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Buffer.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/include/Program.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Buffer.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/include/Texture.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/IBO.cpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/Buffer.cpp
+GL/glew.h
+-
 Buffer.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Buffer.hpp
+-
+
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/IBO.cpp
+Buffer.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/Buffer.hpp
 IBO.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/IBO.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/IBO.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/IBO.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/Program.cpp
+../include/Program.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/include/Program.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Program.cpp
-Program.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Program.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/Texture.cpp
+../include/Texture.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/include/Texture.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Program.hpp
-
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Texture.cpp
-Texture.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Texture.hpp
-
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Texture.hpp
-
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/VAO.cpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/VAO.cpp
 Buffer.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Buffer.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/Buffer.hpp
 VAO.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/VAO.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/VAO.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/VAO.hpp
-
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/VBO.cpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/VBO.cpp
 Buffer.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Buffer.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/Buffer.hpp
 VBO.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/VBO.hpp
-
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/VBO.hpp
+C:/Users/Etienne/IMACMAN/IMACMAN/Prog/src/VBO.hpp
 
 C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/Cone.cpp
 cmath

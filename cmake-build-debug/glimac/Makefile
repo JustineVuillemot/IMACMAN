@@ -124,6 +124,33 @@ glimac/fast:
 	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/build
 .PHONY : glimac/fast
 
+__/IMACMAN/TEST_VBOVAOIBO.obj: __/IMACMAN/TEST_VBOVAOIBO.cpp.obj
+
+.PHONY : __/IMACMAN/TEST_VBOVAOIBO.obj
+
+# target to build an object file
+__/IMACMAN/TEST_VBOVAOIBO.cpp.obj:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.obj
+.PHONY : __/IMACMAN/TEST_VBOVAOIBO.cpp.obj
+
+__/IMACMAN/TEST_VBOVAOIBO.i: __/IMACMAN/TEST_VBOVAOIBO.cpp.i
+
+.PHONY : __/IMACMAN/TEST_VBOVAOIBO.i
+
+# target to preprocess a source file
+__/IMACMAN/TEST_VBOVAOIBO.cpp.i:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.i
+.PHONY : __/IMACMAN/TEST_VBOVAOIBO.cpp.i
+
+__/IMACMAN/TEST_VBOVAOIBO.s: __/IMACMAN/TEST_VBOVAOIBO.cpp.s
+
+.PHONY : __/IMACMAN/TEST_VBOVAOIBO.s
+
+# target to generate assembly for a file
+__/IMACMAN/TEST_VBOVAOIBO.cpp.s:
+	cd /d C:\Users\Etienne\IMACMAN\IMACMAN\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/IMACMAN/TEST_VBOVAOIBO.cpp.s
+.PHONY : __/IMACMAN/TEST_VBOVAOIBO.cpp.s
+
 __/IMACMAN/test.obj: __/IMACMAN/test.cpp.obj
 
 .PHONY : __/IMACMAN/test.obj
@@ -592,6 +619,9 @@ help:
 	@echo ... edit_cache
 	@echo ... glimac
 	@echo ... rebuild_cache
+	@echo ... __/IMACMAN/TEST_VBOVAOIBO.obj
+	@echo ... __/IMACMAN/TEST_VBOVAOIBO.i
+	@echo ... __/IMACMAN/TEST_VBOVAOIBO.s
 	@echo ... __/IMACMAN/test.obj
 	@echo ... __/IMACMAN/test.i
 	@echo ... __/IMACMAN/test.s
