@@ -29,6 +29,11 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "C:/MinGW/include/SDL"
   "../glimac/include"
   "../third-party/include"
+  "../Cube/include"
+  "../Jeu/include"
+  "../Objet/include"
+  "../Perso/include"
+  "../Prog/include"
   )
 
 # Targets to which this target links.
