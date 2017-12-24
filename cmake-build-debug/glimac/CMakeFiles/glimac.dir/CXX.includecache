@@ -840,7 +840,7 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../third-party/include/glm/detail/func_vector_relational.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/IMACMAN/test.cpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/IMACMAN/test.cpp
 iostream
 -
 fstream
@@ -866,49 +866,49 @@ windows.h
 unistd.h
 -
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Buffer.cpp
-Buffer.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Buffer.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/Buffer.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Buffer.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/IBO.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/IBO.cpp
-Buffer.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Buffer.hpp
-IBO.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/IBO.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/Program.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/IBO.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/Texture.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Program.cpp
-Program.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Program.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/VAO.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Program.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/VBO.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Texture.cpp
-Texture.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Texture.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/src/Buffer.cpp
+../include/Buffer.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/Buffer.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Texture.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/src/IBO.cpp
+../include/Buffer.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/Buffer.hpp
+../include/IBO.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/IBO.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/VAO.cpp
-Buffer.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Buffer.hpp
-VAO.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/VAO.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/src/Program.cpp
+../include/Program.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/Program.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/VAO.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/src/Texture.cpp
+../include/Texture.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/Texture.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/VBO.cpp
-Buffer.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/Buffer.hpp
-VBO.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/VBO.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/src/VAO.cpp
+../include/Buffer.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/Buffer.hpp
+../include/VAO.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/VAO.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/Prog/VBO.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/src/VBO.cpp
+../include/Buffer.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/Buffer.hpp
+../include/VBO.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/Prog/include/VBO.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/Cone.cpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/Cone.cpp
 cmath
 -
 vector
@@ -916,47 +916,47 @@ vector
 iostream
 -
 glimac/common.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/glimac/common.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/glimac/common.hpp
 glimac/Cone.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/glimac/Cone.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/glimac/Cone.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/FreeflyCamera.cpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/FreeflyCamera.cpp
 glimac/FreeflyCamera.hpp
 -
 
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/Geometry.cpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/Geometry.cpp
 glimac/Geometry.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/glimac/Geometry.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/glimac/Geometry.hpp
 tiny_obj_loader.h
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/tiny_obj_loader.h
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/tiny_obj_loader.h
 iostream
 -
 algorithm
 -
 
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/Image.cpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/Image.cpp
 glimac/Image.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/glimac/Image.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/glimac/Image.hpp
 stb_image.h
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/stb_image.h
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/stb_image.h
 iostream
 -
 
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/Program.cpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/Program.cpp
 glimac/Program.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/glimac/Program.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/glimac/Program.hpp
 stdexcept
 -
 
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/SDLWindowManager.cpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/SDLWindowManager.cpp
 glimac/SDLWindowManager.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/glimac/SDLWindowManager.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/glimac/SDLWindowManager.hpp
 iostream
 -
 
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/Shader.cpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/Shader.cpp
 glimac/Shader.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/glimac/Shader.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/glimac/Shader.hpp
 fstream
 -
 stdexcept
@@ -966,7 +966,7 @@ string
 sstream
 -
 
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/Sphere.cpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/Sphere.cpp
 cmath
 -
 vector
@@ -974,15 +974,15 @@ vector
 iostream
 -
 glimac/common.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/glimac/common.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/glimac/common.hpp
 glimac/Sphere.hpp
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/glimac/Sphere.hpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/glimac/Sphere.hpp
 
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/TrackballCamera.cpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/TrackballCamera.cpp
 glimac/TrackballCamera.hpp
 -
 
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/stb_image.h
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/stb_image.h
 stdio.h
 -
 math.h
@@ -1004,7 +1004,7 @@ stddef.h
 stdint.h
 -
 
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/tiny_obj_loader.cpp
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/tiny_obj_loader.cpp
 cstdlib
 -
 cstring
@@ -1022,9 +1022,9 @@ fstream
 sstream
 -
 tiny_obj_loader.h
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/tiny_obj_loader.h
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/tiny_obj_loader.h
 
-C:/Users/Etienne/IMACMAN/IMACMAN/glimac/src/tiny_obj_loader.h
+C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/glimac/src/tiny_obj_loader.h
 string
 -
 vector

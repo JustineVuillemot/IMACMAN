@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Users\Alexian\AppData\Roaming\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Users\Alexian\AppData\Roaming\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN"
+CMAKE_SOURCE_DIR = C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/depend.make
@@ -59,16 +59,16 @@ include IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/flags.make
 IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.obj: IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/flags.make
 IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.obj: IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/includes_CXX.rsp
 IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.obj: ../IMACMAN/SDLtemplate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.obj"
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1\IMACMAN && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\IMACMAN_SDLtemplate.dir\SDLtemplate.cpp.obj -c "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\IMACMAN\SDLtemplate.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.obj"
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug\IMACMAN && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\IMACMAN_SDLtemplate.dir\SDLtemplate.cpp.obj -c C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\IMACMAN\SDLtemplate.cpp
 
 IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.i"
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1\IMACMAN && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\IMACMAN\SDLtemplate.cpp" > CMakeFiles\IMACMAN_SDLtemplate.dir\SDLtemplate.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug\IMACMAN && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\IMACMAN\SDLtemplate.cpp > CMakeFiles\IMACMAN_SDLtemplate.dir\SDLtemplate.cpp.i
 
 IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.s"
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1\IMACMAN && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\IMACMAN\SDLtemplate.cpp" -o CMakeFiles\IMACMAN_SDLtemplate.dir\SDLtemplate.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug\IMACMAN && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\IMACMAN\SDLtemplate.cpp -o CMakeFiles\IMACMAN_SDLtemplate.dir\SDLtemplate.cpp.s
 
 IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.obj.requires:
 
@@ -94,8 +94,8 @@ IMACMAN/IMACMAN_SDLtemplate.exe: glimac/libglimac.a
 IMACMAN/IMACMAN_SDLtemplate.exe: IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/linklibs.rsp
 IMACMAN/IMACMAN_SDLtemplate.exe: IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/objects1.rsp
 IMACMAN/IMACMAN_SDLtemplate.exe: IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable IMACMAN_SDLtemplate.exe"
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1\IMACMAN && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\IMACMAN_SDLtemplate.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable IMACMAN_SDLtemplate.exe"
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug\IMACMAN && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\IMACMAN_SDLtemplate.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/build: IMACMAN/IMACMAN_SDLtemplate.exe
@@ -107,10 +107,10 @@ IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/requires: IMACMAN/CMakeFiles/IMACMAN_
 .PHONY : IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/requires
 
 IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/clean:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1\IMACMAN && $(CMAKE_COMMAND) -P CMakeFiles\IMACMAN_SDLtemplate.dir\cmake_clean.cmake
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug\IMACMAN && $(CMAKE_COMMAND) -P CMakeFiles\IMACMAN_SDLtemplate.dir\cmake_clean.cmake
 .PHONY : IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/clean
 
 IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN" "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\IMACMAN" "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\cmake-build-debug" "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\cmake-build-debug\IMACMAN" "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\cmake-build-debug\IMACMAN\CMakeFiles\IMACMAN_SDLtemplate.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2 C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\IMACMAN C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug\IMACMAN C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug\IMACMAN\CMakeFiles\IMACMAN_SDLtemplate.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/depend
 

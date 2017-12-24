@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/IMACMAN/SDLtemplate.cpp" "C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.obj"
+  "C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/IMACMAN/SDLtemplate.cpp" "C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/SDLtemplate.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/Alexian/Desktop/Cours/Semestre 3/Synthese d'image/IMACMAN/IMACMAN/cmake-build-debug/glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
+  "C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/cmake-build-debug/glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -14,39 +14,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0287f0c4-e8ae-44e9-8e74-db629ef542d6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cube/include/Cube.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cube/include/Mur.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Jeu/include/Jeu.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Objet/include/Bonus.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Objet/include/Objet.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Objet/include/PacGomme.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Perso/include/Fantome.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Perso/include/Pacman.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Perso/include/Personnage.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CMakeCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CMakeCXXCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CMakeDetermineCompilerABI_C.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CMakeRCCompiler.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CMakeSystem.cmake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CompilerIdC/CMakeCCompilerId.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CompilerIdC/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.4/CompilerIdCXX/a.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.exe" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.exe" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cube/src/Cube.cpp" afterPath="$PROJECT_DIR$/Cube/src/Cube.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cube/src/Mur.cpp" afterPath="$PROJECT_DIR$/Cube/src/Mur.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Jeu/src/Jeu.cpp" afterPath="$PROJECT_DIR$/Jeu/src/Jeu.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/__/IMACMAN/test.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/__/IMACMAN/test.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Cone.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Cone.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Image.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Image.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Program.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Program.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Shader.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Shader.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.obj" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/libglimac.a" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/libglimac.a" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Objet/src/Bonus.cpp" afterPath="$PROJECT_DIR$/Objet/src/Bonus.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Objet/src/Objet.cpp" afterPath="$PROJECT_DIR$/Objet/src/Objet.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Objet/src/PacGomme.cpp" afterPath="$PROJECT_DIR$/Objet/src/PacGomme.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Perso/src/Fantome.cpp" afterPath="$PROJECT_DIR$/Perso/src/Fantome.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Perso/src/Pacman.cpp" afterPath="$PROJECT_DIR$/Perso/src/Pacman.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Perso/src/Personnage.cpp" afterPath="$PROJECT_DIR$/Perso/src/Personnage.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
@@ -57,12 +46,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/CMakeDirectoryInformation.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/DependInfo.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/flags.make" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/includes_CXX.rsp" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/includes_CXX.rsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir/link.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir/DependInfo.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir/depend.make" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir/includes_CXX.rsp" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir/includes_CXX.rsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir/link.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/IMACMAN/Makefile" />
@@ -71,9 +59,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/CMakeDirectoryInformation.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/CXX.includecache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/DependInfo.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/depend.make" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/includes_CXX.rsp" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/CMakeFiles/glimac.dir/includes_CXX.rsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/glimac/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/glimac/cmake_install.cmake" />
@@ -91,11 +81,9 @@
       <file leaf-file-name="test.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IMACMAN/test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-              <folding>
-                <element signature="e#20#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="527">
+              <caret line="93" column="37" lean-forward="true" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,12 +124,12 @@
         <option value="$PROJECT_DIR$/Cube/src/Cube.cpp" />
         <option value="$PROJECT_DIR$/Cube/src/Mur.cpp" />
         <option value="$PROJECT_DIR$/Jeu/src/Jeu.cpp" />
-        <option value="$PROJECT_DIR$/Objet/src/Bonus.cpp" />
         <option value="$PROJECT_DIR$/Objet/src/Objet.cpp" />
         <option value="$PROJECT_DIR$/Objet/src/PacGomme.cpp" />
         <option value="$PROJECT_DIR$/Perso/src/Fantome.cpp" />
         <option value="$PROJECT_DIR$/Perso/src/Pacman.cpp" />
         <option value="$PROJECT_DIR$/Perso/src/Personnage.cpp" />
+        <option value="$PROJECT_DIR$/Objet/src/Bonus.cpp" />
       </list>
     </option>
   </component>
@@ -180,7 +168,29 @@
           <expand>
             <path>
               <item name="ImacGL" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Projet2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImacGL" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Projet2" type="462c0819:PsiDirectoryNode" />
               <item name="IMACMAN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImacGL" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Projet2" type="462c0819:PsiDirectoryNode" />
+              <item name="Prog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImacGL" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Projet2" type="462c0819:PsiDirectoryNode" />
+              <item name="Prog" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImacGL" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Projet2" type="462c0819:PsiDirectoryNode" />
+              <item name="Prog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -195,18 +205,18 @@
     <property name="two.files.diff.last.used.file" value="$USER_HOME$/Downloads/CMakeLists.txt" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Prog" />
+      <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Perso" />
+      <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Objet" />
+      <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Jeu" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Cube\include" />
       <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Cube\src" />
       <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Jeu\include" />
       <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Jeu\src" />
       <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Objet\include" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Prog" />
-      <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Perso" />
-      <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Objet" />
-      <recent name="C:\Users\Etienne\IMACMAN\IMACMAN\Jeu" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -221,7 +231,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.IMACMAN_SDLtemplate">
+  <component name="RunManager" selected="Application.IMACMAN_test">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImacGL" TARGET_NAME="TP1_exo1_triangle_blanc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImacGL" RUN_TARGET_NAME="TP1_exo1_triangle_blanc">
       <envs />
     </configuration>
@@ -271,20 +281,23 @@
       <workItem from="1512845404795" duration="274000" />
       <workItem from="1514024793652" duration="5326000" />
       <workItem from="1514072770991" duration="363000" />
+      <workItem from="1514127322604" duration="766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16964000" />
+    <option name="totallyTimeSpent" value="17730000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12445095" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19427083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32767764" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.50185084" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.49814913" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32767764" sideWeight="0.49814913" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -292,7 +305,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -335,18 +347,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/OPenGLSteeve_Windows/GLSteeve/GLSteeve/main.cpp" />
-    <entry file="file://$PROJECT_DIR$/../SDLtemplate.cpp" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../exo1_triangle_blanc.cpp" />
-    <entry file="file://$PROJECT_DIR$/TP1/CMakeLists.txt" />
-    <entry file="file://$PROJECT_DIR$/TP1/exo1_triangle_blanc.cpp" />
     <entry file="file://$PROJECT_DIR$/TP1/exo2_triangle_couleurs.cpp" />
     <entry file="file://$PROJECT_DIR$/TP1/exo3_structure_vertex.cpp" />
     <entry file="file://$PROJECT_DIR$/TP1/exo4_quads.cpp" />
@@ -376,93 +376,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Objet/include/Bonus.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jeu/include/Jeu.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Objet/include/Bonus.h" />
+    <entry file="file://$PROJECT_DIR$/Jeu/include/Jeu.h" />
     <entry file="file://$PROJECT_DIR$/version1/Sol.h" />
-    <entry file="file://$PROJECT_DIR$/Prog/src/VAO.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prog/include/VAO.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prog/include/VBO.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prog/src/VBO.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prog/src/IBO.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prog/include/IBO.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prog/include/Texture.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prog/src/Texture.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prog/include/Program.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cube/include/Cube.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Cube/include/Cube.h" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -488,23 +405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prog/include/Buffer.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prog/src/Buffer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -520,15 +420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prog/src/Program.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -536,7 +427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -544,7 +434,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cube/include/Cube.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -556,7 +452,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Jeu/include/Jeu.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="53" column="58" lean-forward="true" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Objet/include/Objet.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Objet/include/Bonus.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Objet/include/PacGomme.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -566,8 +486,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Objet/src/Bonus.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -588,6 +508,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Perso/src/Personnage.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Perso/include/Personnage.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Perso/include/Fantome.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Perso/src/Fantome.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -604,29 +548,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Perso/src/Personnage.cpp">
+    <entry file="file://$PROJECT_DIR$/Perso/include/Pacman.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="-102">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cube/include/Cube.hpp">
+    <entry file="file://$PROJECT_DIR$/Prog/src/Buffer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prog/include/Buffer.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prog/src/IBO.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prog/include/IBO.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prog/src/Program.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prog/include/Program.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prog/include/Texture.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prog/src/Texture.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prog/include/VAO.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prog/src/VAO.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prog/include/VBO.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prog/src/VBO.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IMACMAN/test.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-          <folding>
-            <element signature="e#20#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="527">
+          <caret line="93" column="37" lean-forward="true" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>

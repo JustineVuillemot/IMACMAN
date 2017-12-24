@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Users\Alexian\AppData\Roaming\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Users\Alexian\AppData\Roaming\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN"
+CMAKE_SOURCE_DIR = C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\I
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Users\Alexian\AppData\Roaming\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Users\Alexian\AppData\Roaming\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,14 +79,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\cmake-build-debug\CMakeFiles" "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\cmake-build-debug\glimac\CMakeFiles\progress.marks"
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 glimac/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Alexian\Desktop\Cours\Semestre 3\Synthese d'image\IMACMAN\IMACMAN\cmake-build-debug\CMakeFiles" 0
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug\CMakeFiles C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug\glimac\CMakeFiles\progress.marks
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 glimac/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 glimac/clean
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 glimac/clean
 .PHONY : clean
 
 # The main clean target
@@ -96,22 +96,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 glimac/preinstall
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 glimac/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 glimac/preinstall
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 glimac/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 glimac/CMakeFiles/glimac.dir/rule:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f CMakeFiles\Makefile2 glimac/CMakeFiles/glimac.dir/rule
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 glimac/CMakeFiles/glimac.dir/rule
 .PHONY : glimac/CMakeFiles/glimac.dir/rule
 
 # Convenience name for target.
@@ -121,7 +121,7 @@ glimac: glimac/CMakeFiles/glimac.dir/rule
 
 # fast build rule for target.
 glimac/fast:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/build
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/build
 .PHONY : glimac/fast
 
 __/IMACMAN/test.obj: __/IMACMAN/test.cpp.obj
@@ -130,7 +130,7 @@ __/IMACMAN/test.obj: __/IMACMAN/test.cpp.obj
 
 # target to build an object file
 __/IMACMAN/test.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/IMACMAN/test.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/IMACMAN/test.cpp.obj
 .PHONY : __/IMACMAN/test.cpp.obj
 
 __/IMACMAN/test.i: __/IMACMAN/test.cpp.i
@@ -139,7 +139,7 @@ __/IMACMAN/test.i: __/IMACMAN/test.cpp.i
 
 # target to preprocess a source file
 __/IMACMAN/test.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/IMACMAN/test.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/IMACMAN/test.cpp.i
 .PHONY : __/IMACMAN/test.cpp.i
 
 __/IMACMAN/test.s: __/IMACMAN/test.cpp.s
@@ -148,7 +148,7 @@ __/IMACMAN/test.s: __/IMACMAN/test.cpp.s
 
 # target to generate assembly for a file
 __/IMACMAN/test.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/IMACMAN/test.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/IMACMAN/test.cpp.s
 .PHONY : __/IMACMAN/test.cpp.s
 
 __/Prog/src/Buffer.obj: __/Prog/src/Buffer.cpp.obj
@@ -157,7 +157,7 @@ __/Prog/src/Buffer.obj: __/Prog/src/Buffer.cpp.obj
 
 # target to build an object file
 __/Prog/src/Buffer.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Buffer.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Buffer.cpp.obj
 .PHONY : __/Prog/src/Buffer.cpp.obj
 
 __/Prog/src/Buffer.i: __/Prog/src/Buffer.cpp.i
@@ -166,7 +166,7 @@ __/Prog/src/Buffer.i: __/Prog/src/Buffer.cpp.i
 
 # target to preprocess a source file
 __/Prog/src/Buffer.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Buffer.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Buffer.cpp.i
 .PHONY : __/Prog/src/Buffer.cpp.i
 
 __/Prog/src/Buffer.s: __/Prog/src/Buffer.cpp.s
@@ -175,7 +175,7 @@ __/Prog/src/Buffer.s: __/Prog/src/Buffer.cpp.s
 
 # target to generate assembly for a file
 __/Prog/src/Buffer.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Buffer.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Buffer.cpp.s
 .PHONY : __/Prog/src/Buffer.cpp.s
 
 __/Prog/src/IBO.obj: __/Prog/src/IBO.cpp.obj
@@ -184,7 +184,7 @@ __/Prog/src/IBO.obj: __/Prog/src/IBO.cpp.obj
 
 # target to build an object file
 __/Prog/src/IBO.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/IBO.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/IBO.cpp.obj
 .PHONY : __/Prog/src/IBO.cpp.obj
 
 __/Prog/src/IBO.i: __/Prog/src/IBO.cpp.i
@@ -193,7 +193,7 @@ __/Prog/src/IBO.i: __/Prog/src/IBO.cpp.i
 
 # target to preprocess a source file
 __/Prog/src/IBO.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/IBO.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/IBO.cpp.i
 .PHONY : __/Prog/src/IBO.cpp.i
 
 __/Prog/src/IBO.s: __/Prog/src/IBO.cpp.s
@@ -202,7 +202,7 @@ __/Prog/src/IBO.s: __/Prog/src/IBO.cpp.s
 
 # target to generate assembly for a file
 __/Prog/src/IBO.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/IBO.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/IBO.cpp.s
 .PHONY : __/Prog/src/IBO.cpp.s
 
 __/Prog/src/Program.obj: __/Prog/src/Program.cpp.obj
@@ -211,7 +211,7 @@ __/Prog/src/Program.obj: __/Prog/src/Program.cpp.obj
 
 # target to build an object file
 __/Prog/src/Program.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.obj
 .PHONY : __/Prog/src/Program.cpp.obj
 
 __/Prog/src/Program.i: __/Prog/src/Program.cpp.i
@@ -220,7 +220,7 @@ __/Prog/src/Program.i: __/Prog/src/Program.cpp.i
 
 # target to preprocess a source file
 __/Prog/src/Program.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.i
 .PHONY : __/Prog/src/Program.cpp.i
 
 __/Prog/src/Program.s: __/Prog/src/Program.cpp.s
@@ -229,7 +229,7 @@ __/Prog/src/Program.s: __/Prog/src/Program.cpp.s
 
 # target to generate assembly for a file
 __/Prog/src/Program.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Program.cpp.s
 .PHONY : __/Prog/src/Program.cpp.s
 
 __/Prog/src/Texture.obj: __/Prog/src/Texture.cpp.obj
@@ -238,7 +238,7 @@ __/Prog/src/Texture.obj: __/Prog/src/Texture.cpp.obj
 
 # target to build an object file
 __/Prog/src/Texture.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.obj
 .PHONY : __/Prog/src/Texture.cpp.obj
 
 __/Prog/src/Texture.i: __/Prog/src/Texture.cpp.i
@@ -247,7 +247,7 @@ __/Prog/src/Texture.i: __/Prog/src/Texture.cpp.i
 
 # target to preprocess a source file
 __/Prog/src/Texture.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.i
 .PHONY : __/Prog/src/Texture.cpp.i
 
 __/Prog/src/Texture.s: __/Prog/src/Texture.cpp.s
@@ -256,7 +256,7 @@ __/Prog/src/Texture.s: __/Prog/src/Texture.cpp.s
 
 # target to generate assembly for a file
 __/Prog/src/Texture.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/Texture.cpp.s
 .PHONY : __/Prog/src/Texture.cpp.s
 
 __/Prog/src/VAO.obj: __/Prog/src/VAO.cpp.obj
@@ -265,7 +265,7 @@ __/Prog/src/VAO.obj: __/Prog/src/VAO.cpp.obj
 
 # target to build an object file
 __/Prog/src/VAO.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.obj
 .PHONY : __/Prog/src/VAO.cpp.obj
 
 __/Prog/src/VAO.i: __/Prog/src/VAO.cpp.i
@@ -274,7 +274,7 @@ __/Prog/src/VAO.i: __/Prog/src/VAO.cpp.i
 
 # target to preprocess a source file
 __/Prog/src/VAO.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.i
 .PHONY : __/Prog/src/VAO.cpp.i
 
 __/Prog/src/VAO.s: __/Prog/src/VAO.cpp.s
@@ -283,7 +283,7 @@ __/Prog/src/VAO.s: __/Prog/src/VAO.cpp.s
 
 # target to generate assembly for a file
 __/Prog/src/VAO.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VAO.cpp.s
 .PHONY : __/Prog/src/VAO.cpp.s
 
 __/Prog/src/VBO.obj: __/Prog/src/VBO.cpp.obj
@@ -292,7 +292,7 @@ __/Prog/src/VBO.obj: __/Prog/src/VBO.cpp.obj
 
 # target to build an object file
 __/Prog/src/VBO.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VBO.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VBO.cpp.obj
 .PHONY : __/Prog/src/VBO.cpp.obj
 
 __/Prog/src/VBO.i: __/Prog/src/VBO.cpp.i
@@ -301,7 +301,7 @@ __/Prog/src/VBO.i: __/Prog/src/VBO.cpp.i
 
 # target to preprocess a source file
 __/Prog/src/VBO.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VBO.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VBO.cpp.i
 .PHONY : __/Prog/src/VBO.cpp.i
 
 __/Prog/src/VBO.s: __/Prog/src/VBO.cpp.s
@@ -310,7 +310,7 @@ __/Prog/src/VBO.s: __/Prog/src/VBO.cpp.s
 
 # target to generate assembly for a file
 __/Prog/src/VBO.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VBO.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/__/Prog/src/VBO.cpp.s
 .PHONY : __/Prog/src/VBO.cpp.s
 
 src/Cone.obj: src/Cone.cpp.obj
@@ -319,7 +319,7 @@ src/Cone.obj: src/Cone.cpp.obj
 
 # target to build an object file
 src/Cone.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Cone.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Cone.cpp.obj
 .PHONY : src/Cone.cpp.obj
 
 src/Cone.i: src/Cone.cpp.i
@@ -328,7 +328,7 @@ src/Cone.i: src/Cone.cpp.i
 
 # target to preprocess a source file
 src/Cone.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Cone.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Cone.cpp.i
 .PHONY : src/Cone.cpp.i
 
 src/Cone.s: src/Cone.cpp.s
@@ -337,7 +337,7 @@ src/Cone.s: src/Cone.cpp.s
 
 # target to generate assembly for a file
 src/Cone.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Cone.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Cone.cpp.s
 .PHONY : src/Cone.cpp.s
 
 src/FreeflyCamera.obj: src/FreeflyCamera.cpp.obj
@@ -346,7 +346,7 @@ src/FreeflyCamera.obj: src/FreeflyCamera.cpp.obj
 
 # target to build an object file
 src/FreeflyCamera.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.obj
 .PHONY : src/FreeflyCamera.cpp.obj
 
 src/FreeflyCamera.i: src/FreeflyCamera.cpp.i
@@ -355,7 +355,7 @@ src/FreeflyCamera.i: src/FreeflyCamera.cpp.i
 
 # target to preprocess a source file
 src/FreeflyCamera.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.i
 .PHONY : src/FreeflyCamera.cpp.i
 
 src/FreeflyCamera.s: src/FreeflyCamera.cpp.s
@@ -364,7 +364,7 @@ src/FreeflyCamera.s: src/FreeflyCamera.cpp.s
 
 # target to generate assembly for a file
 src/FreeflyCamera.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.s
 .PHONY : src/FreeflyCamera.cpp.s
 
 src/Geometry.obj: src/Geometry.cpp.obj
@@ -373,7 +373,7 @@ src/Geometry.obj: src/Geometry.cpp.obj
 
 # target to build an object file
 src/Geometry.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.obj
 .PHONY : src/Geometry.cpp.obj
 
 src/Geometry.i: src/Geometry.cpp.i
@@ -382,7 +382,7 @@ src/Geometry.i: src/Geometry.cpp.i
 
 # target to preprocess a source file
 src/Geometry.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.i
 .PHONY : src/Geometry.cpp.i
 
 src/Geometry.s: src/Geometry.cpp.s
@@ -391,7 +391,7 @@ src/Geometry.s: src/Geometry.cpp.s
 
 # target to generate assembly for a file
 src/Geometry.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.s
 .PHONY : src/Geometry.cpp.s
 
 src/Image.obj: src/Image.cpp.obj
@@ -400,7 +400,7 @@ src/Image.obj: src/Image.cpp.obj
 
 # target to build an object file
 src/Image.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Image.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Image.cpp.obj
 .PHONY : src/Image.cpp.obj
 
 src/Image.i: src/Image.cpp.i
@@ -409,7 +409,7 @@ src/Image.i: src/Image.cpp.i
 
 # target to preprocess a source file
 src/Image.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Image.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Image.cpp.i
 .PHONY : src/Image.cpp.i
 
 src/Image.s: src/Image.cpp.s
@@ -418,7 +418,7 @@ src/Image.s: src/Image.cpp.s
 
 # target to generate assembly for a file
 src/Image.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Image.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Image.cpp.s
 .PHONY : src/Image.cpp.s
 
 src/Program.obj: src/Program.cpp.obj
@@ -427,7 +427,7 @@ src/Program.obj: src/Program.cpp.obj
 
 # target to build an object file
 src/Program.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Program.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Program.cpp.obj
 .PHONY : src/Program.cpp.obj
 
 src/Program.i: src/Program.cpp.i
@@ -436,7 +436,7 @@ src/Program.i: src/Program.cpp.i
 
 # target to preprocess a source file
 src/Program.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Program.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Program.cpp.i
 .PHONY : src/Program.cpp.i
 
 src/Program.s: src/Program.cpp.s
@@ -445,7 +445,7 @@ src/Program.s: src/Program.cpp.s
 
 # target to generate assembly for a file
 src/Program.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Program.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Program.cpp.s
 .PHONY : src/Program.cpp.s
 
 src/SDLWindowManager.obj: src/SDLWindowManager.cpp.obj
@@ -454,7 +454,7 @@ src/SDLWindowManager.obj: src/SDLWindowManager.cpp.obj
 
 # target to build an object file
 src/SDLWindowManager.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.obj
 .PHONY : src/SDLWindowManager.cpp.obj
 
 src/SDLWindowManager.i: src/SDLWindowManager.cpp.i
@@ -463,7 +463,7 @@ src/SDLWindowManager.i: src/SDLWindowManager.cpp.i
 
 # target to preprocess a source file
 src/SDLWindowManager.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.i
 .PHONY : src/SDLWindowManager.cpp.i
 
 src/SDLWindowManager.s: src/SDLWindowManager.cpp.s
@@ -472,7 +472,7 @@ src/SDLWindowManager.s: src/SDLWindowManager.cpp.s
 
 # target to generate assembly for a file
 src/SDLWindowManager.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.s
 .PHONY : src/SDLWindowManager.cpp.s
 
 src/Shader.obj: src/Shader.cpp.obj
@@ -481,7 +481,7 @@ src/Shader.obj: src/Shader.cpp.obj
 
 # target to build an object file
 src/Shader.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Shader.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Shader.cpp.obj
 .PHONY : src/Shader.cpp.obj
 
 src/Shader.i: src/Shader.cpp.i
@@ -490,7 +490,7 @@ src/Shader.i: src/Shader.cpp.i
 
 # target to preprocess a source file
 src/Shader.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Shader.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Shader.cpp.i
 .PHONY : src/Shader.cpp.i
 
 src/Shader.s: src/Shader.cpp.s
@@ -499,7 +499,7 @@ src/Shader.s: src/Shader.cpp.s
 
 # target to generate assembly for a file
 src/Shader.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Shader.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Shader.cpp.s
 .PHONY : src/Shader.cpp.s
 
 src/Sphere.obj: src/Sphere.cpp.obj
@@ -508,7 +508,7 @@ src/Sphere.obj: src/Sphere.cpp.obj
 
 # target to build an object file
 src/Sphere.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.obj
 .PHONY : src/Sphere.cpp.obj
 
 src/Sphere.i: src/Sphere.cpp.i
@@ -517,7 +517,7 @@ src/Sphere.i: src/Sphere.cpp.i
 
 # target to preprocess a source file
 src/Sphere.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.i
 .PHONY : src/Sphere.cpp.i
 
 src/Sphere.s: src/Sphere.cpp.s
@@ -526,7 +526,7 @@ src/Sphere.s: src/Sphere.cpp.s
 
 # target to generate assembly for a file
 src/Sphere.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/Sphere.cpp.s
 .PHONY : src/Sphere.cpp.s
 
 src/TrackballCamera.obj: src/TrackballCamera.cpp.obj
@@ -535,7 +535,7 @@ src/TrackballCamera.obj: src/TrackballCamera.cpp.obj
 
 # target to build an object file
 src/TrackballCamera.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.obj
 .PHONY : src/TrackballCamera.cpp.obj
 
 src/TrackballCamera.i: src/TrackballCamera.cpp.i
@@ -544,7 +544,7 @@ src/TrackballCamera.i: src/TrackballCamera.cpp.i
 
 # target to preprocess a source file
 src/TrackballCamera.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.i
 .PHONY : src/TrackballCamera.cpp.i
 
 src/TrackballCamera.s: src/TrackballCamera.cpp.s
@@ -553,7 +553,7 @@ src/TrackballCamera.s: src/TrackballCamera.cpp.s
 
 # target to generate assembly for a file
 src/TrackballCamera.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.s
 .PHONY : src/TrackballCamera.cpp.s
 
 src/tiny_obj_loader.obj: src/tiny_obj_loader.cpp.obj
@@ -562,7 +562,7 @@ src/tiny_obj_loader.obj: src/tiny_obj_loader.cpp.obj
 
 # target to build an object file
 src/tiny_obj_loader.cpp.obj:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.obj
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.obj
 .PHONY : src/tiny_obj_loader.cpp.obj
 
 src/tiny_obj_loader.i: src/tiny_obj_loader.cpp.i
@@ -571,7 +571,7 @@ src/tiny_obj_loader.i: src/tiny_obj_loader.cpp.i
 
 # target to preprocess a source file
 src/tiny_obj_loader.cpp.i:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.i
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.i
 .PHONY : src/tiny_obj_loader.cpp.i
 
 src/tiny_obj_loader.s: src/tiny_obj_loader.cpp.s
@@ -580,7 +580,7 @@ src/tiny_obj_loader.s: src/tiny_obj_loader.cpp.s
 
 # target to generate assembly for a file
 src/tiny_obj_loader.cpp.s:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.s
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(MAKE) -f glimac\CMakeFiles\glimac.dir\build.make glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.s
 .PHONY : src/tiny_obj_loader.cpp.s
 
 # Help Target
@@ -654,6 +654,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\Alexian\Desktop\Cours\SEMEST~3\SYNTHE~1\IMACMAN\IMACMAN\CMAKE-~1 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\justine\Documents\IMAC\cours\synthese-img\OpenGL\Projet2\cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
