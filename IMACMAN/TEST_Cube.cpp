@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
     VBO vbo = VBO();
     VAO vao = VAO();
     IBO ibo = IBO();
-    Cube cube = Cube(glm::vec3(-0.5f, -0.5f, -0.5f), glm::vec3(0.5f, 0.5f, 0.0f));
+    Cube cube = Cube(glm::vec3(-0.5f, -0.2f, -0.5f), glm::vec3(0.5f, 0.2f, 0.5f));
 
     std::vector<ShapeVertex> vertices;
     vertices = cube.getVertexVec();

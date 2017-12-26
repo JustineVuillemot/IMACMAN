@@ -7,6 +7,7 @@
 
 #include <glm/glm.hpp>
 #include <glimac/common.hpp>
+#include <vector>
 
 using namespace glimac;
 
@@ -14,7 +15,7 @@ class Cube {
 public:
 
     Cube(){};
-    Cube(const glm::vec3& lower, const glm::vec3& upper);
+    Cube(const glm::vec3 &lower, const glm::vec3 &upper);
 
     /* GETTER */
     std::vector<ShapeVertex> getVertexVec(){

@@ -6,7 +6,7 @@
 
 //Cube(const glm::vec3& lower, const glm::vec3& upper);
 
-Cube::Cube(const glm::vec3& lower, const glm::vec3& upper){
+Cube::Cube(const glm::vec3 &lower, const glm::vec3 &upper){
 
     /*remplissage de vertexVec avec les 8 points*/
     //face AVANT
@@ -71,5 +71,5 @@ Cube::Cube(const glm::vec3& lower, const glm::vec3& upper){
     _indexVec.push_back(6);
 
     /*position*/
-    _position = _vertexVec.push_back(glm::vec3(lower.x, upper.y, lower.z));
+    _position = glm::vec3(lower.x, upper.y, lower.z);
 }

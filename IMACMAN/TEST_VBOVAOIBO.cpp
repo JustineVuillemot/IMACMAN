@@ -16,18 +16,6 @@
 
 using namespace glimac;
 
-struct Vertex2DColor{
-    glm::vec2 position;
-    glm::vec3 color;
-
-    Vertex2DColor(){}
-    Vertex2DColor(glm::vec2 p,glm::vec3 c)
-    {
-        position = p;
-        color = c;
-    }
-};
-
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
     SDLWindowManager windowManager(800, 600, "GLImac");
