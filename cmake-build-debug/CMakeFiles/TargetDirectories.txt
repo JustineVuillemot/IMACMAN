@@ -1,9 +1,0 @@
-C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/cmake-build-debug/glimac/CMakeFiles/edit_cache.dir
-C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/cmake-build-debug/glimac/CMakeFiles/glimac.dir
-C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/cmake-build-debug/glimac/CMakeFiles/rebuild_cache.dir
-C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_SDLtemplate.dir
-C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/cmake-build-debug/IMACMAN/CMakeFiles/IMACMAN_test.dir
-C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/cmake-build-debug/IMACMAN/CMakeFiles/edit_cache.dir
-C:/Users/justine/Documents/IMAC/cours/synthese-img/OpenGL/Projet2/cmake-build-debug/IMACMAN/CMakeFiles/rebuild_cache.dir

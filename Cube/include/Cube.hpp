@@ -7,14 +7,22 @@
 #ifndef IMACMAN_CUBE_H
 #define IMACMAN_CUBE_H
 
+#include <glimac/common.hpp>
+
+using namespace glimac;
 
 class Cube {
 public:
 
-    /* GETTER */
+    Cube(){};
+    Cube(const glm::vec3& lower, const glm::vec3& upper);
 
-    std::vector<Point> getVertexVec(){
+    /* GETTER */
+    std::vector<ShapeVertex> getVertexVec(){
         return _vertexVec;
+    }
+    std::vector<uint32_t> getIndexVec(){
+        return _indexVec;
     }
     glm::vec3 getPosition(){
         return _position;
@@ -25,8 +33,10 @@ public:
     void setPositon(glm::vec3 position){
         _position = position;
     }
+
 private:
-    std::vector<Point> _vertexVec;
+    std::vector<ShapeVertex> _vertexVec;
+    std::vector<uint32_t> _indexVec;
     glm::vec3 _position;
 };
 
