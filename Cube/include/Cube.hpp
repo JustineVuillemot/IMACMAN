@@ -2,11 +2,10 @@
 // Created by Alexian on 16/12/2017.
 //
 
-#include <glm/glm.hpp>
-
 #ifndef IMACMAN_CUBE_H
 #define IMACMAN_CUBE_H
 
+#include <glm/glm.hpp>
 #include <glimac/common.hpp>
 
 using namespace glimac;

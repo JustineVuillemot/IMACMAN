@@ -23,52 +23,52 @@ Cube::Cube(const glm::vec3& lower, const glm::vec3& upper){
 
     /*remplissage de l'indiceVec*/
     //face avant
-    _indiceVec.push_back(0);
-    _indiceVec.push_back(1);
-    _indiceVec.push_back(2);
-    _indiceVec.push_back(0);
-    _indiceVec.push_back(2);
-    _indiceVec.push_back(3);
+    _indexVec.push_back(0);
+    _indexVec.push_back(1);
+    _indexVec.push_back(2);
+    _indexVec.push_back(0);
+    _indexVec.push_back(2);
+    _indexVec.push_back(3);
 
     //face arriere
-    _indiceVec.push_back(4);
-    _indiceVec.push_back(5);
-    _indiceVec.push_back(6);
-    _indiceVec.push_back(4);
-    _indiceVec.push_back(6);
-    _indiceVec.push_back(7);
+    _indexVec.push_back(4);
+    _indexVec.push_back(5);
+    _indexVec.push_back(6);
+    _indexVec.push_back(4);
+    _indexVec.push_back(6);
+    _indexVec.push_back(7);
 
     //face droit
-    _indiceVec.push_back(0);
-    _indiceVec.push_back(1);
-    _indiceVec.push_back(4);
-    _indiceVec.push_back(1);
-    _indiceVec.push_back(4);
-    _indiceVec.push_back(5);
+    _indexVec.push_back(0);
+    _indexVec.push_back(1);
+    _indexVec.push_back(4);
+    _indexVec.push_back(1);
+    _indexVec.push_back(4);
+    _indexVec.push_back(5);
 
     //face gauche
-    _indiceVec.push_back(2);
-    _indiceVec.push_back(3);
-    _indiceVec.push_back(7);
-    _indiceVec.push_back(2);
-    _indiceVec.push_back(6);
-    _indiceVec.push_back(7);
+    _indexVec.push_back(2);
+    _indexVec.push_back(3);
+    _indexVec.push_back(7);
+    _indexVec.push_back(2);
+    _indexVec.push_back(6);
+    _indexVec.push_back(7);
 
     //face haut
-    _indiceVec.push_back(0);
-    _indiceVec.push_back(3);
-    _indiceVec.push_back(4);
-    _indiceVec.push_back(3);
-    _indiceVec.push_back(4);
-    _indiceVec.push_back(7);
+    _indexVec.push_back(0);
+    _indexVec.push_back(3);
+    _indexVec.push_back(4);
+    _indexVec.push_back(3);
+    _indexVec.push_back(4);
+    _indexVec.push_back(7);
 
     //face bas
-    _indiceVec.push_back(1);
-    _indiceVec.push_back(2);
-    _indiceVec.push_back(5);
-    _indiceVec.push_back(2);
-    _indiceVec.push_back(5);
-    _indiceVec.push_back(6);
+    _indexVec.push_back(1);
+    _indexVec.push_back(2);
+    _indexVec.push_back(5);
+    _indexVec.push_back(2);
+    _indexVec.push_back(5);
+    _indexVec.push_back(6);
 
     /*position*/
     _position = _vertexVec.push_back(glm::vec3(lower.x, upper.y, lower.z));
