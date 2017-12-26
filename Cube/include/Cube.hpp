@@ -1,7 +1,3 @@
-//
-// Created by Alexian on 16/12/2017.
-//
-
 #include <glm/glm.hpp>
 
 #ifndef IMACMAN_CUBE_H
@@ -15,7 +11,7 @@ class Cube {
 public:
 
     Cube(){};
-    Cube(const glm::vec3& lower, const glm::vec3& upper);
+    Cube(const glm::vec3 &lower, const glm::vec3 &upper);
 
     /* GETTER */
     std::vector<ShapeVertex> getVertexVec(){
