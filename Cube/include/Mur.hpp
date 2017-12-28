@@ -2,7 +2,7 @@
 // Created by Alexian on 16/12/2017.
 //
 
-#include "Cube.h"
+#include "Cube.hpp"
 
 #ifndef IMACMAN_MUR_H
 #define IMACMAN_MUR_H

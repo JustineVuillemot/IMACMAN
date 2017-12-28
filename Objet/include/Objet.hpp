@@ -3,6 +3,9 @@
 //
 
 #include <glm/glm.hpp>
+#include <IBO.hpp>
+#include <VBO.hpp>
+#include <VAO.hpp>
 
 #ifndef IMACMAN_OBJET_H
 #define IMACMAN_OBJET_H
@@ -35,6 +38,9 @@ public:
     }
 
 private:
+    VAO o_vao;
+    VBO o_vbo;
+    IBO o_ibo;
     int _nbrPoint;
     glm::vec3 _position;
     int _etat;

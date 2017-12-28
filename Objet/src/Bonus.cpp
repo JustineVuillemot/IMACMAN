@@ -2,5 +2,4 @@
 // Created by Alexian on 16/12/2017.
 //
 
-#include "../include/Bonus.hpp
-"
+#include "../include/Bonus.hpp"

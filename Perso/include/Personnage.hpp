@@ -3,6 +3,9 @@
 //
 
 #include <glm/glm.hpp>
+#include <VBO.hpp>
+#include <IBO.hpp>
+#include <VAO.hpp>
 
 #ifndef IMACMAN_PERSONNAGE_H
 #define IMACMAN_PERSONNAGE_H
@@ -32,6 +35,9 @@ public:
     /* METHODS */
     void deplacement();
 private:
+    VAO p_vao;
+    VBO p_vbo;
+    IBO p_ibo;
     glm::vec3 _pos;
     glm::vec3 _posInitiale;
 
