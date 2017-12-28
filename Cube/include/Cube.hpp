@@ -5,8 +5,6 @@
 #ifndef IMACMAN_CUBE_H
 #define IMACMAN_CUBE_H
 
-#include <GL/glew.h>
-#include <glimac/common.hpp>
 #include <vector>
 #include "VAO.hpp"
 
@@ -18,7 +16,13 @@ public:
     Cube(){};
     Cube(const glm::vec3 &lower, const glm::vec3 &upper);
 
-    void remplirBuffers();
+    void remplirBuffers(){
+        c_vbo.remplirBuffer(_vertexVec);
+        c_ibo.remplirBuffer(_indexVec);
+        c_vao.remplirBuffer(_vertexVec, &c_vbo, &c_ibo);
+
+    }
+
     void draw();
 
     /* GETTER */
