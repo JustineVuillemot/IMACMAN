@@ -39,6 +39,10 @@ public:
         _etat = etat;
     }
 
+    /* METHODS */
+    void initSphere(GLfloat radius, GLsizei discLat, GLsizei discLong)
+    void drawObj();
+
 private:
     glimac::Sphere _obj;
     VAO o_vao;

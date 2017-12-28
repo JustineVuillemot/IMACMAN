@@ -36,6 +36,8 @@ public:
 
     /* METHODS */
     void deplacement();
+    void initSphere(GLfloat radius, GLsizei discLat, GLsizei discLong);
+    void drawSphere();
 private:
     glimac::Sphere _PersoObj;
     VAO p_vao;
