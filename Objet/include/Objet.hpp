@@ -3,9 +3,11 @@
 //
 
 #include <glm/glm.hpp>
-#include <IBO.hpp>
 #include <VBO.hpp>
 #include <VAO.hpp>
+#include <glimac/Sphere.hpp>
+#include <Texture.hpp>
+#include <Program.hpp>
 
 #ifndef IMACMAN_OBJET_H
 #define IMACMAN_OBJET_H
@@ -38,12 +40,16 @@ public:
     }
 
 private:
+    glimac::Sphere _obj;
     VAO o_vao;
     VBO o_vbo;
-    IBO o_ibo;
     int _nbrPoint;
     glm::vec3 _position;
     int _etat;
+
+    std::string _texturePath;
+    Texture _texture;
+    Program _program;
 };
 
 
