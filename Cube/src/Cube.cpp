@@ -1,7 +1,9 @@
 //
 // Created by Alexian on 16/12/2017.
 //
+
 #include <GL/glew.h>
+#include <glimac/common.hpp>
 #include "Cube.hpp"
 
 Cube::Cube(const glm::vec3 &lower, const glm::vec3 &upper){
@@ -70,13 +72,6 @@ Cube::Cube(const glm::vec3 &lower, const glm::vec3 &upper){
 
     /*position*/
     _position = glm::vec3(lower.x, upper.y, lower.z);
-}
-
-void Cube::remplirBuffers(){
-    c_vbo.remplirBuffer(_vertexVec);
-    c_ibo.remplirBuffer(_indexVec);
-    c_vao.remplirBuffer(_vertexVec, &c_vbo, &c_ibo);
-
 }
 
 void Cube::draw(){
