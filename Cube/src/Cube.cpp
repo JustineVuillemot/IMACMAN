@@ -75,7 +75,6 @@ Cube::Cube(const glm::vec3 &lower, const glm::vec3 &upper){
 }
 
 void Cube::draw(){
-    std::cout << "Here" << std::endl;
     c_vao.bind();
         glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
     c_vao.debind();
