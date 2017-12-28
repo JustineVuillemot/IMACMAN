@@ -13,10 +13,13 @@ find_package(GLEW REQUIRED)
 include_directories(${SDL_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR} ${GLEW_INCLUDE_DIR} glimac/include third-party/include Cube/include Jeu/include Objet/include Perso/include Prog/include)
 
 #set(ALL_LIBRARIES glimac ${SDL_LIBRARY} ${OPENGL_LIBRARIES} ${GLEW_LIBRARY} glu32 freeglut)
-set(ALL_LIBRARIES mingw32 glimac Prog Cube SDL glew32s opengl32 glu32 freeglut) #add the libraries options in the LIB_LIST variable
+set(ALL_LIBRARIES mingw32 glimac Prog Cube Jeu Objet Perso SDL glew32s opengl32 glu32 freeglut) #add the libraries options in the LIB_LIST variable
 add_subdirectory(glimac)
 add_subdirectory(Prog)
 add_subdirectory(Cube)
+add_subdirectory(Jeu)
+add_subdirectory(Objet)
+add_subdirectory(Perso)
 
 file(GLOB TP_DIRECTORIES "IMACMAN")
 
