@@ -4,8 +4,6 @@
 
 #include "Cube.hpp"
 
-//Cube(const glm::vec3& lower, const glm::vec3& upper);
-
 Cube::Cube(const glm::vec3 &lower, const glm::vec3 &upper){
 
     /*remplissage de vertexVec avec les 8 points*/
@@ -72,4 +70,17 @@ Cube::Cube(const glm::vec3 &lower, const glm::vec3 &upper){
 
     /*position*/
     _position = glm::vec3(lower.x, upper.y, lower.z);
+}
+
+void Cube::remplirBuffers(){
+    c_vbo.remplirBuffer(_vertexVec);
+    c_ibo.remplirBuffer(_indexVec);
+    c_vao.remplirBuffer(_vertexVec, &c_vbo, &c_ibo);
+
+}
+
+void Cube::draw(){
+    c_vao.bind();
+        glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
+    c_vao.debind();
 }

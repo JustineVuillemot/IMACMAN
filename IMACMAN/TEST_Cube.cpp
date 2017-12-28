@@ -14,10 +14,6 @@
 #include <glimac/Image.hpp>
 #include <glimac/SDLWindowManager.hpp>
 #include <glimac/TrackballCamera.hpp>
-#include "Buffer.hpp"
-#include "VBO.hpp"
-#include "VAO.hpp"
-#include "IBO.hpp"
 #include "Cube.hpp"
 
 using namespace glimac;
@@ -48,22 +44,9 @@ int main(int argc, char** argv) {
     GLuint uMVPMatrix = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
     GLuint uNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
 
-    VBO vbo = VBO();
-    VAO vao = VAO();
-    IBO ibo = IBO();
     Cube cube = Cube(glm::vec3(-0.5f, -0.2f, -0.5f), glm::vec3(0.5f, 0.2f, 0.5f));
 
-    std::vector<ShapeVertex> vertices;
-    vertices = cube.getVertexVec();
-
-    std::vector<uint32_t> indices;
-    indices = cube.getIndexVec();
-
-    vbo.remplirBuffer(vertices);
-
-    ibo.remplirBuffer(indices);
-
-    vao.remplirBuffer(vertices, &vbo, &ibo);
+    cube.remplirBuffers();
 
     glm::mat4 modelViewMat, normalMat, mvProjMat;
 
@@ -108,13 +91,7 @@ int main(int argc, char** argv) {
 
         glClear(GL_COLOR_BUFFER_BIT);
 
-        vao.bind();
-
-        // => On utilise glDrawElements à la place de glDrawArrays
-        // Cela indique à OpenGL qu'il doit utiliser l'IBO enregistré dans le VAO
-        glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
-
-        vao.debind();
+        cube.draw();
 
         // Update the display
         windowManager.swapBuffers();

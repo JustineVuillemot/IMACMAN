@@ -31,8 +31,8 @@ int main(int argc, char** argv) {
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
     FilePath applicationPath(argv[0]);
-    Program program = loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
-                                  applicationPath.dirPath() + "shaders/tex3D.fs.glsl");
+    Program program = loadProgram(applicationPath.dirPath() + "shaders/triangle.vs.glsl",
+                                  applicationPath.dirPath() + "shaders/triangle.fs.glsl");
     program.use();
 
     VBO vbo = VBO();

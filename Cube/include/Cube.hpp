@@ -5,9 +5,10 @@
 #ifndef IMACMAN_CUBE_H
 #define IMACMAN_CUBE_H
 
-#include <glm/glm.hpp>
+#include <GL/glew.h>
 #include <glimac/common.hpp>
 #include <vector>
+#include "VAO.hpp"
 
 using namespace glimac;
 
@@ -16,6 +17,9 @@ public:
 
     Cube(){};
     Cube(const glm::vec3 &lower, const glm::vec3 &upper);
+
+    void remplirBuffers();
+    void draw();
 
     /* GETTER */
     std::vector<ShapeVertex> getVertexVec(){
@@ -38,6 +42,9 @@ private:
     std::vector<ShapeVertex> _vertexVec;
     std::vector<uint32_t> _indexVec;
     glm::vec3 _position;
+    VBO c_vbo;
+    IBO c_ibo;
+    VAO c_vao;
 };
 
 
