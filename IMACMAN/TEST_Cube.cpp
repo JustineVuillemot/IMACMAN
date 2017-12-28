@@ -16,6 +16,7 @@
 #include <glimac/TrackballCamera.hpp>
 #include "Cube.hpp"
 
+
 using namespace glimac;
 
 int main(int argc, char** argv) {

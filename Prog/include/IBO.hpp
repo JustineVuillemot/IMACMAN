@@ -1,3 +1,4 @@
+#define GLEW_STATIC
 #ifndef IMACGL_IBO_HPP
 #define IMACGL_IBO_HPP
 

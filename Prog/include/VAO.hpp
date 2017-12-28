@@ -1,4 +1,4 @@
-
+#define GLEW_STATIC
 #ifndef IMACGL_VAO_HPP
 #define IMACGL_VAO_HPP
 

@@ -8,7 +8,9 @@
 #include <GL/glew.h>
 #include <glimac/common.hpp>
 #include <vector>
+#include "VBO.hpp"
 #include "VAO.hpp"
+#include "IBO.hpp"
 
 using namespace glimac;
 
