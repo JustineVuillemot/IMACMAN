@@ -7,8 +7,8 @@
 
 #include <cstdlib>
 #include <vector>
-#include "Perso/Personnage.h"
-#include "Objet/Objet.h"
+#include "Personnage.hpp"
+#include "Objet.hpp"
 
 class Jeu {
 

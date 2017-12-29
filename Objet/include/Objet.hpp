@@ -40,7 +40,7 @@ public:
     }
 
     /* METHODS */
-    void initSphere(GLfloat radius, GLsizei discLat, GLsizei discLong)
+    void initSphere(GLfloat radius, GLsizei discLat, GLsizei discLong);
     void drawObj();
 
 private:

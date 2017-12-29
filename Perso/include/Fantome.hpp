@@ -2,7 +2,7 @@
 // Created by Alexian on 16/12/2017.
 //
 
-#include "Personnage.h"
+#include "Personnage.hpp"
 
 #ifndef IMACMAN_FANTOME_H
 #define IMACMAN_FANTOME_H
