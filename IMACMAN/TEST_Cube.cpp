@@ -14,7 +14,7 @@
 #include <glimac/Image.hpp>
 #include <glimac/SDLWindowManager.hpp>
 #include <glimac/TrackballCamera.hpp>
-#include "Cube.hpp"
+#include "Mur.hpp"
 
 
 using namespace glimac;
@@ -45,9 +45,12 @@ int main(int argc, char** argv) {
     GLuint uMVPMatrix = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
     GLuint uNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
 
-    Cube cube = Cube(glm::vec3(-0.5f, -0.2f, -0.5f), glm::vec3(0.5f, 0.2f, 0.5f));
+    //Cube mur = Cube(glm::vec3(-1.f, -0.2f, -1.f), glm::vec3(0.f, 0.2f, 0.f));
+    Mur mur = Mur(glm::vec3(-0.5f, -0.2f, -0.5f), 2.f, 1.5f, 2.f);
+    Mur mur2 = Mur(glm::vec3(1.5f, -0.2f, -0.5f), 2.f, 1.5f, 2.f);
 
-    cube.remplirBuffers();
+    mur.remplirBuffers();
+    mur2.remplirBuffers();
 
     glm::mat4 modelViewMat, normalMat, mvProjMat;
 
@@ -92,7 +95,8 @@ int main(int argc, char** argv) {
 
         glClear(GL_COLOR_BUFFER_BIT);
 
-        cube.draw();
+        mur.draw();
+        mur2.draw();
 
         // Update the display
         windowManager.swapBuffers();

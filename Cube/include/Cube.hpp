@@ -25,6 +25,8 @@ public:
 
     }
 
+    void generateVertices(const glm::vec3 &lower, const glm::vec3 &upper);
+    void generateIndexs();
     void draw();
 
     /* GETTER */
@@ -44,7 +46,7 @@ public:
         _position = position;
     }
 
-private:
+protected:
     std::vector<ShapeVertex> _vertexVec;
     std::vector<uint32_t> _indexVec;
     glm::vec3 _position;

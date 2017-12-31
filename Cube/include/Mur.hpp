@@ -10,27 +10,36 @@
 
 class Mur : public Cube {
 public:
+    Mur(){};
+    Mur(const glm::vec3 position, const float width, const float height, const float depth);
 
     /* GETTER */
 
     float getEpaisseur(){
-        return _epaisseur;
+        return _depth;
     }
-    int getOrientation(){
-        return _orientation;
+    float getWidth(){
+        return _width;
+    }
+    float getHeight(){
+        return _height;
     }
 
     /* SETTER */
 
     void setEpaisseur(float epaisseur){
-        _epaisseur = epaisseur;
+        _depth = epaisseur;
     }
-    void setOrientation(int orientation){
-        _orientation = orientation;
+    void setWidth(float taille){
+        _width = taille;
+    }
+    void setHeight(float hauteur){
+        _height = hauteur;
     }
 private:
-    float _epaisseur;
-    int _orientation;
+    float _depth;
+    float _width;
+    float _height;
 };
 
 
