@@ -14,7 +14,7 @@
 #include <glimac/Image.hpp>
 #include <glimac/SDLWindowManager.hpp>
 #include <glimac/TrackballCamera.hpp>
-#include "Cube.hpp"
+#include "PacGomme.hpp"
 
 
 using namespace glimac;
@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
     FilePath applicationPath(argv[0]);
-    Program program = loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
+    glimac::Program program = loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
                                   applicationPath.dirPath() + "shaders/tex3D.fs.glsl");
     program.use();
 
@@ -45,9 +45,9 @@ int main(int argc, char** argv) {
     GLuint uMVPMatrix = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
     GLuint uNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
 
-    Cube cube = Cube(glm::vec3(-0.5f, -0.2f, -0.5f), glm::vec3(0.5f, 0.2f, 0.5f));
+    PacGomme perso = PacGomme(glm::vec3(1, 0, 3), 1);
 
-    cube.remplirBuffers();
+    perso.remplirBuffers();
 
     glm::mat4 modelViewMat, normalMat, mvProjMat;
 
@@ -81,7 +81,7 @@ int main(int argc, char** argv) {
             }
         }
 
-        modelViewMat = cam.getViewMatrix();
+        modelViewMat = perso.getViewMatrix(cam.getViewMatrix());
         mvProjMat = glm::perspective(glm::radians(70.f), width/height, 0.1f, 100.f);
         normalMat = glm::transpose(glm::inverse(modelViewMat));
 
@@ -92,7 +92,7 @@ int main(int argc, char** argv) {
 
         glClear(GL_COLOR_BUFFER_BIT);
 
-        cube.draw();
+        perso.draw();
 
         // Update the display
         windowManager.swapBuffers();

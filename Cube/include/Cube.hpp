@@ -16,6 +16,7 @@ class Cube {
 public:
 
     Cube(){};
+    //lower = coin bas gauche arrière // upper = coin haut droit devant
     Cube(const glm::vec3 &lower, const glm::vec3 &upper);
 
     void remplirBuffers(){

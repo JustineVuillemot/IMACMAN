@@ -9,7 +9,14 @@
 
 
 class PacGomme : public Objet{
-
+public:
+    PacGomme(){}
+    PacGomme(glm::vec3 pos, float radius){
+        _obj = glimac::Sphere(radius, 30, 30);
+        _position = pos;
+        _etat = 0;
+        _nbrPoint = 5;
+    }
 };
 
 

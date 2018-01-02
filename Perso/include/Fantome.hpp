@@ -10,6 +10,12 @@
 
 class Fantome : public Personnage{
 public:
+    Fantome(){}
+    Fantome (glm::vec3 pos, float radius){
+        _PersoObj = glimac::Sphere(radius, 30, 30);
+        _pos = _posInitiale = pos;
+        _etat = 0;
+    }
 
     /* GETTER */
 
