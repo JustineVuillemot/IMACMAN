@@ -4,12 +4,7 @@
 
 #include "../include/Objet.hpp"
 
-void Objet::initSphere(GLfloat radius, GLsizei discLat, GLsizei discLong) {
-    glimac::Sphere testSphere(radius, discLat, discLong);
-    _obj =  testSphere;
-}
-
-void Objet::drawObj() {
+void Objet::draw() {
     o_vao.bind();
     glDrawArrays(GL_TRIANGLES, 0, _obj.getVertexCount());
     o_vao.debind();

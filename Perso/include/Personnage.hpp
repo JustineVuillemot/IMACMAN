@@ -14,6 +14,10 @@
 
 class Personnage {
 public:
+    Personnage() : _PersoObj(1, 30, 30){}
+    Personnage (glm::vec3 pos, float radius) : _PersoObj(radius, 30, 30){
+        _pos = _posInitiale = pos;
+    }
 
     /* GETTER */
 
@@ -22,6 +26,9 @@ public:
     }
     glm::vec3 getPosInitiale(){
         return _posInitiale;
+    }
+    glm::mat4 getViewMatrix(glm::mat4 viewMat = glm::mat4(1)){
+        return glm::translate(viewMat, _pos);
     }
 
     /* SETTER */
@@ -35,15 +42,19 @@ public:
 
     /* METHODS */
     void deplacement();
-    void initSphere(GLfloat radius, GLsizei discLat, GLsizei discLong);
-    void drawSphere();
-private:
+    void draw();
+
+    void remplirBuffers(){
+        p_vbo.remplirBuffer(_PersoObj.getVertexArray());
+        p_vao.remplirBuffer(_PersoObj.getVertexArray(), &p_vbo);
+    }
+
+protected:
     glimac::Sphere _PersoObj;
     VAO p_vao;
     VBO p_vbo;
     glm::vec3 _pos;
     glm::vec3 _posInitiale;
-    glm::mat4 _MVMatrix;
 
     std::string _texturePath;
     Texture _texture;

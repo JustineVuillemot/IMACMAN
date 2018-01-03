@@ -16,9 +16,11 @@ class Cube {
 public:
 
     Cube(){};
-    Cube(const glm::vec3 &lower,const glm::vec3 &upper);
-
     ~Cube() = default;
+
+    //lower = coin bas gauche arrière // upper = coin haut droit devant
+    Cube(const glm::vec3 &lower, const glm::vec3 &upper);
+
 
     void remplirBuffers(){
         c_vbo.remplirBuffer(_vertexVec);

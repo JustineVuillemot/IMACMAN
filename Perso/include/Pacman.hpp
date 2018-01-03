@@ -10,6 +10,12 @@
 
 class Pacman : public Personnage {
 public:
+    Pacman(){}
+    Pacman (glm::vec3 pos, float radius){
+        _pos = _posInitiale = pos;
+        _PersoObj = glimac::Sphere(radius, 30, 30);
+        _vie = 3;
+    }
 
     /* GETTER */
 

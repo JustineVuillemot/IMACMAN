@@ -14,6 +14,13 @@
 
 class Objet {
 public:
+    Objet() : _obj(1, 30, 30){}
+    Objet(glm::vec3 pos, float radius) : _obj(radius, 30, 30){
+        _position = pos;
+        _etat = 0;
+        _nbrPoint = 5;
+    }
+
     /* GETTER */
 
     int getNbrPoint(){
@@ -24,6 +31,9 @@ public:
     }
     int getEtat(){
         return _etat;
+    }
+    glm::mat4 getViewMatrix(glm::mat4 viewMat = glm::mat4(1)){
+        return glm::translate(viewMat, _position);
     }
 
     /* SETTER */
@@ -39,10 +49,13 @@ public:
     }
 
     /* METHODS */
-    void initSphere(GLfloat radius, GLsizei discLat, GLsizei discLong);
-    void drawObj();
+    void draw();
+    void remplirBuffers(){
+        o_vbo.remplirBuffer(_obj.getVertexArray());
+        o_vao.remplirBuffer(_obj.getVertexArray(), &o_vbo);
+    }
 
-private:
+protected:
     glimac::Sphere _obj;
     VAO o_vao;
     VBO o_vbo;
