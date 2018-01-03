@@ -7,6 +7,7 @@
 
 #include <cstdlib>
 #include <vector>
+#include <string>
 #include "Cube.hpp"
 #include "Personnage.hpp"
 #include "Objet.hpp"
