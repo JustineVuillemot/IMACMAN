@@ -1,7 +1,3 @@
-//
-// Created by justine on 24/12/2017.
-//
-
 #define GLEW_STATIC
 #include <iostream>
 #include <fstream>
@@ -14,7 +10,8 @@
 #include <glimac/Image.hpp>
 #include <glimac/SDLWindowManager.hpp>
 #include <glimac/TrackballCamera.hpp>
-#include "Mur.hpp"
+#include "Cube.hpp"
+#include "Jeu.hpp"
 
 
 
@@ -38,7 +35,7 @@ int main(int argc, char** argv) {
 
     FilePath applicationPath(argv[0]);
     Program program = loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
-                                  applicationPath.dirPath() + "shaders/tex3D.fs.glsl");
+                                          applicationPath.dirPath() + "shaders/tex3D.fs.glsl");
     program.use();
 
     /*UNIFORMES*/
@@ -46,12 +43,26 @@ int main(int argc, char** argv) {
     GLuint uMVPMatrix = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
     GLuint uNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
 
-    //Cube mur = Cube(glm::vec3(-1.f, -0.2f, -1.f), glm::vec3(0.f, 0.2f, 0.f));
-    Mur mur = Mur(glm::vec3(-0.5f, -0.2f, -0.5f), 2.f, 1.5f, 2.f);
-    Mur mur2 = Mur(glm::vec3(1.5f, -0.2f, -0.5f), 2.f, 1.5f, 2.f);
+    Jeu jeu;
 
-    mur.remplirBuffers();
-    mur2.remplirBuffers();
+    try{
+        jeu = Jeu("../../Level/Level1.txt", 1.f, 1.f);
+    }
+    catch(const std::string &s){
+        std::cerr << "Erreur : " << s << std::endl;
+    }
+
+    jeu.addElement();
+    jeu.remplirBuffer();
+
+    int i;
+    int j;
+    for(i = 0; i < jeu.get_nbrSub(); ++i){
+        for(j = 0; j < jeu.get_nbrSub(); ++j){
+            std::cout << jeu._plateau[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
 
     glm::mat4 modelViewMat, normalMat, mvProjMat;
 
@@ -96,12 +107,12 @@ int main(int argc, char** argv) {
 
         glClear(GL_COLOR_BUFFER_BIT);
 
-        mur.draw();
-        mur2.draw();
+        jeu.draw();
 
         // Update the display
         windowManager.swapBuffers();
     }
 
+    jeu.freeJeu();
     return EXIT_SUCCESS;
 }

@@ -7,7 +7,6 @@
 #include <VAO.hpp>
 #include <glimac/Sphere.hpp>
 #include <Texture.hpp>
-#include <Program.hpp>
 
 #ifndef IMACMAN_PERSONNAGE_H
 #define IMACMAN_PERSONNAGE_H
@@ -48,7 +47,7 @@ private:
 
     std::string _texturePath;
     Texture _texture;
-    Program _program;
+    //Program _program;
 
 };
 

@@ -7,7 +7,6 @@
 #include <VAO.hpp>
 #include <glimac/Sphere.hpp>
 #include <Texture.hpp>
-#include <Program.hpp>
 
 #ifndef IMACMAN_OBJET_H
 #define IMACMAN_OBJET_H
@@ -53,7 +52,7 @@ private:
 
     std::string _texturePath;
     Texture _texture;
-    Program _program;
+    //Program _program;
 };
 
 

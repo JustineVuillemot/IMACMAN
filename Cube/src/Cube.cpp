@@ -6,7 +6,7 @@
 #include <glimac/common.hpp>
 #include "Cube.hpp"
 
-Cube::Cube(const glm::vec3 &lower, const glm::vec3 &upper){
+Cube::Cube(const glm::vec3 &lower,const glm::vec3 &upper){
 
     generateVertices(lower, upper);
     generateIndexs();

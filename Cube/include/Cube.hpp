@@ -16,7 +16,9 @@ class Cube {
 public:
 
     Cube(){};
-    Cube(const glm::vec3 &lower, const glm::vec3 &upper);
+    Cube(const glm::vec3 &lower,const glm::vec3 &upper);
+
+    ~Cube() = default;
 
     void remplirBuffers(){
         c_vbo.remplirBuffer(_vertexVec);
@@ -44,6 +46,16 @@ public:
 
     void setPositon(glm::vec3 position){
         _position = position;
+    }
+
+    void print(){
+        int i;
+        for(i=0; i< _vertexVec.size() ; ++i){
+            std::cout << _vertexVec[i].position << std::endl;
+        }
+        for(i=0; i< _indexVec.size() ; ++i){
+            std::cout << _indexVec[i] << std::endl;
+        }
     }
 
 protected:
