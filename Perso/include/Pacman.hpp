@@ -32,7 +32,7 @@ public:
     /* METHODS */
 
     void moveLeft(float distance);
-    void moveRight(float distance);
+    void moveUp(float distance);
 private:
     int _vie;
 };

@@ -8,6 +8,7 @@
 #include <glimac/Sphere.hpp>
 #include <Texture.hpp>
 
+
 #ifndef IMACMAN_OBJET_H
 #define IMACMAN_OBJET_H
 

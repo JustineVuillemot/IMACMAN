@@ -5,8 +5,8 @@
 #include "../include/Pacman.hpp"
 
 void Pacman::moveLeft(float distance) {
-
+    setPos(getPos() + glm::vec3(0, distance, 0));
 }
-void Pacman::moveRight(float distance){
-
+void Pacman::moveUp(float distance){
+    setPos(getPos() + glm::vec3(distance, 0, 0));
 }
