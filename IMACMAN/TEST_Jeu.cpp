@@ -93,26 +93,26 @@ int main(int argc, char** argv) {
                 else if(e.key.keysym.sym == SDLK_DOWN){
                     cam.rotateUp(-5.0);
                 }
-                if (e.key.keysym.sym == SDLK_z  && e.key.state == SDL_PRESSED) { // Z
+                if (e.key.keysym.sym == 119  && e.key.state == SDL_PRESSED) { // Z
                     moveUp = true;
-                } else if (e.key.keysym.sym == SDLK_s  && e.key.state == SDL_PRESSED) { // S
+                } else if (e.key.keysym.sym == 115  && e.key.state == SDL_PRESSED) { // S
                     moveDown = true;
                 }
-                if (e.key.keysym.sym == SDLK_q && e.key.state == SDL_PRESSED) { // Q
+                if (e.key.keysym.sym == 97 && e.key.state == SDL_PRESSED) { // Q
                     moveLeft = true;
-                } else if (e.key.keysym.sym == SDLK_d  && e.key.state == SDL_PRESSED) { // D
+                } else if (e.key.keysym.sym == 100  && e.key.state == SDL_PRESSED) { // D
                     moveRight = true;
                 }
             }
             if(e.type == SDL_KEYUP){
-                if (e.key.keysym.sym == SDLK_z  && e.key.state == SDL_RELEASED) { // Z
+                if (e.key.keysym.sym == 119  && e.key.state == SDL_RELEASED) { // Z
                     moveUp = false;
-                } else if (e.key.keysym.sym == SDLK_s  && e.key.state == SDL_RELEASED) { // S
+                } else if (e.key.keysym.sym == 115  && e.key.state == SDL_RELEASED) { // S
                     moveDown = false;
                 }
-                if (e.key.keysym.sym == SDLK_q && e.key.state == SDL_RELEASED) { // Q
+                if (e.key.keysym.sym == 97 && e.key.state == SDL_RELEASED) { // Q
                     moveLeft = false;
-                } else if (e.key.keysym.sym == SDLK_d  && e.key.state == SDL_RELEASED) { // D
+                } else if (e.key.keysym.sym == 100  && e.key.state == SDL_RELEASED) { // D
                     moveRight = false;
                 }
             }
