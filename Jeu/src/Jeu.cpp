@@ -59,3 +59,25 @@ int Jeu::get_nbrSub() const {
 void Jeu::set_nbrSub(int _nbrSub) {
     Jeu::_nbrSub = _nbrSub;
 }
+
+
+int Jeu::collisionManager(glm::vec3 direction){
+    int i;
+    for(i=0; i < _personnages.size(); ++i){
+        if(_pacman[0]->collisionPerso(*_personnages[i], direction) == 1){
+            return 1;
+        };
+    }
+    for(i=0; i < _objets.size(); ++i){
+        if(_pacman[0]->collisionObjet(*_objets[i], direction) != 0){
+            _objets[i]->setEtat(0);
+            return 2;
+        }
+    }
+    for(i=0; i < _cubes.size(); ++i){
+        if(_pacman[0]->collisionCube(*_cubes[i], direction) != 0){
+            return 3;
+        }
+    }
+    return 0;
+}

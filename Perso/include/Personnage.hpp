@@ -7,6 +7,8 @@
 #include <VAO.hpp>
 #include <glimac/Sphere.hpp>
 #include <Texture.hpp>
+#include <Cube.hpp>
+#include <Objet.hpp>
 
 #ifndef IMACMAN_PERSONNAGE_H
 #define IMACMAN_PERSONNAGE_H
@@ -48,6 +50,10 @@ public:
         p_vbo.remplirBuffer(_PersoObj.getVertexArray());
         p_vao.remplirBuffer(_PersoObj.getVertexArray(), &p_vbo);
     }
+
+    int collisionPerso(Personnage &Perso2, glm::vec3 direction);
+    int collisionObjet(Objet &objet, glm::vec3 direction);
+    int collisionCube(Cube &cube, glm::vec3 direction);
 
 protected:
     glimac::Sphere _PersoObj;

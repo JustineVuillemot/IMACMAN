@@ -82,14 +82,14 @@ int main(int argc, char** argv) {
 
             if (e.type == SDL_KEYDOWN) {
                 if (e.key.keysym.sym == 119) { // Z
-                    perso.moveUp(2.f);
+                    perso.moveUp(0.3f);
                 } else if (e.key.keysym.sym == 115) { // S
-                    perso.moveUp(-2.f);
+                    perso.moveUp(-0.3f);
                 }
                 if (e.key.keysym.sym == 97) { // Q
-                    perso.moveLeft(2.f);
+                    perso.moveLeft(0.3f);
                 } else if (e.key.keysym.sym == 100) { // D
-                    perso.moveLeft(2.f);
+                    perso.moveLeft(-0.3f);
                 }
             }
         }

@@ -70,30 +70,33 @@ public:
         for(i=0; i < _nbrSub; ++i) {
             for (j = 0; j < _nbrSub; ++j) {
                 //position : i*widthCase / heightCase / j*widthCase;
+                //std::cout << _plateau[i][j] << std::endl;
                 switch (_plateau[i][j]) {
+
                     case 0:
-                        _cubes.push_back(new Cube(glm::vec3(i*_widthCase, 0, j*_widthCase), glm::vec3((i+1)*_widthCase, _heightCase, (j+1)*_widthCase)));
+                        _cubes.push_back(new Cube(glm::vec3(j*_widthCase - _nbrSub/2.0 , 0,i*_widthCase - _nbrSub/2.0), glm::vec3((j+1)*_widthCase - _nbrSub/2.0, _heightCase,(i+1)*_widthCase - _nbrSub/2.0 )));
+
                         break;
 
-                        case 1:
-                            _personnages.push_back(new Pacman(glm::vec3(i*_widthCase+_widthCase/2.f, _heightCase/2.f, j*_widthCase+_widthCase/2.f), 0.3));
-                            break;
+                    case 1:
+                        _pacman.push_back(new Pacman(glm::vec3(j*_widthCase+_widthCase/2.f - _nbrSub/2.0, _heightCase/2.f,i*_widthCase+_widthCase/2.f - _nbrSub/2.0 ), 0.3));
+                        break;
 
-                        case 2:
-                            _objets.push_back(new PacGomme(glm::vec3(i*_widthCase+_widthCase/2.f, _heightCase/2.f, j*_widthCase+_widthCase/2.f), 0.1));
-                            break;
+                    case 2:
+                        _objets.push_back(new PacGomme(glm::vec3(j*_widthCase+_widthCase/2.f - _nbrSub/2.0, _heightCase/2.f,i*_widthCase+_widthCase/2.f - _nbrSub/2.0), 0.1));
+                        break;
 
-                        case 3:
-                            _objets.push_back(new Bonus(glm::vec3(i*_widthCase+_widthCase/2.f, _heightCase/2.f, j*_widthCase+_widthCase/2.f), 0.1));
-                            break;
+                    case 3:
+                        _objets.push_back(new Bonus(glm::vec3(j*_widthCase+_widthCase/2.f - _nbrSub/2.0, _heightCase/2.f,i*_widthCase+_widthCase/2.f - _nbrSub/2.0 ), 0.1));
+                        break;
 
-                        case 4:
-                            _personnages.push_back(new Fantome(glm::vec3(i*_widthCase+_widthCase/2.f, _heightCase/2.f, j*_widthCase+_widthCase/2.f), 0.3));
-                            break;
+                    case 4:
+                        _personnages.push_back(new Fantome(glm::vec3(j*_widthCase+_widthCase/2.f - _nbrSub/2.0, _heightCase/2.f,i*_widthCase+_widthCase/2.f - _nbrSub/2.0 ), 0.3));
+                        break;
 
-                        case 5:
-                            _objets.push_back(new Bonus(glm::vec3(i*_widthCase+_widthCase/2.f, _heightCase/2.f, j*_widthCase+_widthCase/2.f), 0.1));
-                            break;
+                    case 5:
+                        _objets.push_back(new Bonus(glm::vec3(j*_widthCase+_widthCase/2.f, _heightCase/2.f,i*_widthCase+_widthCase/2.f ), 0.1));
+                        break;
 
                     default:
                         break;
@@ -106,6 +109,9 @@ public:
         int i;
         for(i=0; i<_cubes.size(); ++i){
             _cubes[i]->remplirBuffers();
+        }
+        for(i=0; i<_pacman.size(); ++i){
+            _pacman[i]->remplirBuffers();
         }
         for(i=0; i<_personnages.size(); ++i){
             _personnages[i]->remplirBuffers();
@@ -120,6 +126,10 @@ public:
         for(i=0; i < _personnages.size() ; ++i){
             delete _personnages[i];
             _personnages[i] = nullptr;
+        }
+        for(i=0; i < _pacman.size() ; ++i){
+            delete _pacman[i];
+            _pacman[i] = nullptr;
         }
         for(i=0; i < _objets.size() ; ++i){
             delete _objets[i];
@@ -143,6 +153,13 @@ public:
             glUniformMatrix4fv(uMVPMatrix, 1, GL_FALSE, glm::value_ptr(mvProjMat*modelViewMat));
             _personnages[i]->draw();
         }
+        for(i=0; i < _pacman.size(); ++i){
+            modelViewMat = _pacman[i]->getViewMatrix(camViewMat);
+            glUniformMatrix4fv(uMVMatrix, 1, GL_FALSE, glm::value_ptr(modelViewMat));
+            glUniformMatrix4fv(uNormalMatrix, 1, GL_FALSE, glm::value_ptr(normalMat));
+            glUniformMatrix4fv(uMVPMatrix, 1, GL_FALSE, glm::value_ptr(mvProjMat*modelViewMat));
+            _pacman[i]->draw();
+        }
         for(i=0; i < _objets.size(); ++i){
             modelViewMat = _objets[i]->getViewMatrix(camViewMat);
             glUniformMatrix4fv(uMVMatrix, 1, GL_FALSE, glm::value_ptr(modelViewMat));
@@ -150,16 +167,18 @@ public:
             glUniformMatrix4fv(uMVPMatrix, 1, GL_FALSE, glm::value_ptr(mvProjMat*modelViewMat));
             _objets[i]->draw();
         }
-
     }
 
+    int collisionManager(glm::vec3 direction);
     //Variables
+    //Pacman _pacman;
+    std::vector<Pacman*> _pacman;
+private:
     int _plateau[10][10];
     std::vector<Cube*> _cubes;
     std::vector<Personnage*> _personnages;
-    std::vector<Objet*> _objets;
-private:
 
+    std::vector<Objet*> _objets;
     int _nbrSub;
     int _score;
     float _widthCase;

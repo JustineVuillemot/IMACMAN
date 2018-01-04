@@ -55,19 +55,24 @@ int main(int argc, char** argv) {
     jeu.addElement();
     jeu.remplirBuffer();
 
-    int i;
+    /*int i;
     int j;
     for(i = 0; i < jeu.get_nbrSub(); ++i){
         for(j = 0; j < jeu.get_nbrSub(); ++j){
             std::cout << jeu._plateau[i][j] << " ";
         }
         std::cout << std::endl;
-    }
+    }*/
 
     glm::mat4 modelViewMat, normalMat, mvProjMat;
 
     TrackballCamera cam;
-    bool rotatebutton;
+    bool rotatebutton = false;
+    bool moveLeft = false;
+    bool moveRight = false;
+    bool moveUp = false;
+    bool moveDown = false;
+
 
     // Application loop:
     bool done = false;
@@ -75,6 +80,42 @@ int main(int argc, char** argv) {
         // Event loop:
         SDL_Event e;
         while(windowManager.pollEvent(e)) {
+            if(e.type == SDL_KEYDOWN){
+                if(e.key.keysym.sym == SDLK_LEFT){
+                    cam.rotateLeft(5.0);
+                }
+                else if(e.key.keysym.sym == SDLK_RIGHT){
+                    cam.rotateLeft(-5.0);
+                }
+                else if(e.key.keysym.sym == SDLK_UP){
+                    cam.rotateUp(5.0);
+                }
+                else if(e.key.keysym.sym == SDLK_DOWN){
+                    cam.rotateUp(-5.0);
+                }
+                if (e.key.keysym.sym == SDLK_z  && e.key.state == SDL_PRESSED) { // Z
+                    moveUp = true;
+                } else if (e.key.keysym.sym == SDLK_s  && e.key.state == SDL_PRESSED) { // S
+                    moveDown = true;
+                }
+                if (e.key.keysym.sym == SDLK_q && e.key.state == SDL_PRESSED) { // Q
+                    moveLeft = true;
+                } else if (e.key.keysym.sym == SDLK_d  && e.key.state == SDL_PRESSED) { // D
+                    moveRight = true;
+                }
+            }
+            if(e.type == SDL_KEYUP){
+                if (e.key.keysym.sym == SDLK_z  && e.key.state == SDL_RELEASED) { // Z
+                    moveUp = false;
+                } else if (e.key.keysym.sym == SDLK_s  && e.key.state == SDL_RELEASED) { // S
+                    moveDown = false;
+                }
+                if (e.key.keysym.sym == SDLK_q && e.key.state == SDL_RELEASED) { // Q
+                    moveLeft = false;
+                } else if (e.key.keysym.sym == SDLK_d  && e.key.state == SDL_RELEASED) { // D
+                    moveRight = false;
+                }
+            }
             if(e.type == SDL_QUIT) {
                 done = true; // Leave the loop after this iteration
             }
@@ -94,6 +135,31 @@ int main(int argc, char** argv) {
                 cam.rotateLeft(e.motion.xrel);
                 cam.rotateUp(e.motion.yrel);
             }
+        }
+
+        if(moveLeft == true){
+            if(jeu.collisionManager(glm::vec3(-0.3,0,0)) == 3){
+                jeu._pacman[0]->moveLeft(0.005f);
+            }
+            jeu._pacman[0]->moveLeft(-0.005f);
+        }
+        if(moveRight == true){
+            if(jeu.collisionManager(glm::vec3(0.3,0,0)) == 3){
+                jeu._pacman[0]->moveLeft(-0.005f);
+            }
+            jeu._pacman[0]->moveLeft(0.005f);
+        }
+        if(moveUp == true){
+            if(jeu.collisionManager(glm::vec3(0,0,-0.3)) == 3){
+                jeu._pacman[0]->moveUp(0.005f);
+            }
+            jeu._pacman[0]->moveUp(-0.005f);
+        }
+        if(moveDown == true){
+            if(jeu.collisionManager(glm::vec3(0,0,0.3)) == 3){
+                jeu._pacman[0]->moveUp(-0.005f);
+            }
+            jeu._pacman[0]->moveUp(0.005f);
         }
 
         modelViewMat = cam.getViewMatrix();

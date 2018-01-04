@@ -5,7 +5,9 @@
 #include "../include/Objet.hpp"
 
 void Objet::draw() {
-    o_vao.bind();
-    glDrawArrays(GL_TRIANGLES, 0, _obj.getVertexCount());
-    o_vao.debind();
+    if(_etat != 0){
+        o_vao.bind();
+        glDrawArrays(GL_TRIANGLES, 0, _obj.getVertexCount());
+        o_vao.debind();
+    }
 }
