@@ -99,3 +99,9 @@ int Personnage::collisionCube(Cube &cube, glm::vec3 direction){
     }
     return 0;
 }
+
+void Personnage::rotatePerso(float newAngle) {
+    float angleRotation = getAngleOrientation() - 360.f + newAngle;
+    setAngleOrientation(newAngle);
+    setRotation(angleRotation);
+}
