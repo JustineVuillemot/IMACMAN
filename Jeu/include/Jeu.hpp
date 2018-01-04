@@ -9,7 +9,11 @@
 #include <vector>
 #include "Cube.hpp"
 #include "Personnage.hpp"
+#include "Pacman.hpp"
+#include "Fantome.hpp"
 #include "Objet.hpp"
+#include "PacGomme.hpp"
+#include "Bonus.hpp"
 
 
 class Jeu {
@@ -55,11 +59,11 @@ public:
         int i =0;
         int j =0;
 
-        for(i=0; i < _nbrSub; ++i) {
+        /*for(i=0; i < _nbrSub; ++i) {
             for (j=0; j < _nbrSub; ++j) {
                 _cubes.push_back(new Cube(glm::vec3(i*_widthCase, -1*_heightCase, j*_widthCase), glm::vec3((i+1)*_widthCase, 0, (j+1)*_widthCase)));
             }
-        }
+        }*/
         int taille = _cubes.size();
         //Creation of the Object in the surface - Séparer de création tableau car : Amélioration : mettre des murs à la place des cubes
         for(i=0; i < _nbrSub; ++i) {
@@ -70,25 +74,25 @@ public:
                         _cubes.push_back(new Cube(glm::vec3(i*_widthCase, 0, j*_widthCase), glm::vec3((i+1)*_widthCase, _heightCase, (j+1)*_widthCase)));
                         break;
 
-                        /*case 1:
-                            _personnages.push_back(new Pacman());
+                        case 1:
+                            _personnages.push_back(new Pacman(glm::vec3(i*_widthCase+_widthCase/2.f, _heightCase/2.f, j*_widthCase+_widthCase/2.f), 0.3));
                             break;
 
                         case 2:
-                            _objets.push_back(new PacGomme());
+                            _objets.push_back(new PacGomme(glm::vec3(i*_widthCase+_widthCase/2.f, _heightCase/2.f, j*_widthCase+_widthCase/2.f), 0.1));
                             break;
 
                         case 3:
-                            _objets.push_back(new Bonus());
+                            _objets.push_back(new Bonus(glm::vec3(i*_widthCase+_widthCase/2.f, _heightCase/2.f, j*_widthCase+_widthCase/2.f), 0.1));
                             break;
 
                         case 4:
-                            _personnages.push_back(new Fantome());
+                            _personnages.push_back(new Fantome(glm::vec3(i*_widthCase+_widthCase/2.f, _heightCase/2.f, j*_widthCase+_widthCase/2.f), 0.3));
                             break;
 
                         case 5:
-                            _objets.push_back(new Bonus());
-                            break;*/
+                            _objets.push_back(new Bonus(glm::vec3(i*_widthCase+_widthCase/2.f, _heightCase/2.f, j*_widthCase+_widthCase/2.f), 0.1));
+                            break;
 
                     default:
                         break;
@@ -101,6 +105,12 @@ public:
         int i;
         for(i=0; i<_cubes.size(); ++i){
             _cubes[i]->remplirBuffers();
+        }
+        for(i=0; i<_personnages.size(); ++i){
+            _personnages[i]->remplirBuffers();
+        }
+        for(i=0; i<_objets.size(); ++i){
+            _objets[i]->remplirBuffers();
         }
     }
 
@@ -120,26 +130,35 @@ public:
         }
     }
 
-    void draw() {
+    void draw(GLuint uMVMatrix, glm::mat4 modelViewMat, GLuint uNormalMatrix, glm::mat4 normalMat, GLuint uMVPMatrix, glm::mat4 mvProjMat, glm::mat4 camViewMat) {
         int i;
-        /*for(i=0; _personnages.size(); ++i){
-            _personnages[i].draw();
-        }
-        for(i=0; _objets.size(); ++i){
-            _objets[i].draw();
-        }*/
         for(i=0; i < _cubes.size(); ++i){
             _cubes[i]->draw();
         }
+        for(i=0; i < _personnages.size(); ++i){
+            modelViewMat = _personnages[i]->getViewMatrix(camViewMat);
+            glUniformMatrix4fv(uMVMatrix, 1, GL_FALSE, glm::value_ptr(modelViewMat));
+            glUniformMatrix4fv(uNormalMatrix, 1, GL_FALSE, glm::value_ptr(normalMat));
+            glUniformMatrix4fv(uMVPMatrix, 1, GL_FALSE, glm::value_ptr(mvProjMat*modelViewMat));
+            _personnages[i]->draw();
+        }
+        for(i=0; i < _objets.size(); ++i){
+            modelViewMat = _objets[i]->getViewMatrix(camViewMat);
+            glUniformMatrix4fv(uMVMatrix, 1, GL_FALSE, glm::value_ptr(modelViewMat));
+            glUniformMatrix4fv(uNormalMatrix, 1, GL_FALSE, glm::value_ptr(normalMat));
+            glUniformMatrix4fv(uMVPMatrix, 1, GL_FALSE, glm::value_ptr(mvProjMat*modelViewMat));
+            _objets[i]->draw();
+        }
+
     }
 
     //Variables
     int _plateau[10][10];
-
-private:
     std::vector<Cube*> _cubes;
     std::vector<Personnage*> _personnages;
     std::vector<Objet*> _objets;
+private:
+
     int _nbrSub;
     int _score;
     float _widthCase;
