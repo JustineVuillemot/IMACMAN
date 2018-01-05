@@ -5,14 +5,19 @@
 #include <Cube.hpp>
 #include "../include/Personnage.hpp"
 
-void Personnage::deplacement() {
-
+void Personnage::deplacement(glm::vec3 dist){
+    setPos(getPos() + dist);
 }
 
 void Personnage::draw() {
     p_vao.bind();
     glDrawArrays(GL_TRIANGLES, 0, _PersoObj.getVertexCount());
     p_vao.debind();
+}
+
+void Personnage::changeDirection(){
+    _direction = glm::vec3(-1*(_direction.z), 0, _direction.x);
+    this->rotatePerso(int(this->getAngleOrientation()+90)%360);
 }
 
 int Personnage::collisionPerso(Personnage &Perso2, glm::vec3 direction){

@@ -20,11 +20,13 @@ public:
     Personnage (glm::vec3 pos, float radius) : _PersoObj(radius, 30, 30){
         _pos = _posInitiale = pos;
         _angleOrientation = 0.f;
+        _direction = glm::vec3(0,0,-0.3);
     }
 
     Personnage (glm::vec3 pos, float radius, glimac::FilePath &appPath) : _PersoObj(radius, 30, 30){
         _pos = _posInitiale = pos;
         _angleOrientation = 0.f;
+        _direction = glm::vec3(0,0,-0.3);
 
         _program = Prog(appPath, "3D", "tex3D");
         _program.addUniform("uMVMatrix");
@@ -49,6 +51,9 @@ public:
     float getRotation(){
         return _rotation;
     }
+    glm::vec3 getDirection(){
+        return _direction;
+    }
 
     /* SETTER */
 
@@ -66,7 +71,8 @@ public:
     }
 
     /* METHODS */
-    void deplacement();
+    void deplacement(glm::vec3 dist);
+    void changeDirection();
     void draw();
 
     void remplirBuffers(){
@@ -90,6 +96,7 @@ protected:
     float _angleOrientation;
     /* Up = 0° || Right = 90° || Down = 180° || Left = 270° */
     float _rotation; //Will be used in Jeu.hpp to rotate
+    glm::vec3 _direction;
 
     std::string _texturePath;
     Texture _texture;

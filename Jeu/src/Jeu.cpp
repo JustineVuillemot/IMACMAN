@@ -5,6 +5,7 @@
 
 #include "Jeu.hpp"
 #include <sstream>
+#include <iostream>
 
 
 Jeu::Jeu(std::string filepath, float widthCase, float heightCase){
@@ -71,6 +72,7 @@ int Jeu::collisionManager(glm::vec3 direction){
     for(i=0; i < _objets.size(); ++i){
         if(_pacman[0]->collisionObjet(*_objets[i], direction) != 0){
             _objets[i]->setEtat(0);
+            _score += 10;
             return 2;
         }
     }
@@ -80,4 +82,32 @@ int Jeu::collisionManager(glm::vec3 direction){
         }
     }
     return 0;
+}
+
+void Jeu::deplacementFantome(float time){
+    int collision = 0;
+    int nbFantome = (time/3)+1;
+
+    if(nbFantome > _personnages.size()){
+        nbFantome = _personnages.size();
+    }
+
+    std::cout << nbFantome << std::endl;
+
+
+    for(int j=0; j<nbFantome; j++){
+
+        for(int i=0; i<_cubes.size(); i++){
+            if(_personnages[j]->collisionCube(*_cubes[i], _personnages[j]->getDirection())){
+                collision = 1;
+            }
+        }
+
+        _personnages[j]->deplacement(_personnages[j]->getDirection()*glm::vec3(0.005/0.3, 0, 0.005/0.3));
+
+        if(collision){
+            _personnages[j]->changeDirection();
+        }
+    }
+
 }
