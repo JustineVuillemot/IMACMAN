@@ -17,6 +17,17 @@ public:
         _vie = 3;
     }
 
+    Pacman (glm::vec3 pos, float radius, glimac::FilePath &appPath){
+        _pos = _posInitiale = pos;
+        _PersoObj = glimac::Sphere(radius, 30, 30);
+        _vie = 3;
+
+        _program = Prog(appPath, "3D", "tex3D3");
+        _program.addUniform("uMVMatrix");
+        _program.addUniform("uMVPMatrix");
+        _program.addUniform("uNormalMatrix");
+    }
+
     /* GETTER */
 
     int getVie(){

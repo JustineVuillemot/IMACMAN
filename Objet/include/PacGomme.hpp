@@ -11,11 +11,23 @@
 class PacGomme : public Objet{
 public:
     PacGomme(){}
+
     PacGomme(glm::vec3 pos, float radius){
         _obj = glimac::Sphere(radius, 30, 30);
         _position = pos;
         _etat = 1;
         _nbrPoint = 5;
+    }
+
+    PacGomme(glm::vec3 pos, float radius, glimac::FilePath &appPath){
+        _obj = glimac::Sphere(radius, 30, 30);
+        _position = pos;
+        _etat = 1;
+        _nbrPoint = 5;
+        _program = Prog(appPath, "3D", "tex3D");
+        _program.addUniform("uMVMatrix");
+        _program.addUniform("uMVPMatrix");
+        _program.addUniform("uNormalMatrix");
     }
 };
 

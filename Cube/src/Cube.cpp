@@ -14,6 +14,8 @@ Cube::Cube(const glm::vec3 &lower,const glm::vec3 &upper){
     _position = glm::vec3(lower.x, upper.y, lower.z);
 }
 
+//Cube::Cube(const glm::vec3 &lower,const glm::vec3 &upper, glimac::FilePath appPath)
+
 void Cube::generateVertices(const glm::vec3 &lower, const glm::vec3 &upper){
     //face AVANT
     _vertexVec.push_back(ShapeVertex(upper, glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,0))); //haut droit

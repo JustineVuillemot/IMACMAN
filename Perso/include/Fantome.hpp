@@ -17,6 +17,17 @@ public:
         _etat = 0;
     }
 
+    Fantome (glm::vec3 pos, float radius, glimac::FilePath &appPath){
+        _PersoObj = glimac::Sphere(radius, 30, 30);
+        _pos = _posInitiale = pos;
+        _etat = 0;
+
+        _program = Prog(appPath, "3D", "tex3D4");
+        _program.addUniform("uMVMatrix");
+        _program.addUniform("uMVPMatrix");
+        _program.addUniform("uNormalMatrix");
+    }
+
     /* GETTER */
 
     int getEtat(){
