@@ -86,7 +86,7 @@ int Jeu::collisionManager(glm::vec3 direction){
 
 void Jeu::deplacementFantome(float time){
     int collision = 0;
-    int nbFantome = (time/3)+1;
+    int nbFantome = (time/3)+1; //+1 to be >0
 
     if(nbFantome > _personnages.size()){
         nbFantome = _personnages.size();
@@ -96,6 +96,7 @@ void Jeu::deplacementFantome(float time){
 
 
     for(int j=0; j<nbFantome; j++){
+        collision = 0;
 
         for(int i=0; i<_cubes.size(); i++){
             if(_personnages[j]->collisionCube(*_cubes[i], _personnages[j]->getDirection())){
