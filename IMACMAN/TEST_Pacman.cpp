@@ -53,7 +53,7 @@ int main(int argc, char** argv) {
         std::cerr << "Erreur : " << s << std::endl;
     }
 
-    jeu.addElement();
+    jeu.addElement(applicationPath);
     jeu.remplirBuffer();
 
     /*int i;

@@ -7,6 +7,7 @@
 #include <VAO.hpp>
 #include <glimac/Sphere.hpp>
 #include <Texture.hpp>
+#include "Prog.hpp"
 
 
 #ifndef IMACMAN_OBJET_H
@@ -20,6 +21,16 @@ public:
         _position = pos;
         _etat = 1;
         _nbrPoint = 5;
+    }
+
+    Objet(glm::vec3 pos, float radius, glimac::FilePath &appPath) : _obj(radius, 30, 30){
+        _position = pos;
+        _etat = 1;
+        _nbrPoint = 5;
+        _program = Prog(appPath, "3D", "tex3D");
+        _program.addUniform("uMVMatrix");
+        _program.addUniform("uMVPMatrix");
+        _program.addUniform("uNormalMatrix");
     }
 
     /* GETTER */
@@ -56,6 +67,7 @@ public:
         o_vao.remplirBuffer(_obj.getVertexArray(), &o_vbo);
     }
 
+    Prog _program;
 protected:
     glimac::Sphere _obj;
     VAO o_vao;

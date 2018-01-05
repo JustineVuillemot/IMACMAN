@@ -6,6 +6,7 @@
 #define IMACMAN_CUBE_H
 
 #include <vector>
+#include <Prog.hpp>
 #include "VBO.hpp"
 #include "VAO.hpp"
 #include "IBO.hpp"
@@ -20,6 +21,18 @@ public:
 
     //lower = coin bas gauche arrière // upper = coin haut droit devant
     Cube(const glm::vec3 &lower, const glm::vec3 &upper);
+
+    Cube(const glm::vec3 &lower,const glm::vec3 &upper, glimac::FilePath &appPath){
+
+        generateVertices(lower, upper);
+        generateIndexs();
+
+        _position = glm::vec3(lower.x, upper.y, lower.z);
+        _program = Prog(appPath, "3D", "tex3D2");
+        _program.addUniform("uMVMatrix");
+        _program.addUniform("uMVPMatrix");
+        _program.addUniform("uNormalMatrix");
+    }
 
 
     void remplirBuffers(){
@@ -60,6 +73,7 @@ public:
         }
     }
 
+    Prog _program;
 protected:
     std::vector<ShapeVertex> _vertexVec;
     std::vector<uint32_t> _indexVec;

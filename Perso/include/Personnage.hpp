@@ -22,6 +22,16 @@ public:
         _angleOrientation = 0.f;
     }
 
+    Personnage (glm::vec3 pos, float radius, glimac::FilePath &appPath) : _PersoObj(radius, 30, 30){
+        _pos = _posInitiale = pos;
+        _angleOrientation = 0.f;
+
+        _program = Prog(appPath, "3D", "tex3D");
+        _program.addUniform("uMVMatrix");
+        _program.addUniform("uMVPMatrix");
+        _program.addUniform("uNormalMatrix");
+    }
+
     /* GETTER */
 
     glm::vec3 getPos(){
@@ -70,6 +80,7 @@ public:
 
     void rotatePerso(float newAngle);
 
+    Prog _program;
 protected:
     glimac::Sphere _PersoObj;
     VAO p_vao;
