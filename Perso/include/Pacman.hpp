@@ -26,6 +26,8 @@ public:
         _program.addUniform("uMVMatrix");
         _program.addUniform("uMVPMatrix");
         _program.addUniform("uNormalMatrix");
+        _program.addUniform("uTexture");
+        _texture = Texture("C:\\Users\\Etienne\\IMACMAN\\IMACMAN\\asset\\Textures\\pacmantest.jpg"); //a changer
     }
 
     /* GETTER */
@@ -44,6 +46,8 @@ public:
 
     void moveLeft(float distance);
     void moveUp(float distance);
+
+    Texture _texture;
 private:
     int _vie;
 };

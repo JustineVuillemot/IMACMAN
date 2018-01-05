@@ -160,12 +160,15 @@ public:
         }
         for(i=0; i < _pacman.size(); ++i){
             _pacman[i]->_program.use();
+            _pacman[i]->_program.sendUniform1i(_pacman[i]->_texture._texture, 0);
             modelViewMat = _pacman[i]->getViewMatrix(camViewMat);
             modelViewMat = glm::rotate(modelViewMat, _pacman[i]->getRotation(), glm::vec3(0, 1, 0));
             _pacman[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _pacman[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _pacman[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
+            _pacman[i]->_texture.bind();
             _pacman[i]->draw();
+            _pacman[i]->_texture.debind();
         }
         for(i=0; i < _objets.size(); ++i){
             _objets[i]->_program.use();

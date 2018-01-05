@@ -19,6 +19,11 @@ public:
         glUniformMatrix4fv(_varUnis[name], 1, GL_FALSE, glm::value_ptr(value));
     }
 
+    void sendUniform1i(GLuint value, int num){
+        glUniform1i(value, num);
+    }
+
+
     void use();
 
 private:
