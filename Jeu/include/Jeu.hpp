@@ -171,6 +171,8 @@ public:
     }
 
     int collisionManager(glm::vec3 direction);
+    void deplacementFantome();
+
     //Variables
     //Pacman _pacman;
     std::vector<Pacman*> _pacman;

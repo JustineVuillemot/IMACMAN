@@ -56,7 +56,7 @@ public:
     }
 
     /* METHODS */
-    void deplacement();
+    void deplacement(float distX, float distY);
     void draw();
 
     void remplirBuffers(){

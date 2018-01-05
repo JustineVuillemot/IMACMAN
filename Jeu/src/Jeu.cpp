@@ -81,3 +81,8 @@ int Jeu::collisionManager(glm::vec3 direction){
     }
     return 0;
 }
+
+
+void Jeu::deplacementFantome(){
+    _personnages[0]->deplacement(0.f, 0.005f);
+}
