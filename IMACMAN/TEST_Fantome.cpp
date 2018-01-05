@@ -13,9 +13,6 @@
 #include "Cube.hpp"
 #include "Jeu.hpp"
 
-
-
-
 using namespace glimac;
 
 int main(int argc, char** argv) {
@@ -53,7 +50,7 @@ int main(int argc, char** argv) {
         std::cerr << "Erreur : " << s << std::endl;
     }
 
-    jeu.addElement();
+    jeu.addElement(applicationPath);
     jeu.remplirBuffer();
 
     glm::mat4 modelViewMat, normalMat, mvProjMat;
@@ -159,7 +156,7 @@ int main(int argc, char** argv) {
         }
 
         //FANTOMES
-        jeu.deplacementFantome();
+        jeu.deplacementFantome(windowManager.getTime());
 
         modelViewMat = cam.getViewMatrix();
         mvProjMat = glm::perspective(glm::radians(70.f), width/height, 0.1f, 100.f);
