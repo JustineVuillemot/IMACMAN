@@ -69,10 +69,12 @@ public:
     void setRotation(float angleRotation){
         _rotation = angleRotation;
     }
+    void setDirection(glm::vec3 direction){
+        _direction = direction;
+    }
 
     /* METHODS */
     void deplacement(glm::vec3 dist);
-    void changeDirection();
     void draw();
 
     void remplirBuffers(){
