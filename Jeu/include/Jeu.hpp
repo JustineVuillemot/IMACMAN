@@ -14,6 +14,7 @@
 #include "Fantome.hpp"
 #include "Objet.hpp"
 #include "PacGomme.hpp"
+#include "SuperPacGomme.hpp"
 #include "Bonus.hpp"
 
 
@@ -87,7 +88,7 @@ public:
                         break;
 
                     case 3:
-                        _objets.push_back(new Bonus(glm::vec3(j*_widthCase+_widthCase/2.f - _nbrSub/2.0, _heightCase/2.f,i*_widthCase+_widthCase/2.f - _nbrSub/2.0 ), 0.1, appPath));
+                        _objets.push_back(new SuperPacGomme(glm::vec3(j*_widthCase+_widthCase/2.f - _nbrSub/2.0, _heightCase/2.f,i*_widthCase+_widthCase/2.f - _nbrSub/2.0 ), 0.2, appPath));
                         break;
 
                     case 4:
@@ -95,7 +96,7 @@ public:
                         break;
 
                     case 5:
-                        _objets.push_back(new Bonus(glm::vec3(j*_widthCase+_widthCase/2.f, _heightCase/2.f,i*_widthCase+_widthCase/2.f ), 0.1, appPath));
+                        _objets.push_back(new Bonus(glm::vec3(j*_widthCase+_widthCase/2.f - _nbrSub/2.0, _heightCase/2.f,i*_widthCase+_widthCase/2.f - _nbrSub/2.0), 0.15, appPath));
                         break;
 
                     default:
@@ -145,6 +146,7 @@ public:
         int i;
         for(i=0; i < _cubes.size(); ++i){
             _cubes[i]->_program.use();
+            modelViewMat = camViewMat;
             _cubes[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _cubes[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _cubes[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);

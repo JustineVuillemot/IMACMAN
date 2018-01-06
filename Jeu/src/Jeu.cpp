@@ -71,8 +71,18 @@ int Jeu::collisionManager(glm::vec3 direction){
     }
     for(i=0; i < _objets.size(); ++i){
         if(_pacman[0]->collisionObjet(*_objets[i], direction) != 0){
-            _objets[i]->setEtat(0);
-            _score += 10;
+            if(_objets[i]->getEtat() == 2){
+                _objets[i]->setEtat(0);
+                _score += 100;
+            }
+            else if(_objets[i]->getEtat() == 3){
+                _objets[i]->setEtat(0);
+                _score += 50;
+            }
+            else{
+                _objets[i]->setEtat(0);
+                _score += 10;
+            }
             return 2;
         }
     }
@@ -96,7 +106,6 @@ void Jeu::deplacementFantome(float time){
 
 
     for(int j=0; j<nbFantome; j++){
-
         for(int i=0; i<_cubes.size(); i++){
             if(_personnages[j]->collisionCube(*_cubes[i], _personnages[j]->getDirection())){
                 collision = 1;

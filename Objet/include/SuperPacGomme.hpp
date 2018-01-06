@@ -1,27 +1,23 @@
-//
-// Created by Alexian on 16/12/2017.
-//
+#ifndef IMACGL_SUPERPACGOMME_HPP
+#define IMACGL_SUPERPACGOMME_HPP
 
 #include "Objet.hpp"
 
-#ifndef IMACMAN_BONUS_H
-#define IMACMAN_BONUS_H
-
-
-class Bonus : public Objet{
+class SuperPacGomme : public Objet{
 public:
-    Bonus(){}
-    Bonus(glm::vec3 pos, float radius){
+    SuperPacGomme(){}
+
+    SuperPacGomme(glm::vec3 pos, float radius){
         _obj = glimac::Sphere(radius, 30, 30);
         _position = pos;
-        _etat = 3;
+        _etat = 2;
         _nbrPoint = 5;
     }
 
-    Bonus(glm::vec3 pos, float radius, glimac::FilePath &appPath){
+    SuperPacGomme(glm::vec3 pos, float radius, glimac::FilePath &appPath){
         _obj = glimac::Sphere(radius, 30, 30);
         _position = pos;
-        _etat = 3;
+        _etat = 2;
         _nbrPoint = 5;
         _program = Prog(appPath, "3D", "tex3D");
         _program.addUniform("uMVMatrix");
@@ -30,5 +26,4 @@ public:
     }
 };
 
-
-#endif //IMACMAN_BONUS_H
+#endif //IMACGL_SUPERPACGOMME_HPP

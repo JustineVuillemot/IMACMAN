@@ -27,7 +27,7 @@ public:
         _program.addUniform("uMVPMatrix");
         _program.addUniform("uNormalMatrix");
         _program.addUniform("uTexture");
-        _texture = Texture("C:\\Users\\Etienne\\IMACMAN\\IMACMAN\\asset\\Textures\\pacmantest.jpg"); //a changer
+        _texture = Texture("../../asset/Textures/pacmantest.jpg");
     }
 
     /* GETTER */
