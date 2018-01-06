@@ -182,6 +182,7 @@ public:
 
     int collisionManager(glm::vec3 direction);
     void deplacementFantome(float time);
+    glm::vec3 testNewtDir(int index, const glm::vec3 dir);
 
     //Variables
     //Pacman _pacman;

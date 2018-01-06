@@ -15,11 +15,6 @@ void Personnage::draw() {
     p_vao.debind();
 }
 
-void Personnage::changeDirection(){
-    _direction = glm::vec3(-1*(_direction.z), 0, _direction.x);
-    this->rotatePerso(int(this->getAngleOrientation()+90)%360);
-}
-
 int Personnage::collisionPerso(Personnage &Perso2, glm::vec3 direction){
     glm::vec3 posPerso2 = Perso2.getPos(); //contour de la sphère
     if(direction.x != 0){

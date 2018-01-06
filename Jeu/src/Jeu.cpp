@@ -6,6 +6,7 @@
 #include "Jeu.hpp"
 #include <sstream>
 #include <iostream>
+#include <cmath>
 
 
 Jeu::Jeu(std::string filepath, float widthCase, float heightCase){
@@ -84,6 +85,25 @@ int Jeu::collisionManager(glm::vec3 direction){
     return 0;
 }
 
+glm::vec3 Jeu::testNewtDir(int index, const glm::vec3 dir){
+    int collision = 0;
+    glm::vec3 newDir = glm::vec3(fabs(dir.z), 0, -fabs(dir.x));
+
+    //std::cout << fabs(dir.z) << std::endl;
+
+    for(int i=0; i<_cubes.size(); i++){
+        if(_personnages[index]->collisionCube(*_cubes[i], newDir)){
+            collision = 1;
+        }
+    }
+
+    if(!collision){
+        return newDir;
+    }
+
+    return -newDir;
+}
+
 void Jeu::deplacementFantome(float time){
     int collision = 0;
     int nbFantome = (time/3)+1; //+1 to be >0
@@ -92,7 +112,7 @@ void Jeu::deplacementFantome(float time){
         nbFantome = _personnages.size();
     }
 
-    std::cout << nbFantome << std::endl;
+    //std::cout << nbFantome << std::endl;
 
 
     for(int j=0; j<nbFantome; j++){
@@ -107,7 +127,8 @@ void Jeu::deplacementFantome(float time){
         _personnages[j]->deplacement(_personnages[j]->getDirection()*glm::vec3(0.005/0.3, 0, 0.005/0.3));
 
         if(collision){
-            _personnages[j]->changeDirection();
+            //std::cout <<  _personnages[j]->getDirection() << std::endl;
+            _personnages[j]->setDirection(testNewtDir(j, _personnages[j]->getDirection()));
         }
     }
 
