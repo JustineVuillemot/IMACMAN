@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
     Jeu jeu;
 
     try{
-        jeu = Jeu("../../Level/Level4.txt", 1.f, 1.f);
+        jeu = Jeu("../../Level/Level1.txt", 1.f, 1.f);
     }
     catch(const std::string &s){
         std::cerr << "Erreur : " << s << std::endl;
