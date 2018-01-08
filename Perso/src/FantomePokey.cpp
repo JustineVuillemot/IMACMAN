@@ -3,3 +3,7 @@
 //
 
 #include "FantomePokey.hpp"
+
+void FantomePokey::deplacement(glm::vec3 dist){
+
+}

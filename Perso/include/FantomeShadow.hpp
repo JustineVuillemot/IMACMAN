@@ -9,7 +9,8 @@
 
 
 class FantomeShadow : public Fantome{
-
+public:
+    void deplacement(glm::vec3 dist);
 };
 
 

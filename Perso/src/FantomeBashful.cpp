@@ -3,3 +3,7 @@
 //
 
 #include "FantomeBashful.hpp"
+
+void FantomeBashful::deplacement(glm::vec3 dist){
+
+}

@@ -9,6 +9,8 @@
 
 
 class FantomeBashful : public Fantome{
+public:
+    void deplacement(glm::vec3 dist);
 
 };
 

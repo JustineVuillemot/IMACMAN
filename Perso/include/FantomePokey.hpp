@@ -9,6 +9,8 @@
 #include "Fantome.hpp"
 
 class FantomePokey : public Fantome{
+public:
+    void deplacement(glm::vec3 dist);
 
 };
 

@@ -9,7 +9,8 @@
 
 
 class FantomeSpeedy : public Fantome{
-
+public:
+    void deplacement(glm::vec3 dist);
 };
 
 

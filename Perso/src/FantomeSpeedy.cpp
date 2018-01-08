@@ -3,3 +3,7 @@
 //
 
 #include "FantomeSpeedy.hpp"
+
+void FantomeSpeedy::deplacement(glm::vec3 dist){
+
+}

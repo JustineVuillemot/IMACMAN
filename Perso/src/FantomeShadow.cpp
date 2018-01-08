@@ -3,3 +3,7 @@
 //
 
 #include "FantomeShadow.hpp"
+
+void FantomeShadow::deplacement(glm::vec3 dist){
+
+}
