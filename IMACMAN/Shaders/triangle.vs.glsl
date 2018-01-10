@@ -1,11 +1,11 @@
 #version 330
 
-layout(location = 0) in vec2 aVertexPosition;
-layout(location = 8) in vec3 aVertexColor;
+layout(location = 0) in vec3 aVertexPosition;
+layout(location = 2) in vec2 aVertexTexCoords;
 
-out vec3 vColor;
+out vec2 vTexCoords;
 
 void main() {
-    vColor = vec3(1, 0, 0);
-    gl_Position = vec4(aVertexPosition, 0, 1);
+    vTexCoords = aVertexTexCoords;
+    gl_Position = vec4(aVertexPosition.xy, 0, 1);
 }

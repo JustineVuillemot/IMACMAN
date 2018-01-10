@@ -142,7 +142,7 @@ public:
         }
     }
 
-    void draw(GLuint uMVMatrix, glm::mat4 modelViewMat, GLuint uNormalMatrix, glm::mat4 normalMat, GLuint uMVPMatrix, glm::mat4 mvProjMat, glm::mat4 camViewMat) {
+    void draw(glm::mat4 modelViewMat, glm::mat4 normalMat, glm::mat4 mvProjMat, glm::mat4 camViewMat) {
         int i;
         for(i=0; i < _cubes.size(); ++i){
             _cubes[i]->_program.use();

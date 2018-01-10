@@ -5,6 +5,7 @@
 #include <string>
 #include <GL/glew.h>
 #include <glimac/Image.hpp>
+#include <SDL/SDL.h>
 
 
 class Texture {
@@ -17,6 +18,21 @@ public:
         catch(const std::string &s){
             std::cout << "Erreur : " << s << std::endl;
         }
+    }
+
+    Texture(const SDL_Surface &surface){
+        GLenum texture_format;
+        if (surface.format->Rmask == 0x000000ff)
+            texture_format = GL_RGBA;
+        else
+            texture_format = GL_BGRA;
+
+        glGenTextures(1, &_texture);
+        bind();
+        glTexImage2D(GL_TEXTURE_2D, 0, 4, surface.w, surface.h, 0, texture_format, GL_UNSIGNED_BYTE, surface.pixels);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        debind();
     }
 
     void load(std::string path){

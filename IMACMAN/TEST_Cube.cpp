@@ -14,7 +14,7 @@
 #include <glimac/Image.hpp>
 #include <glimac/SDLWindowManager.hpp>
 #include <glimac/TrackballCamera.hpp>
-#include "Mur.hpp"
+#include "Cube.hpp"
 
 
 
@@ -47,8 +47,8 @@ int main(int argc, char** argv) {
     GLuint uNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
 
     //Cube mur = Cube(glm::vec3(-1.f, -0.2f, -1.f), glm::vec3(0.f, 0.2f, 0.f));
-    Mur mur = Mur(glm::vec3(-0.5f, -0.2f, -0.5f), 2.f, 1.5f, 2.f);
-    Mur mur2 = Mur(glm::vec3(1.5f, -0.2f, -0.5f), 2.f, 1.5f, 2.f);
+    Cube mur = Cube(glm::vec3(-0.5f, -0.2f, -0.5f), glm::vec3(0.5f, 0.2f, 0.5f));
+    Cube mur2 = Cube(glm::vec3(0.5f, -0.2f, -0.5f), glm::vec3(1.5f, 0.2f, 0.5f));
 
     mur.remplirBuffers();
     mur2.remplirBuffers();
