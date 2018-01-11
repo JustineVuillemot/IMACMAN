@@ -15,12 +15,14 @@ public:
         _pos = _posInitiale = pos;
         _PersoObj = glimac::Sphere(radius, 30, 30);
         _vie = 3;
+        _etat = 0;
     }
 
     Pacman (glm::vec3 pos, float radius, glimac::FilePath &appPath){
         _pos = _posInitiale = pos;
         _PersoObj = glimac::Sphere(radius, 30, 30);
         _vie = 3;
+        _etat = 0;
 
         _program = Prog(appPath, "3D", "tex3D3");
         _program.addUniform("uMVMatrix");
@@ -36,11 +38,15 @@ public:
         return _vie;
     }
 
+    int getEtat() const;
+
     /* SETTER */
 
     void setVie(int vie){
         _vie = vie;
     }
+
+    void setEtat(int _etat);
 
     /* METHODS */
 
@@ -50,6 +56,8 @@ public:
     Texture _texture;
 private:
     int _vie;
+    int _etat; //Etat = 0, Pacman peut mourir, sinon il peut tuer les fantômes
+
 };
 
 

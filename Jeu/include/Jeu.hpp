@@ -43,9 +43,14 @@ public:
     }
     int get_nbrSub() const;
 
+    float getTimeTouch() const;
+    float getTimePacman() const;
 
     /* SETTER */
     void set_nbrSub(int _nbrSub);
+
+    void setTimeTouch(float time);
+    void setTimePacman(float time);
 
     void setScore(int score){
         _score = score;
@@ -146,11 +151,14 @@ public:
         int i;
         for(i=0; i < _cubes.size(); ++i){
             _cubes[i]->_program.use();
+            //_cubes[i]->_program.sendUniform1i(_cubes[i]->_texture._texture, 0);
             modelViewMat = camViewMat;
             _cubes[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _cubes[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _cubes[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
+            //_cubes[i]->_texture.bind();
             _cubes[i]->draw();
+            //_cubes[i]->_texture.debind();
         }
         for(i=0; i < _personnages.size(); ++i){
             _personnages[i]->_program.use();
@@ -174,15 +182,21 @@ public:
         }
         for(i=0; i < _objets.size(); ++i){
             _objets[i]->_program.use();
+            _objets[i]->_program.sendUniform1i(_objets[i]->_texture._texture, 0);
             modelViewMat = _objets[i]->getViewMatrix(camViewMat);
             _objets[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _objets[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _objets[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
             _objets[i]->draw();
+            _objets[i]->_texture.bind();
+            _objets[i]->draw();
+            _objets[i]->_texture.debind();
         }
     }
 
     int collisionManager(glm::vec3 direction);
+    int collisionManager(glm::vec3 direction, float time);
+    void retourPerso();
     void deplacementFantome(float time);
     glm::vec3 testNewtDir(int index, const glm::vec3 dir);
 
@@ -199,6 +213,8 @@ private:
     int _score;
     float _widthCase;
     float _heightCase;
+    float _timeTouch; //To know when pacman was touch for the last time
+    float _timePacman; //To check when pacman touch a super pac gomme for the last time
 };
 
 

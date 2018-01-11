@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
     Jeu jeu;
 
     try{
-        jeu = Jeu("../../Level/Level1.txt", 1.f, 1.f);
+        jeu = Jeu("../../Level/Level2.txt", 1.f, 1.f);
     }
     catch(const std::string &s){
         std::cerr << "Erreur : " << s << std::endl;
@@ -127,36 +127,50 @@ int main(int argc, char** argv) {
         }
 
         if(moveLeft == true){
-            if(jeu.collisionManager(glm::vec3(-0.3,0,0)) == 3){
+            if(jeu.collisionManager(glm::vec3(-0.3,0,0), windowManager.getTime()) == 3){
                 jeu._pacman[0]->moveLeft(0.005f);
             }
             jeu._pacman[0]->moveLeft(-0.005f);
             jeu._pacman[0]->rotatePerso(270.f);
         }
-        if(moveRight == true){
-            if(jeu.collisionManager(glm::vec3(0.3,0,0)) == 3){
+        else if(moveRight == true){
+            if(jeu.collisionManager(glm::vec3(0.3,0,0), windowManager.getTime()) == 3){
                 jeu._pacman[0]->moveLeft(-0.005f);
             }
             jeu._pacman[0]->moveLeft(0.005f);
             jeu._pacman[0]->rotatePerso(90.f);
         }
-        if(moveUp == true){
-            if(jeu.collisionManager(glm::vec3(0,0,-0.3)) == 3){
+        else if(moveUp == true){
+            if(jeu.collisionManager(glm::vec3(0,0,-0.3), windowManager.getTime()) == 3){
                 jeu._pacman[0]->moveUp(0.005f);
             }
             jeu._pacman[0]->moveUp(-0.005f);
             jeu._pacman[0]->rotatePerso(0.f);
         }
-        if(moveDown == true){
-            if(jeu.collisionManager(glm::vec3(0,0,0.3)) == 3){
+        else if(moveDown == true){
+            if(jeu.collisionManager(glm::vec3(0,0,0.3), windowManager.getTime()) == 3){
                 jeu._pacman[0]->moveUp(-0.005f);
             }
             jeu._pacman[0]->moveUp(0.005f);
             jeu._pacman[0]->rotatePerso(180.f);
         }
+        else{
+            //necessaire pour que pacman meurt s'il ne bouge pas
+            jeu.collisionManager(glm::vec3(0.0,0,0), windowManager.getTime());
+        }
+
+        if(jeu._pacman[0]->getVie() == 0){ //FIN DU JEU
+            done = true;
+        }
+
+        if(windowManager.getTime() - jeu.getTimePacman() > 8.0 && jeu.getTimePacman() != 0){ //La superPacGomme dure 8 secondes
+            std::cout << "FIN DE L'EFFET" << std::endl;
+            jeu._pacman[0]->setEtat(0);
+            jeu.setTimePacman(0);
+        }
 
         //FANTOMES
-        jeu.deplacementFantome(windowManager.getTime());
+        jeu.deplacementFantome(windowManager.getTime() - jeu.getTimeTouch());
 
         modelViewMat = cam.getViewMatrix();
         mvProjMat = glm::perspective(glm::radians(70.f), width/height, 0.1f, 100.f);

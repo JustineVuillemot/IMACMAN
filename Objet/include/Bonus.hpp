@@ -23,10 +23,12 @@ public:
         _position = pos;
         _etat = 3;
         _nbrPoint = 5;
-        _program = Prog(appPath, "3D", "tex3D");
+        _program = Prog(appPath, "3D", "tex3D3");
         _program.addUniform("uMVMatrix");
         _program.addUniform("uMVPMatrix");
         _program.addUniform("uNormalMatrix");
+        _program.addUniform("uTexture");
+        _texture = Texture("../../asset/Textures/pacmantest.jpg");
     }
 };
 

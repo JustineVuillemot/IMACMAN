@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <Prog.hpp>
+#include <Texture.hpp>
 #include "VBO.hpp"
 #include "VAO.hpp"
 #include "IBO.hpp"
@@ -28,10 +29,13 @@ public:
         generateIndexs();
 
         _position = glm::vec3(lower.x, upper.y, lower.z);
+        //_program = Prog(appPath, "3D", "tex3D3");
         _program = Prog(appPath, "3D", "tex3D2");
         _program.addUniform("uMVMatrix");
         _program.addUniform("uMVPMatrix");
         _program.addUniform("uNormalMatrix");
+        //_program.addUniform("uTexture");
+        //_texture = Texture("../../asset/Textures/Cube.png");
     }
 
 
@@ -72,7 +76,7 @@ public:
             std::cout << _indexVec[i] << std::endl;
         }
     }
-
+    Texture _texture;
     Prog _program;
 protected:
     std::vector<ShapeVertex> _vertexVec;
