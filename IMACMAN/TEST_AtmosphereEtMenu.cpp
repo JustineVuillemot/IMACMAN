@@ -121,6 +121,18 @@ int main(int argc, char** argv) {
                 if(e.type == SDL_QUIT) {
                     done = true; // Leave the loop after this iteration
                 }
+                //Game save & load managment
+                if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT) {
+                    if(e.button.x > 274 && e.button.x < 517 && e.button.y > 330 && e.button.y < 350){//recommencer
+                        std::cout << "Recommencer le jeu" << std::endl;
+                    }
+                    if(e.button.x > 290 && e.button.x < 501 && e.button.y > 390 && e.button.y < 410){//save
+                        std::cout << "Sauvegarder partie" << std::endl;
+                    }
+                    if(e.button.x > 300 && e.button.x < 490 && e.button.y > 450 && e.button.y < 470){//load
+                        std::cout << "Charger partie" << std::endl;
+                    }
+                }
             }
         }else {
             while (windowManager.pollEvent(e)) {
@@ -239,7 +251,7 @@ int main(int argc, char** argv) {
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-
+        atmo.remplirBuffers();
         //ATMOSPHERE
         atmo._program.use();
         if(atmo.getEtat() == 0){
@@ -266,6 +278,8 @@ int main(int argc, char** argv) {
 
         jeu.draw(modelViewMat, normalMat, mvProjMat, cam.getViewMatrix());
 
+        glDisable(GL_DEPTH_TEST);
+
         //UI
         progUI.use();
         glUniform1i(uTexUI, 0);
@@ -275,6 +289,7 @@ int main(int argc, char** argv) {
         if(menu){
             pauseMenu.draw();
         }
+        glEnable(GL_DEPTH_TEST);
 
         points.refreshText("Points : "+std::to_string(jeu.getScore()));
         vies.refreshText("Vies : "+std::to_string(jeu._pacman[0]->getVie()));
