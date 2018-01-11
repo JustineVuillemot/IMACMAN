@@ -42,7 +42,25 @@ int main(int argc, char** argv) {
     Program progUI = loadProgram(applicationPath.dirPath() + "shaders/triangle.vs.glsl",
                                   applicationPath.dirPath() + "shaders/triangle.fs.glsl");
 
-    UI points = UI("../../asset/arial.ttf", glm::vec2(-0.8, 0.8));
+    UI points;
+
+    try{
+        points = UI("../../asset/arial.ttf", glm::vec2(-0.8, 0.8), "Points : 0");
+    }
+    catch(const std::invalid_argument &err){
+        std::cerr << err.what() << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
+    UI vies;
+
+    try{
+        vies = UI("../../asset/arial.ttf", glm::vec2(0.6, 0.8), "Vies : 3");
+    }
+    catch(const std::invalid_argument &err){
+        std::cerr << err.what() << std::endl;
+        exit(EXIT_FAILURE);
+    }
 
     /*UNIFORMES*/
     GLuint uTexUI = glGetUniformLocation(progUI.getGLId(), "uTexture");
@@ -167,7 +185,7 @@ int main(int argc, char** argv) {
         }
 
         //FANTOMES
-        jeu.deplacementFantome(windowManager.getTime());
+        //jeu.deplacementFantome(windowManager.getTime());
 
         modelViewMat = cam.getViewMatrix();
         mvProjMat = glm::perspective(glm::radians(70.f), width/height, 0.1f, 100.f);
@@ -181,6 +199,9 @@ int main(int argc, char** argv) {
         progUI.use();
         glUniform1i(uTexUI, 0);
         points.draw();
+        vies.draw();
+        points.refreshText("Points : "+std::to_string(jeu.getScore()));
+        vies.refreshText("Vies : "+std::to_string(jeu._pacman[0]->getVie()));
 
         // Update the display
         windowManager.swapBuffers();

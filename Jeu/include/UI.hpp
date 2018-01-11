@@ -18,10 +18,20 @@ public:
     UI(){};
     ~UI() = default;
 
-    UI(std::string fontPath, glm::vec2 position);
+    UI(std::string fontPath, glm::vec2 position, std::string texte);
 
-    void generateSurface();
+    void generateSurface(std::string texte);
     void generateTexture();
+
+    void generateVertices();
+    void generateIndexs();
+    void remplirBuffers(){
+        ui_vbo.remplirBuffer(_vertexVec);
+        ui_ibo.remplirBuffer(_indexVect);
+        ui_vao.remplirBuffer(_vertexVec, &ui_vbo, &ui_ibo);
+    }
+
+    void refreshText(std::string texte);
     void draw();
 
     /* GETTER */
@@ -40,10 +50,11 @@ private:
     VBO ui_vbo;
     IBO ui_ibo;
     VAO ui_vao;
-    SDL_Surface* _texte;
+    SDL_Surface* _texteSurface;
     std::string _fontPath;
     Texture _texture;
-
+    std::vector<ShapeVertex> _vertexVec;
+    std::vector<uint32_t> _indexVect;
 };
 
 #endif //IMACGL_UI_HPP
