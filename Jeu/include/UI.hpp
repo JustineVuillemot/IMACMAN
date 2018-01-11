@@ -2,6 +2,8 @@
 #ifndef IMACGL_UI_HPP
 #define IMACGL_UI_HPP
 
+#include <GL/glew.h>
+#include <GL/glut.h>
 #include <string>
 #include "SDL.h"
 #include "SDL_ttf.h"
@@ -18,7 +20,24 @@ public:
     UI(){};
     ~UI() = default;
 
-    UI(std::string fontPath, glm::vec2 position, std::string texte);
+    UI(std::string fontPath, glm::vec2 position, std::string texte){
+        _fontPath = fontPath;
+        _position = position;
+
+        try{
+            generateSurface(texte);
+        }
+        catch(const std::invalid_argument &err){
+            throw err;
+        }
+
+        generateTexture();
+
+        generateVertices();
+        generateIndexs();
+
+        remplirBuffers();
+    }
 
     void generateSurface(std::string texte);
     void generateTexture();
@@ -53,6 +72,7 @@ private:
     SDL_Surface* _texteSurface;
     std::string _fontPath;
     Texture _texture;
+    GLuint testText;
     std::vector<ShapeVertex> _vertexVec;
     std::vector<uint32_t> _indexVect;
 };

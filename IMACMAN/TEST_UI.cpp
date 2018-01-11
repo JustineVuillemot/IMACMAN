@@ -14,6 +14,7 @@
 #include <glimac/TrackballCamera.hpp>
 #include "Jeu.hpp"
 #include "UI.hpp"
+#include "Menu.hpp"
 
 using namespace glimac;
 
@@ -67,6 +68,16 @@ int main(int argc, char** argv) {
 
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+    Menu pauseMenu;
+
+    try{
+        pauseMenu = Menu("../../asset/arialbd.ttf");
+    }
+    catch(const std::invalid_argument &err){
+        std::cerr << err.what() << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
 
     Jeu jeu;
 
@@ -89,7 +100,7 @@ int main(int argc, char** argv) {
     bool moveRight = false;
     bool moveUp = false;
     bool moveDown = false;
-    bool menu = false;
+    bool menu = true;
 
     // Application loop:
     bool done = false;
@@ -101,7 +112,7 @@ int main(int argc, char** argv) {
             while(windowManager.pollEvent(e)) {
                 if (e.type == SDL_KEYDOWN && e.key.keysym.sym == 27) {
                     menu = !menu;
-                    std::cout << "menu change" << std::endl;
+                    //std::cout << "menu change" << std::endl;
                 }
                 if(e.type == SDL_QUIT) {
                     done = true; // Leave the loop after this iteration
@@ -135,7 +146,7 @@ int main(int argc, char** argv) {
                 }
                 if (e.key.keysym.sym == 27) {
                     menu = !menu;
-                    std::cout << "menu change" << std::endl;
+                    //std::cout << "menu change" << std::endl;
                 }
             }
             if(e.type == SDL_KEYUP){
@@ -219,6 +230,11 @@ int main(int argc, char** argv) {
         glUniform1i(uTexUI, 0);
         points.draw();
         vies.draw();
+
+        if(menu){
+            pauseMenu.draw();
+        }
+
         points.refreshText("Points : "+std::to_string(jeu.getScore()));
         vies.refreshText("Vies : "+std::to_string(jeu._pacman[0]->getVie()));
 

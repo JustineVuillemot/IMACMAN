@@ -2,7 +2,7 @@
 
 
 //position est le coin haut gauche
-UI::UI(std::string fontPath, glm::vec2 position, std::string texte){
+/*UI::UI(std::string fontPath, glm::vec2 position, std::string texte){
     _fontPath = fontPath;
     _position = position;
 
@@ -19,7 +19,7 @@ UI::UI(std::string fontPath, glm::vec2 position, std::string texte){
     generateIndexs();
 
     remplirBuffers();
-}
+}*/
 
 void UI::refreshText(std::string texte){
     try{
