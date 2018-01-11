@@ -7,9 +7,9 @@ Menu::Menu(std::string fontPath){
     remplirBuffers();
 
     try{
-        _reTryGame = UI(fontPath, glm::vec2(-0.4, 0.4), "Recommencer le niveau");
-        _saveGame = UI(fontPath, glm::vec2(-0.4, 0.1), "Sauvegarder la partie");
-        _loadGame = UI(fontPath, glm::vec2(-0.4, -0.2), "Charger une partie");
+        _reTryGame = UI(fontPath, glm::vec2(-0.315, 0.18), "Recommencer le niveau");
+        _saveGame = UI(fontPath, glm::vec2(-0.28, 0.03), "Sauvegarder la partie");
+        _loadGame = UI(fontPath, glm::vec2(-0.25, -0.12), "Charger une partie");
     }
     catch(const std::invalid_argument &err){
         throw err;
@@ -17,10 +17,10 @@ Menu::Menu(std::string fontPath){
 }
 
 void Menu::generateVertices(){
-    _vertexVec.push_back(ShapeVertex(glm::vec3(-2, 2, 0.0), glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,0)));
-    _vertexVec.push_back(ShapeVertex(glm::vec3(2, 2, 0.0), glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,0)));
-    _vertexVec.push_back(ShapeVertex(glm::vec3(2, -2, 0.0), glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,0)));
-    _vertexVec.push_back(ShapeVertex(glm::vec3(-2, -2, 0.0), glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,0)));
+    _vertexVec.push_back(ShapeVertex(glm::vec3(-0.4, 0.3, 0.0), glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,0)));
+    _vertexVec.push_back(ShapeVertex(glm::vec3(0.4, 0.3, 0.0), glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,0)));
+    _vertexVec.push_back(ShapeVertex(glm::vec3(0.4, -0.3, 0.0), glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,0)));
+    _vertexVec.push_back(ShapeVertex(glm::vec3(-0.4, -0.3, 0.0), glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,0)));
 }
 
 void Menu::generateIndexs(){
@@ -33,11 +33,21 @@ void Menu::generateIndexs(){
 }
 
 void Menu::draw(){
+    generateVertices();
+    remplirBuffers();
     m_vao.bind();
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
     m_vao.debind();
 
-    /*_reTryGame.draw();
+    _reTryGame.generateVertices();
+    _reTryGame.remplirBuffers();
+    _reTryGame.draw();
+
+    _saveGame.generateVertices();
+    _saveGame.remplirBuffers();
     _saveGame.draw();
-    _loadGame.draw();*/
+
+    _loadGame.generateVertices();
+    _loadGame.remplirBuffers();
+    _loadGame.draw();
 }

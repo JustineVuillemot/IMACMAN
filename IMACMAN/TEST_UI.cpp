@@ -63,14 +63,6 @@ int main(int argc, char** argv) {
         exit(EXIT_FAILURE);
     }
 
-    UI test;
-
-    try {
-        test = UI("../../asset/arialbd.ttf", glm::vec2(0.0, 0.0), "Recommencer le niveau");
-    }catch(const std::invalid_argument &err){
-        std::cerr << "test" << std::endl;
-    }
-
     /*UNIFORMES*/
     GLuint uTexUI = glGetUniformLocation(progUI.getGLId(), "uTexture");
 
@@ -236,15 +228,13 @@ int main(int argc, char** argv) {
         //UI
         progUI.use();
         glUniform1i(uTexUI, 0);
-        pauseMenu.draw();
         points.draw();
         vies.draw();
-        test.draw();
 
-        /*if(menu){
+        if(menu){
             pauseMenu.draw();
-        }*/
-        test.refreshText("test refreshed");
+        }
+
         points.refreshText("Points : "+std::to_string(jeu.getScore()));
         vies.refreshText("Vies : "+std::to_string(jeu._pacman[0]->getVie()));
 
