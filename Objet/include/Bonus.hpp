@@ -15,7 +15,7 @@ public:
         _obj = glimac::Sphere(radius, 30, 30);
         _position = pos;
         _etat = 3;
-        _nbrPoint = 5;
+        _nbrPoint = 50;
     }
 
     Bonus(glm::vec3 pos, float radius, glimac::FilePath &appPath){

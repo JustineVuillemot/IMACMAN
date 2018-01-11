@@ -11,7 +11,7 @@ public:
         _obj = glimac::Sphere(radius, 30, 30);
         _position = pos;
         _etat = 2;
-        _nbrPoint = 5;
+        _nbrPoint = 100;
     }
 
     SuperPacGomme(glm::vec3 pos, float radius, glimac::FilePath &appPath){

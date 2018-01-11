@@ -74,15 +74,15 @@ int Jeu::collisionManager(glm::vec3 direction){
         if(_pacman[0]->collisionObjet(*_objets[i], direction) != 0){
             if(_objets[i]->getEtat() == 2){
                 _objets[i]->setEtat(0);
-                _score += 100;
+                _score += _objets[i]->getNbrPoint();
             }
             else if(_objets[i]->getEtat() == 3){
                 _objets[i]->setEtat(0);
-                _score += 50;
+                _score += _objets[i]->getNbrPoint();
             }
             else{
                 _objets[i]->setEtat(0);
-                _score += 10;
+                _score += _objets[i]->getNbrPoint();
             }
             return 2;
         }

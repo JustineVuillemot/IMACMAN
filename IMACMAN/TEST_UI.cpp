@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
     UI points;
 
     try{
-        points = UI("../../asset/arial.ttf", glm::vec2(-0.8, 0.8), "Points : 0");
+        points = UI("../../asset/arialbd.ttf", glm::vec2(-0.8, 0.8), "Points : 0");
     }
     catch(const std::invalid_argument &err){
         std::cerr << err.what() << std::endl;
@@ -55,7 +55,7 @@ int main(int argc, char** argv) {
     UI vies;
 
     try{
-        vies = UI("../../asset/arial.ttf", glm::vec2(0.6, 0.8), "Vies : 3");
+        vies = UI("../../asset/arialbd.ttf", glm::vec2(0.6, 0.8), "Vies : 3");
     }
     catch(const std::invalid_argument &err){
         std::cerr << err.what() << std::endl;
@@ -89,13 +89,26 @@ int main(int argc, char** argv) {
     bool moveRight = false;
     bool moveUp = false;
     bool moveDown = false;
-
+    bool menu = false;
 
     // Application loop:
     bool done = false;
     while(!done) {
         // Event loop:
         SDL_Event e;
+
+        if(menu){
+            while(windowManager.pollEvent(e)) {
+                if (e.type == SDL_KEYDOWN && e.key.keysym.sym == 27) {
+                    menu = !menu;
+                    std::cout << "menu change" << std::endl;
+                }
+                if(e.type == SDL_QUIT) {
+                    done = true; // Leave the loop after this iteration
+                }
+            }
+        }else{
+
         while(windowManager.pollEvent(e)) {
             if(e.type == SDL_KEYDOWN){
                 if(e.key.keysym.sym == SDLK_LEFT){
@@ -119,6 +132,10 @@ int main(int argc, char** argv) {
                     moveLeft = true;
                 } else if (e.key.keysym.sym == 100  && e.key.state == SDL_PRESSED) { // D
                     moveRight = true;
+                }
+                if (e.key.keysym.sym == 27) {
+                    menu = !menu;
+                    std::cout << "menu change" << std::endl;
                 }
             }
             if(e.type == SDL_KEYUP){
@@ -185,7 +202,9 @@ int main(int argc, char** argv) {
         }
 
         //FANTOMES
-        //jeu.deplacementFantome(windowManager.getTime());
+        jeu.deplacementFantome(windowManager.getTime());
+
+        }
 
         modelViewMat = cam.getViewMatrix();
         mvProjMat = glm::perspective(glm::radians(70.f), width/height, 0.1f, 100.f);
