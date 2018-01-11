@@ -50,7 +50,7 @@ Jeu::Jeu(std::string filepath, float widthCase, float heightCase){
     for(i=0; i < _nbrSub; ++i) {
         for (j = 0; j < _nbrSub; ++j) {
             std::getline(iss, temp, ';');
-            _plateau[i][j] = stoi(temp);
+            _plateau.push_back(stoi(temp));
         }
     }
 }
