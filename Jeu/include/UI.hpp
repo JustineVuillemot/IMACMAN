@@ -16,7 +16,9 @@ class UI {
 public:
 
     UI(){};
-    ~UI() = default;
+    ~UI(){
+        SDL_FreeSurface(_texteSurface);
+    };
 
     UI(std::string fontPath, glm::vec2 position, std::string texte);
 

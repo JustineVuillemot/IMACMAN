@@ -8,8 +8,8 @@ out vec4 fFragColor;
 
 void main() {
 
-    //fFragColor = vec4(0.0, 1.0, 0.0, 0.3);
-    fFragColor = texture(uTexture, vTexCoords);
+    fFragColor = vec4(0.0, 1.0, 0.0, 1.0);
+    //fFragColor = texture(uTexture, vTexCoords);
 
     //gl_FragColor = texture2D(uTexture, vTexCoords);
 }
