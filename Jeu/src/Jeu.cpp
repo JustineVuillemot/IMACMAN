@@ -143,15 +143,15 @@ int Jeu::collisionManager(glm::vec3 direction, float time){
                 _objets[i]->setEtat(0);
                 _timePacman = time;
                 _pacman[0]->setEtat(1);
-                _score += 100;
+                _score += _objets[i]->getNbrPoint();
             }
             else if(_objets[i]->getEtat() == 3){ //BONUS
                 _objets[i]->setEtat(0);
-                _score += 50;
+                _score += _objets[i]->getNbrPoint();
             }
-            else{ //PACGOMME
+            else if(_objets[i]->getEtat() == 1){ //PACGOMME
                 _objets[i]->setEtat(0);
-                _score += 10;
+                _score += _objets[i]->getNbrPoint();
             }
             return 2;
         }
@@ -220,4 +220,33 @@ void Jeu::retourPerso(){
     for(j=0; j < _pacman.size(); ++j){
         _pacman[j]->setPos(_pacman[j]->getPosInitiale());
     }
+}
+
+
+
+
+void Jeu::restart(float time){
+    int i;
+    for(i=0; i<_pacman.size(); ++i){
+        _pacman[i]->setEtat(0);
+        _pacman[i]->setVie(3);
+        _pacman[i]->setPos(_pacman[i]->getPosInitiale());
+    }
+    for(i=0; i<_personnages.size(); ++i){
+        _personnages[i]->setEtat(0);
+        _personnages[i]->setPos(_personnages[i]->getPosInitiale());
+    }
+    for(i=0; i<_objets.size(); ++i){
+        _objets[i]->revive();
+    }
+    _score = 0;
+    _timeTouch = time;
+}
+
+void Jeu::save(){
+
+}
+
+void Jeu::loadSave(glimac::FilePath &appPath){
+
 }

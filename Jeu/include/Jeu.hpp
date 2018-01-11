@@ -207,6 +207,10 @@ public:
     void deplacementFantome(float time);
     glm::vec3 testNewtDir(int index, const glm::vec3 dir);
 
+    void restart(float time);
+    void save();
+    void loadSave(glimac::FilePath &appPath);
+
     //Variables
     //Pacman _pacman;
     std::vector<Pacman*> _pacman;

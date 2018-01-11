@@ -30,6 +30,10 @@ public:
         _program.addUniform("uTexture");
         _texture = Texture("../../asset/Textures/pacmantest.jpg");
     }
+
+    void revive() override{
+        _etat = 3;
+    }
 };
 
 

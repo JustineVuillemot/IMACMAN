@@ -98,6 +98,10 @@ int main(int argc, char** argv) {
                 } else if (e.key.keysym.sym == 100  && e.key.state == SDL_PRESSED) { // D
                     moveRight = true;
                 }
+                if (e.key.keysym.sym == SDLK_b) { // B
+                    jeu.restart(windowManager.getTime());
+                    atmo.setEtat(0);
+                }
             }
             if(e.type == SDL_KEYUP){
                 if (e.key.keysym.sym == 119  && e.key.state == SDL_RELEASED) { // Z
@@ -174,7 +178,6 @@ int main(int argc, char** argv) {
         }
 
         if(windowManager.getTime() - jeu.getTimePacman() > 8.0 && jeu.getTimePacman() != 0){ //La superPacGomme dure 8 secondes
-            std::cout << "FIN DE L'EFFET" << std::endl;
             jeu._pacman[0]->setEtat(0);
             jeu.setTimePacman(0);
             atmo.setEtat(0);

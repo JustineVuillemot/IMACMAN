@@ -23,12 +23,14 @@ public:
         _pos = _posInitiale = pos;
         _angleOrientation = 0.f;
         _direction = glm::vec3(0,0,-0.3);
+        _etat = 0;
     }
 
     Personnage (glm::vec3 pos, float radius, glimac::FilePath &appPath) : _PersoObj(radius, 30, 30){
         _pos = _posInitiale = pos;
         _angleOrientation = 0.f;
         _direction = glm::vec3(0,0,-0.3);
+        _etat = 0;
 
         _program = Prog(appPath, "3D", "tex3D");
         _program.addUniform("uMVMatrix");
@@ -38,6 +40,9 @@ public:
 
     /* GETTER */
 
+    int getEtat(){
+        return _etat;
+    }
     glm::vec3 getPos(){
         return _pos;
     }
@@ -62,6 +67,9 @@ public:
 
     /* SETTER */
 
+    void setEtat(int etat){
+        _etat = etat;
+    }
     void setPos(glm::vec3 pos){
         _pos = pos;
     }
@@ -99,6 +107,7 @@ public:
     Prog _program;
 protected:
     glimac::Sphere _PersoObj;
+    int _etat;
     VAO p_vao;
     VBO p_vbo;
     glm::vec3 _pos;
