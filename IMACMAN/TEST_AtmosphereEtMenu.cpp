@@ -46,6 +46,20 @@ int main(int argc, char** argv) {
     Program progUI = loadProgram(applicationPath.dirPath() + "shaders/triangle.vs.glsl",
                                  applicationPath.dirPath() + "shaders/triangle.fs.glsl");
 
+    //CREATION JEU
+    Jeu jeu;
+
+    try{
+        jeu = Jeu("../../Level/Level2.txt", 1.f, 1.f);
+    }
+    catch(const std::string &s){
+        std::cerr << "Erreur : " << s << std::endl;
+    }
+
+    jeu.addElement(applicationPath);
+    jeu.remplirBuffer();
+
+    //CREATION UI
     UI points;
 
     try{
@@ -82,20 +96,10 @@ int main(int argc, char** argv) {
         exit(EXIT_FAILURE);
     }
 
-    Jeu jeu;
-
-    try{
-        jeu = Jeu("../../Level/Level2.txt", 1.f, 1.f);
-    }
-    catch(const std::string &s){
-        std::cerr << "Erreur : " << s << std::endl;
-    }
-
     Atmo atmo = Atmo(glm::vec3(0,0,0), 50, applicationPath);
     atmo.remplirBuffers();
 
-    jeu.addElement(applicationPath);
-    jeu.remplirBuffer();
+
 
     glm::mat4 modelViewMat, normalMat, mvProjMat;
 
@@ -124,13 +128,14 @@ int main(int argc, char** argv) {
                 //Game save & load managment
                 if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT) {
                     if(e.button.x > 274 && e.button.x < 517 && e.button.y > 330 && e.button.y < 350){//recommencer
-                        std::cout << "Recommencer le jeu" << std::endl;
+                        atmo.setEtat(0);
+                        jeu.restart(windowManager.getTime());
                     }
                     if(e.button.x > 290 && e.button.x < 501 && e.button.y > 390 && e.button.y < 410){//save
-                        std::cout << "Sauvegarder partie" << std::endl;
+                        jeu.save();
                     }
                     if(e.button.x > 300 && e.button.x < 490 && e.button.y > 450 && e.button.y < 470){//load
-                        std::cout << "Charger partie" << std::endl;
+                        jeu.loadSave();
                     }
                 }
             }

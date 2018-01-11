@@ -35,7 +35,7 @@ public:
 
     /* GETTER */
 
-    int getNbrPoint(){
+    virtual int getNbrPoint(){
         return _nbrPoint;
     }
     glm::vec3 getPosition(){
