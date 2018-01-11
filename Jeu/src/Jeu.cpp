@@ -50,7 +50,7 @@ Jeu::Jeu(std::string filepath, float widthCase, float heightCase){
     for(i=0; i < _nbrSub; ++i) {
         for (j = 0; j < _nbrSub; ++j) {
             std::getline(iss, temp, ';');
-            _plateau[i][j] = stoi(temp);
+            _plateau.push_back(stoi(temp));
         }
     }
 }
@@ -149,7 +149,7 @@ int Jeu::collisionManager(glm::vec3 direction, float time){
                 _objets[i]->setEtat(0);
                 _score += _objets[i]->getNbrPoint();
             }
-            else{ //PACGOMME
+            else if(_objets[i]->getEtat() == 1){ //PACGOMME
                 _objets[i]->setEtat(0);
                 _score += _objets[i]->getNbrPoint();
             }
@@ -197,12 +197,12 @@ void Jeu::deplacementFantome(float time){
     for(int j=0; j<nbFantome; j++){
         collision = 0;
         for(int i=0; i<_cubes.size(); i++){
-            if(_personnages[j]->collisionCube(*_cubes[i], _personnages[j]->getDirection())){
+            if(_personnages[j]->collisionCube(*_cubes[i], _personnages[j]->getDirection()*_personnages[j]->getRandDirection())){
                 collision = 1;
             }
         }
 
-        _personnages[j]->deplacement(_personnages[j]->getDirection()*glm::vec3(0.005/0.3, 0, 0.005/0.3));
+        _personnages[j]->deplacement(_personnages[j]->getDirection()*_personnages[j]->getRandDirection()*glm::vec3(0.005/0.3, 0, 0.005/0.3));
 
         if(collision){
             //std::cout <<  _personnages[j]->getDirection() << std::endl;
@@ -220,4 +220,33 @@ void Jeu::retourPerso(){
     for(j=0; j < _pacman.size(); ++j){
         _pacman[j]->setPos(_pacman[j]->getPosInitiale());
     }
+}
+
+
+
+
+void Jeu::restart(float time){
+    int i;
+    for(i=0; i<_pacman.size(); ++i){
+        _pacman[i]->setEtat(0);
+        _pacman[i]->setVie(3);
+        _pacman[i]->setPos(_pacman[i]->getPosInitiale());
+    }
+    for(i=0; i<_personnages.size(); ++i){
+        _personnages[i]->setEtat(0);
+        _personnages[i]->setPos(_personnages[i]->getPosInitiale());
+    }
+    for(i=0; i<_objets.size(); ++i){
+        _objets[i]->revive();
+    }
+    _score = 0;
+    _timeTouch = time;
+}
+
+void Jeu::save(){
+
+}
+
+void Jeu::loadSave(glimac::FilePath &appPath){
+
 }

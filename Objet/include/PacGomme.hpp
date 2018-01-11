@@ -31,6 +31,10 @@ public:
         _program.addUniform("uTexture");
         _texture = Texture("../../asset/Textures/pacgommetest.jpg");
     }
+
+    void revive() override{
+        _etat = 1;
+    }
 };
 
 

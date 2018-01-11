@@ -27,6 +27,9 @@ public:
         _texture = Texture("../../asset/Textures/superpacgommetest.jpg");
     }
 
+    void revive() override{
+        _etat = 2;
+    }
 };
 
 #endif //IMACGL_SUPERPACGOMME_HPP

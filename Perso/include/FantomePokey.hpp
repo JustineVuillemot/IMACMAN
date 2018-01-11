@@ -10,7 +10,20 @@
 
 class FantomePokey : public Fantome{
 public:
-    void deplacement(glm::vec3 dist);
+    FantomePokey (glm::vec3 pos, float radius, glimac::FilePath &appPath){
+        _PersoObj = glimac::Sphere(radius, 30, 30);
+        _pos = _posInitiale = pos;
+        _etat = 0;
+        _randDirection = 1.f;
+        _direction = glm::vec3(0,0,-0.3);
+
+        _program = Prog(appPath, "3D", "tex3D4");
+        _program.addUniform("uMVMatrix");
+        _program.addUniform("uMVPMatrix");
+        _program.addUniform("uNormalMatrix");
+    }
+
+    void deplacement(glm::vec3 dist) override;
 
 };
 

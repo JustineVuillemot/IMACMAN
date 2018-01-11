@@ -2,6 +2,8 @@
 // Created by Alexian on 16/12/2017.
 //
 
+#include <cstdlib>
+#include <ctime>
 #include <glm/glm.hpp>
 #include <VBO.hpp>
 #include <VAO.hpp>
@@ -21,12 +23,14 @@ public:
         _pos = _posInitiale = pos;
         _angleOrientation = 0.f;
         _direction = glm::vec3(0,0,-0.3);
+        _etat = 0;
     }
 
     Personnage (glm::vec3 pos, float radius, glimac::FilePath &appPath) : _PersoObj(radius, 30, 30){
         _pos = _posInitiale = pos;
         _angleOrientation = 0.f;
         _direction = glm::vec3(0,0,-0.3);
+        _etat = 0;
 
         _program = Prog(appPath, "3D", "tex3D");
         _program.addUniform("uMVMatrix");
@@ -36,6 +40,9 @@ public:
 
     /* GETTER */
 
+    int getEtat(){
+        return _etat;
+    }
     glm::vec3 getPos(){
         return _pos;
     }
@@ -54,9 +61,15 @@ public:
     glm::vec3 getDirection(){
         return _direction;
     }
+    float getRandDirection(){
+        return _randDirection;
+    }
 
     /* SETTER */
 
+    void setEtat(int etat){
+        _etat = etat;
+    }
     void setPos(glm::vec3 pos){
         _pos = pos;
     }
@@ -72,9 +85,12 @@ public:
     void setDirection(glm::vec3 direction){
         _direction = direction;
     }
+    void setRandDirection(int randInt){
+        _randDirection = randInt;
+    }
 
     /* METHODS */
-    void deplacement(glm::vec3 dist);
+    virtual void deplacement(glm::vec3 dist);
     void draw();
 
     void remplirBuffers(){
@@ -91,6 +107,7 @@ public:
     Prog _program;
 protected:
     glimac::Sphere _PersoObj;
+    int _etat;
     VAO p_vao;
     VBO p_vbo;
     glm::vec3 _pos;
@@ -99,6 +116,7 @@ protected:
     /* Up = 0° || Right = 90° || Down = 180° || Left = 270° */
     float _rotation; //Will be used in Jeu.hpp to rotate
     glm::vec3 _direction;
+    float _randDirection;
 
     std::string _texturePath;
     Texture _texture;

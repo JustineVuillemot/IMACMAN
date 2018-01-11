@@ -67,6 +67,8 @@ public:
         o_vao.remplirBuffer(_obj.getVertexArray(), &o_vbo);
     }
 
+    virtual void revive() = 0;
+
     Texture _texture;
     Prog _program;
 protected:

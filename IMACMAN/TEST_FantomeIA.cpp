@@ -4,6 +4,8 @@
 #include <GL/glew.h>
 #include <GL/glut.h>
 #include <memory>
+#include <cstdlib>
+#include <ctime>
 #include <SDL/SDL.h>
 #include <glimac/Sphere.hpp>
 #include <glimac/Program.hpp>
@@ -12,7 +14,6 @@
 #include <glimac/TrackballCamera.hpp>
 #include "Cube.hpp"
 #include "Jeu.hpp"
-#include "Atmo.hpp"
 
 using namespace glimac;
 
@@ -22,7 +23,7 @@ int main(int argc, char** argv) {
     float height = 800;
     SDLWindowManager windowManager(width, height, "GLImac");
 
-    glEnable(GL_DEPTH_TEST);
+    srand(time(NULL));
 
     // Initialize glew for OpenGL3+ support
     GLenum glewInitError = glewInit();
@@ -52,9 +53,6 @@ int main(int argc, char** argv) {
     catch(const std::string &s){
         std::cerr << "Erreur : " << s << std::endl;
     }
-
-    Atmo atmo = Atmo(glm::vec3(0,0,0), 50, applicationPath);
-    atmo.remplirBuffers();
 
     jeu.addElement(applicationPath);
     jeu.remplirBuffer();
@@ -97,10 +95,6 @@ int main(int argc, char** argv) {
                     moveLeft = true;
                 } else if (e.key.keysym.sym == 100  && e.key.state == SDL_PRESSED) { // D
                     moveRight = true;
-                }
-                if (e.key.keysym.sym == SDLK_b) { // B
-                    jeu.restart(windowManager.getTime());
-                    atmo.setEtat(0);
                 }
             }
             if(e.type == SDL_KEYUP){
@@ -173,14 +167,10 @@ int main(int argc, char** argv) {
             done = true;
         }
 
-        if(jeu.getTimePacman() != 0 && atmo.getEtat() == 0){
-            atmo.setEtat(1);
-        }
-
         if(windowManager.getTime() - jeu.getTimePacman() > 8.0 && jeu.getTimePacman() != 0){ //La superPacGomme dure 8 secondes
+            std::cout << "FIN DE L'EFFET" << std::endl;
             jeu._pacman[0]->setEtat(0);
             jeu.setTimePacman(0);
-            atmo.setEtat(0);
         }
 
         //FANTOMES
@@ -190,32 +180,12 @@ int main(int argc, char** argv) {
         mvProjMat = glm::perspective(glm::radians(70.f), width/height, 0.1f, 100.f);
         normalMat = glm::transpose(glm::inverse(modelViewMat));
 
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        /*UNFORMES*/
+        /*glUniformMatrix4fv(uMVMatrix, 1, GL_FALSE, glm::value_ptr(modelViewMat));
+        glUniformMatrix4fv(uNormalMatrix, 1, GL_FALSE, glm::value_ptr(normalMat));
+        glUniformMatrix4fv(uMVPMatrix, 1, GL_FALSE, glm::value_ptr(mvProjMat*modelViewMat));*/
 
-
-
-        atmo._program.use();
-        if(atmo.getEtat() == 0){
-            atmo._program.sendUniform1i(atmo._texture1._texture, 0);
-            modelViewMat = atmo.getViewMatrix(cam.getViewMatrix());
-            atmo._program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
-            atmo._program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
-            atmo._program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
-            atmo._texture1.bind();
-            atmo.draw();
-            atmo._texture1.debind();
-        }
-        else{
-            atmo._program.sendUniform1i(atmo._texture2._texture, 0);
-            modelViewMat = atmo.getViewMatrix(cam.getViewMatrix());
-            atmo._program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
-            atmo._program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
-            atmo._program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
-            atmo._texture2.bind();
-            atmo.draw();
-            atmo._texture2.debind();
-        }
-
+        glClear(GL_COLOR_BUFFER_BIT);
 
         jeu.draw(modelViewMat, normalMat, mvProjMat, cam.getViewMatrix());
 

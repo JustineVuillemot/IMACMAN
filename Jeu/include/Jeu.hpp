@@ -16,6 +16,10 @@
 #include "PacGomme.hpp"
 #include "SuperPacGomme.hpp"
 #include "Bonus.hpp"
+#include "FantomePokey.hpp"
+#include "FantomeBashful.hpp"
+#include "FantomeShadow.hpp"
+#include "FantomeSpeedy.hpp"
 
 
 class Jeu {
@@ -66,18 +70,18 @@ public:
         int i =0;
         int j =0;
 
-        /*for(i=0; i < _nbrSub; ++i) {
+        for(i=0; i < _nbrSub; ++i) {
             for (j=0; j < _nbrSub; ++j) {
-                _cubes.push_back(new Cube(glm::vec3(i*_widthCase, -1*_heightCase, j*_widthCase), glm::vec3((i+1)*_widthCase, 0, (j+1)*_widthCase)));
+                _cubes.push_back(new Cube(glm::vec3(j*_widthCase - _nbrSub/2.0, -1*_heightCase/2.0, i*_widthCase - _nbrSub/2.0), glm::vec3((i+1)*_widthCase - _nbrSub/2.0, 0, (j+1)*_widthCase - _nbrSub/2.0), appPath));
             }
-        }*/
+        }
         int taille = _cubes.size();
         //Creation of the Object in the surface - Séparer de création tableau car : Amélioration : mettre des murs à la place des cubes
         for(i=0; i < _nbrSub; ++i) {
             for (j = 0; j < _nbrSub; ++j) {
                 //position : i*widthCase / heightCase / j*widthCase;
                 //std::cout << _plateau[i][j] << std::endl;
-                switch (_plateau[i][j]) {
+                switch (_plateau[i*_nbrSub + j]) {
 
                     case 0:
                         _cubes.push_back(new Cube(glm::vec3(j*_widthCase - _nbrSub/2.0 , 0,i*_widthCase - _nbrSub/2.0), glm::vec3((j+1)*_widthCase - _nbrSub/2.0, _heightCase,(i+1)*_widthCase - _nbrSub/2.0 ), appPath));
@@ -102,6 +106,10 @@ public:
 
                     case 5:
                         _objets.push_back(new Bonus(glm::vec3(j*_widthCase+_widthCase/2.f - _nbrSub/2.0, _heightCase/2.f,i*_widthCase+_widthCase/2.f - _nbrSub/2.0), 0.15, appPath));
+                        break;
+
+                    case 6:
+                        _personnages.push_back(new FantomePokey(glm::vec3(j*_widthCase+_widthCase/2.f - _nbrSub/2.0, _heightCase/2.f,i*_widthCase+_widthCase/2.f - _nbrSub/2.0 ), 0.3, appPath));
                         break;
 
                     default:
@@ -199,11 +207,15 @@ public:
     void deplacementFantome(float time);
     glm::vec3 testNewtDir(int index, const glm::vec3 dir);
 
+    void restart(float time);
+    void save();
+    void loadSave(glimac::FilePath &appPath);
+
     //Variables
     //Pacman _pacman;
     std::vector<Pacman*> _pacman;
 private:
-    int _plateau[10][10];
+    std::vector<int> _plateau;
     std::vector<Cube*> _cubes;
     std::vector<Personnage*> _personnages;
 
