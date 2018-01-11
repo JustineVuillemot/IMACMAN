@@ -197,12 +197,12 @@ void Jeu::deplacementFantome(float time){
     for(int j=0; j<nbFantome; j++){
         collision = 0;
         for(int i=0; i<_cubes.size(); i++){
-            if(_personnages[j]->collisionCube(*_cubes[i], _personnages[j]->getDirection())){
+            if(_personnages[j]->collisionCube(*_cubes[i], _personnages[j]->getDirection()*_personnages[j]->getRandDirection())){
                 collision = 1;
             }
         }
 
-        _personnages[j]->deplacement(_personnages[j]->getDirection()*glm::vec3(0.005/0.3, 0, 0.005/0.3));
+        _personnages[j]->deplacement(_personnages[j]->getDirection()*_personnages[j]->getRandDirection()*glm::vec3(0.005/0.3, 0, 0.005/0.3));
 
         if(collision){
             //std::cout <<  _personnages[j]->getDirection() << std::endl;

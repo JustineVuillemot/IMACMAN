@@ -15,6 +15,7 @@ public:
         _PersoObj = glimac::Sphere(radius, 30, 30);
         _pos = _posInitiale = pos;
         _etat = 0;
+        _randDirection = 1.f;
         _direction = glm::vec3(0,0,-0.3);
     }
 
@@ -22,6 +23,7 @@ public:
         _PersoObj = glimac::Sphere(radius, 30, 30);
         _pos = _posInitiale = pos;
         _etat = 0;
+        _randDirection = 1.f;
         _direction = glm::vec3(0,0,-0.3);
 
         _program = Prog(appPath, "3D", "tex3D4");
@@ -36,6 +38,7 @@ public:
         return _etat;
     }
 
+
     /* SETTER */
 
     void setEtat(int etat){
@@ -46,7 +49,7 @@ public:
 
     void deplacement(float distX, float distY);
 
-private:
+protected:
     int _etat;
 };
 
