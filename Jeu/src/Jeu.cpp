@@ -51,6 +51,7 @@ Jeu::Jeu(std::string filepath, float widthCase, float heightCase){
         for (j = 0; j < _nbrSub; ++j) {
             std::getline(iss, temp, ';');
             _plateau.push_back(stoi(temp));
+            _plateauIni.push_back(stoi(temp));
         }
     }
 }
@@ -241,12 +242,115 @@ void Jeu::restart(float time){
     }
     _score = 0;
     _timeTouch = time;
+    _timePacman = 0;
+    _plateau = _plateauIni;
 }
 
-void Jeu::save(){
-
+std::string Jeu::gameToString(){
+    std::string plateauString = {};
+    plateauString += std::to_string(_score);
+    plateauString += ";";
+    plateauString += std::to_string(_pacman[0]->getVie());
+    plateauString += ";";
+    plateauString += std::to_string(_nbrSub);
+    plateauString += ";";
+    int i;
+    std::vector<int> plateauActuel = plateauAJour();
+    for(i=0; i<plateauActuel.size(); ++i){
+        plateauString += std::to_string(plateauActuel[i]);
+        plateauString += ";";
+    }
+    return plateauString;
 }
 
-void Jeu::loadSave(glimac::FilePath &appPath){
+std::vector<int> Jeu::plateauAJour(){
+    int i; //Parcours du plateau
+    int j = 0; //Parcours des objets
+    std::vector<int> _plateau2 = _plateau;
+    for(i=0; i<_plateau.size(); ++i){
+        if(_plateau[i] == 2 || _plateau[i] == 3 || _plateau[i] == 5){ //C'est un objet
+            if(_objets[j]->getEtat() == 0){
+                _plateau2[i] = 0;
+            }
+            ++j;
+        }
+    }
+    return _plateau2;
+};
 
+int Jeu::save(){
+    std::ofstream m_write;
+    m_write.open("../../Save/Save1.txt");
+
+    std::string line;
+
+    if(m_write.is_open()){
+        m_write << gameToString();
+    }
+    else{
+        return 0;
+    }
+
+    m_write.close();
+    return 1;
+}
+
+void Jeu::loadSave(){
+    retourPerso();
+    std::ifstream m_read;
+    m_read.open("../../Save/Save1.txt");
+
+    std::string line;
+    std::string res = "";
+    if(m_read.is_open()){
+        while( std::getline (m_read, line) ){
+            res += line;
+        }
+    }
+    else{
+        throw std::string("The filepath is incorrect !");
+    }
+    m_read.close();
+
+    //Fill the variables
+    _timeTouch = 0;
+    _timePacman = 0;
+
+    //Creation of the game
+    std::string temp;
+    std::istringstream iss(res);
+    std::getline(iss, temp, ';');
+    _score = std::stoi(temp);
+    std::getline(iss, temp, ';');
+    _pacman[0]->setVie(std::stoi(temp));
+    std::getline(iss, temp, ';');
+    _nbrSub = std::stoi(temp);
+
+    //Creation of the ground
+    int i;
+    int j;
+
+    std::vector<int> plateau2;
+
+    //fill plateau
+    for(i=0; i < _nbrSub; ++i) {
+        for (j = 0; j < _nbrSub; ++j) {
+            std::getline(iss, temp, ';');
+            plateau2.push_back(stoi(temp));
+        }
+    }
+
+    j=0;
+    for(i=0; i<_plateau.size(); ++i){
+        if(_plateau[i] == 2 || _plateau[i] == 3 || _plateau[i] == 5){ //C'est un objet
+            if(plateau2[i] == 0){
+                _objets[j]->setEtat(0);
+            }
+            else{
+                _objets[j]->revive();
+            }
+            ++j;
+        }
+        //_plateau[i] = plateau2[i];
+    }
 }

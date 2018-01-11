@@ -98,9 +98,15 @@ int main(int argc, char** argv) {
                 } else if (e.key.keysym.sym == 100  && e.key.state == SDL_PRESSED) { // D
                     moveRight = true;
                 }
-                if (e.key.keysym.sym == SDLK_b) { // B
+                if (e.key.keysym.sym == SDLK_v) { // V
                     jeu.restart(windowManager.getTime());
                     atmo.setEtat(0);
+                }
+                if (e.key.keysym.sym == SDLK_b) { // B
+                    jeu.save();
+                }
+                if (e.key.keysym.sym == SDLK_n) { // N
+                    jeu.loadSave();
                 }
             }
             if(e.type == SDL_KEYUP){
