@@ -67,6 +67,7 @@ public:
         o_vao.remplirBuffer(_obj.getVertexArray(), &o_vbo);
     }
 
+    Texture _texture;
     Prog _program;
 protected:
     glimac::Sphere _obj;
@@ -76,9 +77,6 @@ protected:
     glm::vec3 _position;
     int _etat;
 
-    std::string _texturePath;
-    Texture _texture;
-    //Program _program;
 };
 
 
