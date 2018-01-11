@@ -16,6 +16,10 @@
 #include "PacGomme.hpp"
 #include "SuperPacGomme.hpp"
 #include "Bonus.hpp"
+#include "FantomePokey.hpp"
+#include "FantomeBashful.hpp"
+#include "FantomeShadow.hpp"
+#include "FantomeSpeedy.hpp"
 
 
 class Jeu {
@@ -102,6 +106,10 @@ public:
 
                     case 5:
                         _objets.push_back(new Bonus(glm::vec3(j*_widthCase+_widthCase/2.f - _nbrSub/2.0, _heightCase/2.f,i*_widthCase+_widthCase/2.f - _nbrSub/2.0), 0.15, appPath));
+                        break;
+
+                    case 6:
+                        _personnages.push_back(new FantomePokey(glm::vec3(j*_widthCase+_widthCase/2.f - _nbrSub/2.0, _heightCase/2.f,i*_widthCase+_widthCase/2.f - _nbrSub/2.0 ), 0.3, appPath));
                         break;
 
                     default:

@@ -2,6 +2,8 @@
 // Created by Alexian on 16/12/2017.
 //
 
+#include <cstdlib>
+#include <ctime>
 #include <glm/glm.hpp>
 #include <VBO.hpp>
 #include <VAO.hpp>
@@ -54,6 +56,9 @@ public:
     glm::vec3 getDirection(){
         return _direction;
     }
+    float getRandDirection(){
+        return _randDirection;
+    }
 
     /* SETTER */
 
@@ -72,9 +77,12 @@ public:
     void setDirection(glm::vec3 direction){
         _direction = direction;
     }
+    void setRandDirection(int randInt){
+        _randDirection = randInt;
+    }
 
     /* METHODS */
-    void deplacement(glm::vec3 dist);
+    virtual void deplacement(glm::vec3 dist);
     void draw();
 
     void remplirBuffers(){
@@ -99,6 +107,7 @@ protected:
     /* Up = 0° || Right = 90° || Down = 180° || Left = 270° */
     float _rotation; //Will be used in Jeu.hpp to rotate
     glm::vec3 _direction;
+    float _randDirection;
 
     std::string _texturePath;
     Texture _texture;
