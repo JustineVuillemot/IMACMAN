@@ -151,14 +151,14 @@ public:
         int i;
         for(i=0; i < _cubes.size(); ++i){
             _cubes[i]->_program.use();
-            //_cubes[i]->_program.sendUniform1i(_cubes[i]->_texture._texture, 0);
+            _cubes[i]->_program.sendUniform1i(_cubes[i]->_texture._texture, 0);
             modelViewMat = camViewMat;
             _cubes[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _cubes[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _cubes[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
-            //_cubes[i]->_texture.bind();
+            _cubes[i]->_texture.bind();
             _cubes[i]->draw();
-            //_cubes[i]->_texture.debind();
+            _cubes[i]->_texture.debind();
         }
         for(i=0; i < _personnages.size(); ++i){
             _personnages[i]->_program.use();
@@ -187,7 +187,6 @@ public:
             _objets[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _objets[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _objets[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
-            _objets[i]->draw();
             _objets[i]->_texture.bind();
             _objets[i]->draw();
             _objets[i]->_texture.debind();

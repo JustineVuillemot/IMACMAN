@@ -105,7 +105,7 @@ int Jeu::collisionManager(glm::vec3 direction){
                 _objets[i]->setEtat(0);
                 _score += _objets[i]->getNbrPoint();
             }
-            else{
+            else if(_objets[i]->getEtat() == 1){
                 _objets[i]->setEtat(0);
                 _score += _objets[i]->getNbrPoint();
             }

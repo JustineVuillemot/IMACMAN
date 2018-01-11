@@ -1,5 +1,6 @@
 #include "UI.hpp"
 
+
 //position est le coin haut gauche
 UI::UI(std::string fontPath, glm::vec2 position, std::string texte){
     _fontPath = fontPath;
