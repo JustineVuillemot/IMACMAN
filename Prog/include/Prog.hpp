@@ -1,6 +1,7 @@
 #ifndef IMACGL_PROG_HPP
 #define IMACGL_PROG_HPP
 
+#include <GL/glew.h>
 #include <glimac/Program.hpp>
 #include <vector>
 #include <glimac/glm.hpp>
@@ -9,7 +10,13 @@
 class Prog{
 public:
     Prog() = default;
-    Prog(glimac::FilePath &appPath, std::string vs, std::string fs);
+    Prog(glimac::FilePath &appPath, std::string vs, std::string fs)
+            : _appPath(appPath), _fs(fs), _vs(vs) {
+        _vs += ".vs.glsl";
+        _fs += ".fs.glsl";
+        _program = glimac::loadProgram(appPath.dirPath() + "shaders/" + _vs,
+                                       appPath.dirPath() + "shaders/" + _fs);
+    }
 
     void addUniform(std::string name){
         _varUnis.insert( std::pair<std::string,GLuint>(name , glGetUniformLocation(_program.getGLId(), name.c_str())));
@@ -24,7 +31,9 @@ public:
     }
 
 
-    void use();
+    void use(){
+        _program.use();
+    }
 
 private:
     glimac::FilePath _appPath;

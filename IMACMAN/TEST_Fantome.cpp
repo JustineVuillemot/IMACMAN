@@ -32,14 +32,14 @@ int main(int argc, char** argv) {
     std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
     FilePath applicationPath(argv[0]);
-    Program program = loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
+    /*Program program = loadProgram(applicationPath.dirPath() + "shaders/3D.vs.glsl",
                                   applicationPath.dirPath() + "shaders/tex3D.fs.glsl");
-    program.use();
+    program.use();*/
 
     /*UNIFORMES*/
-    GLuint uMVMatrix = glGetUniformLocation(program.getGLId(), "uMVMatrix");
+    /*GLuint uMVMatrix = glGetUniformLocation(program.getGLId(), "uMVMatrix");
     GLuint uMVPMatrix = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
-    GLuint uNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
+    GLuint uNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");*/
 
     Jeu jeu;
 
@@ -177,13 +177,13 @@ int main(int argc, char** argv) {
         normalMat = glm::transpose(glm::inverse(modelViewMat));
 
         /*UNFORMES*/
-        glUniformMatrix4fv(uMVMatrix, 1, GL_FALSE, glm::value_ptr(modelViewMat));
+        /*glUniformMatrix4fv(uMVMatrix, 1, GL_FALSE, glm::value_ptr(modelViewMat));
         glUniformMatrix4fv(uNormalMatrix, 1, GL_FALSE, glm::value_ptr(normalMat));
-        glUniformMatrix4fv(uMVPMatrix, 1, GL_FALSE, glm::value_ptr(mvProjMat*modelViewMat));
+        glUniformMatrix4fv(uMVPMatrix, 1, GL_FALSE, glm::value_ptr(mvProjMat*modelViewMat));*/
 
         glClear(GL_COLOR_BUFFER_BIT);
 
-        jeu.draw(uMVMatrix, modelViewMat, uNormalMatrix, normalMat, uMVPMatrix, mvProjMat, cam.getViewMatrix());
+        jeu.draw(modelViewMat, normalMat, mvProjMat, cam.getViewMatrix());
 
         // Update the display
         windowManager.swapBuffers();

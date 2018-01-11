@@ -178,7 +178,7 @@ int main(int argc, char** argv) {
 
         glClear(GL_COLOR_BUFFER_BIT);
 
-        jeu.draw(uMVMatrix, modelViewMat, uNormalMatrix, normalMat, uMVPMatrix, mvProjMat, cam.getViewMatrix());
+        jeu.draw(modelViewMat, normalMat, mvProjMat, cam.getViewMatrix());
 
         // Update the display
         windowManager.swapBuffers();
