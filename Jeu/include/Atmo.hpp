@@ -25,7 +25,7 @@ public:
         _program.addUniform("uNormalMatrix");
         _program.addUniform("uTexture");
         _texture1 = Texture("../../asset/Textures/atmo1.jpg");
-        _texture2 = Texture("../../asset/Textures/pacgommetest.jpg");
+        _texture2 = Texture("../../asset/Textures/atmo2.jpg");
     }
 
     /* GETTER */

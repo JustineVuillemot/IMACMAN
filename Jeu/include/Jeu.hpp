@@ -70,11 +70,11 @@ public:
         int i =0;
         int j =0;
 
-        for(i=0; i < _nbrSub; ++i) {
+        /*for(i=0; i < _nbrSub; ++i) {
             for (j=0; j < _nbrSub; ++j) {
                 _cubes.push_back(new Cube(glm::vec3(j*_widthCase - _nbrSub/2.0, -1*_heightCase/2.0, i*_widthCase - _nbrSub/2.0), glm::vec3((i+1)*_widthCase - _nbrSub/2.0, 0, (j+1)*_widthCase - _nbrSub/2.0), appPath));
             }
-        }
+        }*/
         int taille = _cubes.size();
         //Creation of the Object in the surface - Séparer de création tableau car : Amélioration : mettre des murs à la place des cubes
         for(i=0; i < _nbrSub; ++i) {
@@ -208,14 +208,17 @@ public:
     glm::vec3 testNewtDir(int index, const glm::vec3 dir);
 
     void restart(float time);
-    void save();
-    void loadSave(glimac::FilePath &appPath);
+    std::string gameToString();
+    std::vector<int> plateauAJour();
+    int save();
+    void loadSave();
 
     //Variables
     //Pacman _pacman;
     std::vector<Pacman*> _pacman;
 private:
     std::vector<int> _plateau;
+    std::vector<int> _plateauIni;
     std::vector<Cube*> _cubes;
     std::vector<Personnage*> _personnages;
 

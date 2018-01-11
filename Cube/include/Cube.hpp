@@ -35,7 +35,7 @@ public:
         _program.addUniform("uMVPMatrix");
         _program.addUniform("uNormalMatrix");
         _program.addUniform("uTexture");
-        _texture = Texture("../../asset/Textures/Cube.png");
+        _texture = Texture("../../asset/Textures/cube.jpg");
     }
 
 
