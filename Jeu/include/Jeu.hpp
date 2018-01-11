@@ -70,18 +70,18 @@ public:
         int i =0;
         int j =0;
 
-        /*for(i=0; i < _nbrSub; ++i) {
+        for(i=0; i < _nbrSub; ++i) {
             for (j=0; j < _nbrSub; ++j) {
-                _cubes.push_back(new Cube(glm::vec3(i*_widthCase, -1*_heightCase, j*_widthCase), glm::vec3((i+1)*_widthCase, 0, (j+1)*_widthCase)));
+                _cubes.push_back(new Cube(glm::vec3(j*_widthCase - _nbrSub/2.0, -1*_heightCase/2.0, i*_widthCase - _nbrSub/2.0), glm::vec3((i+1)*_widthCase - _nbrSub/2.0, 0, (j+1)*_widthCase - _nbrSub/2.0), appPath));
             }
-        }*/
+        }
         int taille = _cubes.size();
         //Creation of the Object in the surface - Séparer de création tableau car : Amélioration : mettre des murs à la place des cubes
         for(i=0; i < _nbrSub; ++i) {
             for (j = 0; j < _nbrSub; ++j) {
                 //position : i*widthCase / heightCase / j*widthCase;
                 //std::cout << _plateau[i][j] << std::endl;
-                switch (_plateau[i][j]) {
+                switch (_plateau[i*_nbrSub + j]) {
 
                     case 0:
                         _cubes.push_back(new Cube(glm::vec3(j*_widthCase - _nbrSub/2.0 , 0,i*_widthCase - _nbrSub/2.0), glm::vec3((j+1)*_widthCase - _nbrSub/2.0, _heightCase,(i+1)*_widthCase - _nbrSub/2.0 ), appPath));
@@ -159,14 +159,14 @@ public:
         int i;
         for(i=0; i < _cubes.size(); ++i){
             _cubes[i]->_program.use();
-            //_cubes[i]->_program.sendUniform1i(_cubes[i]->_texture._texture, 0);
+            _cubes[i]->_program.sendUniform1i(_cubes[i]->_texture._texture, 0);
             modelViewMat = camViewMat;
             _cubes[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _cubes[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _cubes[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
-            //_cubes[i]->_texture.bind();
+            _cubes[i]->_texture.bind();
             _cubes[i]->draw();
-            //_cubes[i]->_texture.debind();
+            _cubes[i]->_texture.debind();
         }
         for(i=0; i < _personnages.size(); ++i){
             _personnages[i]->_program.use();
@@ -195,7 +195,6 @@ public:
             _objets[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _objets[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _objets[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
-            _objets[i]->draw();
             _objets[i]->_texture.bind();
             _objets[i]->draw();
             _objets[i]->_texture.debind();
@@ -212,7 +211,7 @@ public:
     //Pacman _pacman;
     std::vector<Pacman*> _pacman;
 private:
-    int _plateau[10][10];
+    std::vector<int> _plateau;
     std::vector<Cube*> _cubes;
     std::vector<Personnage*> _personnages;
 

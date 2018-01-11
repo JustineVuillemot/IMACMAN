@@ -50,7 +50,7 @@ Jeu::Jeu(std::string filepath, float widthCase, float heightCase){
     for(i=0; i < _nbrSub; ++i) {
         for (j = 0; j < _nbrSub; ++j) {
             std::getline(iss, temp, ';');
-            _plateau[i][j] = stoi(temp);
+            _plateau.push_back(stoi(temp));
         }
     }
 }
@@ -105,7 +105,7 @@ int Jeu::collisionManager(glm::vec3 direction){
                 _objets[i]->setEtat(0);
                 _score += _objets[i]->getNbrPoint();
             }
-            else{
+            else if(_objets[i]->getEtat() == 1){
                 _objets[i]->setEtat(0);
                 _score += _objets[i]->getNbrPoint();
             }
