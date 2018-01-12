@@ -215,35 +215,38 @@ int main(int argc, char** argv) {
 
 
             //PACMAN
-            if (moveLeft == true) {
-                if (jeu.collisionManager(glm::vec3(-0.3, 0, 0), windowManager.getTime()) == 3) {
+            if(moveLeft == true){
+                if(jeu.collisionManager(glm::vec3(-0.3,0,0), windowManager.getTime()) == 3){
                     jeu._pacman[0]->moveLeft(0.005f);
                 }
                 jeu._pacman[0]->moveLeft(-0.005f);
                 jeu._pacman[0]->rotatePerso(270.f);
-            } else if (moveRight == true) {
-                if (jeu.collisionManager(glm::vec3(0.3, 0, 0), windowManager.getTime()) == 3) {
+            }
+            if(moveRight == true){
+                if(jeu.collisionManager(glm::vec3(0.3,0,0), windowManager.getTime()) == 3){
                     jeu._pacman[0]->moveLeft(-0.005f);
                 }
                 jeu._pacman[0]->moveLeft(0.005f);
                 jeu._pacman[0]->rotatePerso(90.f);
-            } else if (moveUp == true) {
-                if (jeu.collisionManager(glm::vec3(0, 0, -0.3), windowManager.getTime()) == 3) {
+            }
+            if(moveUp == true){
+                if(jeu.collisionManager(glm::vec3(0,0,-0.3), windowManager.getTime()) == 3){
                     jeu._pacman[0]->moveUp(0.005f);
                 }
                 jeu._pacman[0]->moveUp(-0.005f);
                 jeu._pacman[0]->rotatePerso(0.f);
-            } else if (moveDown == true) {
-                if (jeu.collisionManager(glm::vec3(0, 0, 0.3), windowManager.getTime()) == 3) {
+            }
+            if(moveDown == true){
+                if(jeu.collisionManager(glm::vec3(0,0,0.3), windowManager.getTime()) == 3){
                     jeu._pacman[0]->moveUp(-0.005f);
                 }
                 jeu._pacman[0]->moveUp(0.005f);
                 jeu._pacman[0]->rotatePerso(180.f);
-            } else {
+            }
+            if(moveLeft == false && moveRight == false && moveDown == false && moveUp == false) {
                 //necessaire pour que pacman meurt s'il ne bouge pas
                 jeu.collisionManager(glm::vec3(0.0, 0, 0), windowManager.getTime());
             }
-
             if (jeu._pacman[0]->getVie() == 0) { //FIN DU JEU
                 done = true;
             }
