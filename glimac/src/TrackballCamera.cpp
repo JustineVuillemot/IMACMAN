@@ -1,8 +1,9 @@
 #include <glimac/TrackballCamera.hpp>
 
 TrackballCamera::TrackballCamera() {
-    m_fDistance = 5;
-    m_fAngleX = m_fAngleY = 0;
+    m_fDistance = 8;
+    m_fAngleX = 45;
+    m_fAngleY = 0;
 }
 
 void TrackballCamera::moveFront(float delta)

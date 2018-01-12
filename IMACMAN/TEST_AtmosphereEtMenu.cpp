@@ -80,7 +80,17 @@ int main(int argc, char** argv) {
         exit(EXIT_FAILURE);
     }
 
-    /*UNIFORMES*/
+    UI victoire;
+
+    try{
+        victoire = UI("../../asset/arialbd.ttf", glm::vec2(-0.27, 0.04), "VOUS AVEZ GAGNE !");
+    }
+    catch(const std::invalid_argument &err){
+        std::cerr << err.what() << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
+    //TEXTURE UI
     GLuint uTexUI = glGetUniformLocation(progUI.getGLId(), "uTexture");
 
     //pour gérer la transparence
@@ -96,9 +106,9 @@ int main(int argc, char** argv) {
         exit(EXIT_FAILURE);
     }
 
+    //Boite englobante
     Atmo atmo = Atmo(glm::vec3(0,0,0), 50, applicationPath);
     atmo.remplirBuffers();
-
 
 
     glm::mat4 modelViewMat, normalMat, mvProjMat;
@@ -110,6 +120,7 @@ int main(int argc, char** argv) {
     bool moveUp = false;
     bool moveDown = false;
     bool menu = false;
+    float startTimer;
 
     // Application loop:
     bool done = false;
@@ -119,14 +130,14 @@ int main(int argc, char** argv) {
 
         if(menu){
             while(windowManager.pollEvent(e)) {
-                if (e.type == SDL_KEYDOWN && e.key.keysym.sym == 27) { //échap
+                if (e.type == SDL_KEYDOWN && e.key.keysym.sym == 27 && !jeu.victory()) { //échap
                     menu = !menu;
                 }
                 if(e.type == SDL_QUIT) {
                     done = true; // Leave the loop after this iteration
                 }
                 //Game save & load managment
-                if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT) {
+                if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && !jeu.victory()) {
                     if(e.button.x > 274 && e.button.x < 517 && e.button.y > 330 && e.button.y < 350){//recommencer
                         atmo.setEtat(0);
                         jeu.restart(windowManager.getTime());
@@ -138,6 +149,9 @@ int main(int argc, char** argv) {
                         jeu.loadSave();
                         jeu.setTimeTouch(windowManager.getTime());
                     }
+                }
+                if (windowManager.getTime() - startTimer > 5.0 && jeu.victory()) { //Panneau victoire pendant 5s
+                    done = true;
                 }
             }
         }else {
@@ -240,9 +254,10 @@ int main(int argc, char** argv) {
 
             if (windowManager.getTime() - jeu.getTimePacman() > 8.0 &&
                 jeu.getTimePacman() != 0) { //La superPacGomme dure 8 secondes
-                std::cout << "FIN DE L'EFFET" << std::endl;
-                jeu._pacman[0]->setEtat(0);
-                jeu.setTimePacman(0);
+                //std::cout << "FIN DE L'EFFET" << std::endl;
+                /*jeu._pacman[0]->setEtat(0);
+                jeu.setTimePacman(0);*/
+                jeu.finSuper();
                 atmo.setEtat(0);
             }
 
@@ -292,13 +307,29 @@ int main(int argc, char** argv) {
         points.draw();
         vies.draw();
 
-        if(menu){
+        if(menu && !jeu.victory()){
             pauseMenu.draw();
         }
-        glEnable(GL_DEPTH_TEST);
 
         points.refreshText("Points : "+std::to_string(jeu.getScore()));
         vies.refreshText("Vies : "+std::to_string(jeu._pacman[0]->getVie()));
+
+        //Panneau Victoire
+        if(jeu.victory() && !menu){
+            pauseMenu.drawRect();
+            victoire.refreshText("VOUS AVEZ GAGNE !");
+            victoire.draw();
+
+            startTimer = windowManager.getTime();
+            menu = true;
+
+        }else if(jeu.victory() && menu){
+            pauseMenu.drawRect();
+            victoire.refreshText("VOUS AVEZ GAGNE !");
+            victoire.draw();
+        }
+
+        glEnable(GL_DEPTH_TEST);
 
         // Update the display
         windowManager.swapBuffers();
