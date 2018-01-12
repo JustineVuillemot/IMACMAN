@@ -32,6 +32,14 @@ void Menu::generateIndexs(){
     _indexVect.push_back(3);
 }
 
+void Menu::drawRect(){
+    generateVertices();
+    remplirBuffers();
+    m_vao.bind();
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    m_vao.debind();
+}
+
 void Menu::draw(){
     generateVertices();
     remplirBuffers();

@@ -18,6 +18,7 @@ public:
         m_vao.remplirBuffer(_vertexVec, &m_vbo, &m_ibo);
     }
 
+    void drawRect();
     void draw();
 
 private:
