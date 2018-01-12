@@ -94,6 +94,7 @@ public:
 
                     case 2:
                         _objets.push_back(new PacGomme(glm::vec3(j*_widthCase+_widthCase/2.f - _nbrSub/2.0, _heightCase/2.f,i*_widthCase+_widthCase/2.f - _nbrSub/2.0), 0.1, appPath));
+                        ++_nbrPacGomme;
                         break;
 
                     case 3:
@@ -230,6 +231,8 @@ public:
     int save();
     void loadSave();
 
+    bool victory();
+
     //Variables
     //Pacman _pacman;
     std::vector<Pacman*> _pacman;
@@ -242,6 +245,8 @@ private:
     std::vector<Objet*> _objets;
     int _nbrSub;
     int _score;
+    int _nbrPacGomme;
+    int _nbrPacGommeMange;
     float _widthCase;
     float _heightCase;
     float _timeTouch; //To know when pacman was touch for the last time

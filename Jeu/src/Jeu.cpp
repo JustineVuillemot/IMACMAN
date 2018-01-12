@@ -33,6 +33,8 @@ Jeu::Jeu(std::string filepath, float widthCase, float heightCase){
     _heightCase = heightCase;
     _timeTouch = 0;
     _timePacman = 0;
+    _nbrPacGomme = 0;
+    _nbrPacGommeMange = 0;
 
     //Creation of the game
     std::string temp;
@@ -109,6 +111,7 @@ int Jeu::collisionManager(glm::vec3 direction){
             else if(_objets[i]->getEtat() == 1){
                 _objets[i]->setEtat(0);
                 _score += _objets[i]->getNbrPoint();
+                ++_nbrPacGommeMange;
             }
             return 2;
         }
@@ -155,6 +158,7 @@ int Jeu::collisionManager(glm::vec3 direction, float time){
             else if(_objets[i]->getEtat() == 1){ //PACGOMME
                 _objets[i]->setEtat(0);
                 _score += _objets[i]->getNbrPoint();
+                ++_nbrPacGommeMange;
             }
             return 2;
         }
@@ -246,6 +250,7 @@ void Jeu::restart(float time){
     _timeTouch = time;
     _timePacman = 0;
     _plateau = _plateauIni;
+    _nbrPacGommeMange = 0;
 }
 
 std::string Jeu::gameToString(){
@@ -253,6 +258,8 @@ std::string Jeu::gameToString(){
     plateauString += std::to_string(_score);
     plateauString += ";";
     plateauString += std::to_string(_pacman[0]->getVie());
+    plateauString += ";";
+    plateauString += std::to_string(_nbrPacGommeMange);
     plateauString += ";";
     plateauString += std::to_string(_nbrSub);
     plateauString += ";";
@@ -326,6 +333,8 @@ void Jeu::loadSave(){
     std::getline(iss, temp, ';');
     _pacman[0]->setVie(std::stoi(temp));
     std::getline(iss, temp, ';');
+    _nbrPacGommeMange = std::stoi(temp);
+    std::getline(iss, temp, ';');
     _nbrSub = std::stoi(temp);
 
     //Creation of the ground
@@ -364,4 +373,12 @@ void Jeu::finSuper(){
     for(int j=0; j < _personnages.size(); ++j) {
         _personnages[j]->setEtat(0);
     }
+}
+
+
+bool Jeu::victory(){
+    if(_nbrPacGomme == _nbrPacGommeMange){
+        return true;
+    }
+    return false;
 }

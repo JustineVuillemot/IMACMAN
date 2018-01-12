@@ -174,6 +174,9 @@ int main(int argc, char** argv) {
             //necessaire pour que pacman meurt s'il ne bouge pas
             jeu.collisionManager(glm::vec3(0.0,0,0), windowManager.getTime());
         }
+        if(jeu.victory() == true){
+            done = true;
+        }
 
         if(jeu._pacman[0]->getVie() == 0){ //FIN DU JEU
             done = true;
