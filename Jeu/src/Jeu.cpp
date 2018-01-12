@@ -173,7 +173,7 @@ int Jeu::collisionManager(glm::vec3 direction, float time){
 
 glm::vec3 Jeu::testNewtDir(int index, const glm::vec3 dir){
     int collision = 0;
-    glm::vec3 newDir = glm::vec3(fabs(dir.z), 0, -fabs(dir.x));
+    glm::vec3 newDir = glm::vec3(fabs(dir.z), 0.f, -fabs(dir.x));
 
     //std::cout << fabs(dir.z) << std::endl;
 
@@ -212,7 +212,7 @@ void Jeu::deplacementFantome(float time){
         _personnages[j]->deplacement(_personnages[j]->getDirection()*_personnages[j]->getRandDirection()*glm::vec3(0.005/0.3, 0, 0.005/0.3));
 
         if(collision){
-            //std::cout <<  _personnages[j]->getDirection() << std::endl;
+            //std::cout <<  "fantome " << j << " : " <<_personnages[j]->getDirection() << std::endl;
             _personnages[j]->setDirection(testNewtDir(j, _personnages[j]->getDirection()));
         }
     }
