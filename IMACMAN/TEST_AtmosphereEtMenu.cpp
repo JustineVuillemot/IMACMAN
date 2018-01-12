@@ -46,6 +46,20 @@ int main(int argc, char** argv) {
     Program progUI = loadProgram(applicationPath.dirPath() + "shaders/triangle.vs.glsl",
                                  applicationPath.dirPath() + "shaders/triangle.fs.glsl");
 
+    //CREATION JEU
+    Jeu jeu;
+
+    try{
+        jeu = Jeu("../../Level/Level2.txt", 1.f, 1.f);
+    }
+    catch(const std::string &s){
+        std::cerr << "Erreur : " << s << std::endl;
+    }
+
+    jeu.addElement(applicationPath);
+    jeu.remplirBuffer();
+
+    //CREATION UI
     UI points;
 
     try{
@@ -82,20 +96,10 @@ int main(int argc, char** argv) {
         exit(EXIT_FAILURE);
     }
 
-    Jeu jeu;
-
-    try{
-        jeu = Jeu("../../Level/Level2.txt", 1.f, 1.f);
-    }
-    catch(const std::string &s){
-        std::cerr << "Erreur : " << s << std::endl;
-    }
-
     Atmo atmo = Atmo(glm::vec3(0,0,0), 50, applicationPath);
     atmo.remplirBuffers();
 
-    jeu.addElement(applicationPath);
-    jeu.remplirBuffer();
+
 
     glm::mat4 modelViewMat, normalMat, mvProjMat;
 
@@ -120,6 +124,19 @@ int main(int argc, char** argv) {
                 }
                 if(e.type == SDL_QUIT) {
                     done = true; // Leave the loop after this iteration
+                }
+                //Game save & load managment
+                if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT) {
+                    if(e.button.x > 274 && e.button.x < 517 && e.button.y > 330 && e.button.y < 350){//recommencer
+                        atmo.setEtat(0);
+                        jeu.restart(windowManager.getTime());
+                    }
+                    if(e.button.x > 290 && e.button.x < 501 && e.button.y > 390 && e.button.y < 410){//save
+                        jeu.save();
+                    }
+                    if(e.button.x > 300 && e.button.x < 490 && e.button.y > 450 && e.button.y < 470){//load
+                        jeu.loadSave();
+                    }
                 }
             }
         }else {
@@ -239,7 +256,7 @@ int main(int argc, char** argv) {
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-
+        atmo.remplirBuffers();
         //ATMOSPHERE
         atmo._program.use();
         if(atmo.getEtat() == 0){
@@ -266,6 +283,8 @@ int main(int argc, char** argv) {
 
         jeu.draw(modelViewMat, normalMat, mvProjMat, cam.getViewMatrix());
 
+        glDisable(GL_DEPTH_TEST);
+
         //UI
         progUI.use();
         glUniform1i(uTexUI, 0);
@@ -275,6 +294,7 @@ int main(int argc, char** argv) {
         if(menu){
             pauseMenu.draw();
         }
+        glEnable(GL_DEPTH_TEST);
 
         points.refreshText("Points : "+std::to_string(jeu.getScore()));
         vies.refreshText("Vies : "+std::to_string(jeu._pacman[0]->getVie()));
