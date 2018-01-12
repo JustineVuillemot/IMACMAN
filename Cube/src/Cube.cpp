@@ -18,16 +18,16 @@ Cube::Cube(const glm::vec3 &lower,const glm::vec3 &upper){
 
 void Cube::generateVertices(const glm::vec3 &lower, const glm::vec3 &upper){
     //face AVANT
-    _vertexVec.push_back(ShapeVertex(upper, glm::vec3(0.0, 0.0, 1.0), glm::vec2(1,1))); //haut droit
-    _vertexVec.push_back(ShapeVertex(glm::vec3(upper.x, lower.y, upper.z), glm::vec3(0.0, 0.0, 1.0), glm::vec2(1,0))); // bas droit
-    _vertexVec.push_back(ShapeVertex(glm::vec3(lower.x, lower.y, upper.z), glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,0))); // bas gauche
-    _vertexVec.push_back(ShapeVertex(glm::vec3(lower.x, upper.y, upper.z), glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,1))); // haut gauche
+    _vertexVec.push_back(ShapeVertex(upper, upper - _position, glm::vec2(1,1))); //haut droit
+    _vertexVec.push_back(ShapeVertex(glm::vec3(upper.x, lower.y, upper.z), glm::vec3(upper.x, lower.y, upper.z) - _position, glm::vec2(1,0))); // bas droit
+    _vertexVec.push_back(ShapeVertex(glm::vec3(lower.x, lower.y, upper.z), glm::vec3(lower.x, lower.y, upper.z) - _position, glm::vec2(0,0))); // bas gauche
+    _vertexVec.push_back(ShapeVertex(glm::vec3(lower.x, upper.y, upper.z), glm::vec3(lower.x, upper.y, upper.z) - _position, glm::vec2(0,1))); // haut gauche
 
     //face ARRIERE
-    _vertexVec.push_back(ShapeVertex(glm::vec3(upper.x, upper.y, lower.z), glm::vec3(0.0, 0.0, 1.0), glm::vec2(1,1))); //haut droit
-    _vertexVec.push_back(ShapeVertex(glm::vec3(upper.x, lower.y, lower.z), glm::vec3(0.0, 0.0, 1.0), glm::vec2(1,0))); // bas droit
-    _vertexVec.push_back(ShapeVertex(lower, glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,0))); // bas gauche
-    _vertexVec.push_back(ShapeVertex(glm::vec3(lower.x, upper.y, lower.z), glm::vec3(0.0, 0.0, 1.0), glm::vec2(0,1))); // haut gauche
+    _vertexVec.push_back(ShapeVertex(glm::vec3(upper.x, upper.y, lower.z), glm::vec3(upper.x, upper.y, lower.z) - _position, glm::vec2(1,1))); //haut droit
+    _vertexVec.push_back(ShapeVertex(glm::vec3(upper.x, lower.y, lower.z), glm::vec3(upper.x, lower.y, lower.z) - _position, glm::vec2(1,0))); // bas droit
+    _vertexVec.push_back(ShapeVertex(lower, lower - _position, glm::vec2(0,0))); // bas gauche
+    _vertexVec.push_back(ShapeVertex(glm::vec3(lower.x, upper.y, lower.z), glm::vec3(lower.x, upper.y, lower.z) - _position, glm::vec2(0,1))); // haut gauche
 }
 
 void Cube::generateIndexs(){

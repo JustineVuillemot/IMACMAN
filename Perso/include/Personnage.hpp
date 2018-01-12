@@ -100,7 +100,7 @@ public:
 
     int collisionPerso(Personnage &Perso2, glm::vec3 direction);
     int collisionObjet(Objet &objet, glm::vec3 direction);
-    int collisionCube(Cube &cube, glm::vec3 direction);
+    virtual int collisionCube(Cube &cube, glm::vec3 direction);
 
     void rotatePerso(float newAngle);
 

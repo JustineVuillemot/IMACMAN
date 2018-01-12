@@ -107,6 +107,7 @@ int main(int argc, char** argv) {
                 }
                 if (e.key.keysym.sym == SDLK_n) { // N
                     jeu.loadSave();
+                    jeu.setTimeTouch(windowManager.getTime());
                 }
             }
             if(e.type == SDL_KEYUP){

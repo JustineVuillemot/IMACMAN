@@ -136,6 +136,7 @@ int main(int argc, char** argv) {
                     }
                     if(e.button.x > 300 && e.button.x < 490 && e.button.y > 450 && e.button.y < 470){//load
                         jeu.loadSave();
+                        jeu.setTimeTouch(windowManager.getTime());
                     }
                 }
             }

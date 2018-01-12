@@ -23,12 +23,16 @@ public:
         _position = pos;
         _etat = 3;
         _nbrPoint = 50;
-        _program = Prog(appPath, "3D", "tex3D3");
+        _program = Prog(appPath, "3D", "directionallight");
         _program.addUniform("uMVMatrix");
         _program.addUniform("uMVPMatrix");
         _program.addUniform("uNormalMatrix");
         _program.addUniform("uTexture");
         _texture = Texture("../../asset/Textures/pacmantest.jpg");
+        _program.addUniform("uKs");
+        _program.addUniform("uShininess");
+        _program.addUniform("uLightDir_vs");
+        _program.addUniform("uLightIntensity");
     }
 
     int getNbrPoint() override{

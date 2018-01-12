@@ -158,6 +158,8 @@ public:
 
     void draw(glm::mat4 modelViewMat, glm::mat4 normalMat, glm::mat4 mvProjMat, glm::mat4 camViewMat) {
         int i;
+        glm::vec4 LightDir = glm::vec4(0.f, 0.f, 1.f, 1.f);
+
         for(i=0; i < _cubes.size(); ++i){
             _cubes[i]->_program.use();
             _cubes[i]->_program.sendUniform1i(_cubes[i]->_texture._texture, 0);
@@ -165,6 +167,10 @@ public:
             _cubes[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _cubes[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _cubes[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
+            _cubes[i]->_program.sendUniform3f("uLightDir_vs", glm::vec3(LightDir));
+            _cubes[i]->_program.sendUniform3f("uLightIntensity", glm::vec3(5,5,5));
+            _cubes[i]->_program.sendUniform3f("uKs", glm::vec3(0.7,0.7,0.7));
+            _cubes[i]->_program.sendUniform1f("uShininess", 10);
             _cubes[i]->_texture.bind();
             _cubes[i]->draw();
             _cubes[i]->_texture.debind();
@@ -181,6 +187,10 @@ public:
             _personnages[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _personnages[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _personnages[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
+            _personnages[i]->_program.sendUniform3f("uLightDir_vs", glm::vec3(LightDir));
+            _personnages[i]->_program.sendUniform3f("uLightIntensity", glm::vec3(2,2,2));
+            _personnages[i]->_program.sendUniform3f("uKs", glm::vec3(0.2,0.2,0.2));
+            _personnages[i]->_program.sendUniform1f("uShininess", 30);
             if(_personnages[i]->getEtat() == 0){
                 _personnages[i]->_texture.bind();
                 _personnages[i]->draw();
@@ -200,10 +210,16 @@ public:
             _pacman[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _pacman[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _pacman[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
+            _pacman[i]->_program.sendUniform3f("uLightDir_vs", glm::vec3(LightDir));
+            _pacman[i]->_program.sendUniform3f("uLightIntensity", glm::vec3(2,2,2));
+            _pacman[i]->_program.sendUniform3f("uKs", glm::vec3(0.2,0.2,0.2));
+            _pacman[i]->_program.sendUniform1f("uShininess", 30);
             _pacman[i]->_texture.bind();
             _pacman[i]->draw();
             _pacman[i]->_texture.debind();
         }
+
+
         for(i=0; i < _objets.size(); ++i){
             _objets[i]->_program.use();
             _objets[i]->_program.sendUniform1i(_objets[i]->_texture._texture, 0);
@@ -211,6 +227,10 @@ public:
             _objets[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _objets[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _objets[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
+            _objets[i]->_program.sendUniform3f("uLightDir_vs", glm::vec3(LightDir));
+            _objets[i]->_program.sendUniform3f("uLightIntensity", glm::vec3(2,2,2));
+            _objets[i]->_program.sendUniform3f("uKs", glm::vec3(0.2,0.2,0.2));
+            _objets[i]->_program.sendUniform1f("uShininess", 30);
             _objets[i]->_texture.bind();
             _objets[i]->draw();
             _objets[i]->_texture.debind();

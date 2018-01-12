@@ -26,8 +26,16 @@ public:
         glUniformMatrix4fv(_varUnis[name], 1, GL_FALSE, glm::value_ptr(value));
     }
 
+    void sendUniform3f(std::string name, glm::vec3 value){
+        glUniform3f(_varUnis[name], value.x, value.y, value.z);
+    }
+
     void sendUniform1i(GLuint value, int num){
         glUniform1i(value, num);
+    }
+
+    void sendUniform1f(std::string name, float num){
+        glUniform1f(_varUnis[name], num);
     }
 
 

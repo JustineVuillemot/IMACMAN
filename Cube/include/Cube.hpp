@@ -29,13 +29,18 @@ public:
         generateIndexs();
 
         _position = glm::vec3(lower.x, upper.y, lower.z);
-        _program = Prog(appPath, "3D", "tex3D3");
+        _program = Prog(appPath, "3D", "directionallight");
+        //_program = Prog(appPath, "3D", "tex3D3");
         //_program = Prog(appPath, "3D", "tex3D2");
         _program.addUniform("uMVMatrix");
         _program.addUniform("uMVPMatrix");
         _program.addUniform("uNormalMatrix");
         _program.addUniform("uTexture");
         _texture = Texture("../../asset/Textures/cube.jpg");
+        _program.addUniform("uKs");
+        _program.addUniform("uShininess");
+        _program.addUniform("uLightDir_vs");
+        _program.addUniform("uLightIntensity");
     }
 
 
