@@ -1,26 +1,6 @@
 #include "UI.hpp"
 
 
-//position est le coin haut gauche
-/*UI::UI(std::string fontPath, glm::vec2 position, std::string texte){
-    _fontPath = fontPath;
-    _position = position;
-
-    try{
-        generateSurface(texte);
-    }
-    catch(const std::invalid_argument &err){
-        throw err;
-    }
-
-    generateTexture();
-
-    generateVertices();
-    generateIndexs();
-
-    remplirBuffers();
-}*/
-
 void UI::refreshText(std::string texte){
     try{
         generateSurface(texte);
@@ -65,7 +45,7 @@ void UI::generateSurface(std::string texte){
         throw std::invalid_argument(TTF_GetError());
     }
 
-    SDL_Color white = {255, 255, 255};
+    SDL_Color white = {1, 1, 1};
 
     _texteSurface =  TTF_RenderText_Blended(police, texte.c_str(), white);
 

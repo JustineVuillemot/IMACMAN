@@ -150,7 +150,7 @@ int main(int argc, char** argv) {
                         jeu.setTimeTouch(windowManager.getTime());
                     }
                 }
-                if (windowManager.getTime() - startTimer > 5.0) { //Panneau victoire pendant 5s
+                if (windowManager.getTime() - startTimer > 5.0 && jeu.victory()) { //Panneau victoire pendant 5s
                     done = true;
                 }
             }
@@ -314,6 +314,7 @@ int main(int argc, char** argv) {
         points.refreshText("Points : "+std::to_string(jeu.getScore()));
         vies.refreshText("Vies : "+std::to_string(jeu._pacman[0]->getVie()));
 
+        //Panneau Victoire
         if(jeu.victory() && !menu){
             pauseMenu.drawRect();
             victoire.refreshText("VOUS AVEZ GAGNE !");
