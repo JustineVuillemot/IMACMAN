@@ -133,7 +133,6 @@ int Jeu::collisionManager(glm::vec3 direction, float time){
             else{
                 _personnages[i]->setPos(_personnages[i]->getPosInitiale());
                 _score += 200;
-                //A AJOUTER CHANGEMENT DU SCORE EN FONCTION DU NOMBRE DE KILL
             }
             return 1;
         };
@@ -141,6 +140,9 @@ int Jeu::collisionManager(glm::vec3 direction, float time){
     for(i=0; i < _objets.size(); ++i){
         if(_pacman[0]->collisionObjet(*_objets[i], direction) != 0){
             if(_objets[i]->getEtat() == 2){ //SUPERPACGOMME
+                for(int j=0; j < _personnages.size(); ++j) {
+                    _personnages[j]->setEtat(1);
+                }
                 _objets[i]->setEtat(0);
                 _timePacman = time;
                 _pacman[0]->setEtat(1);
@@ -352,5 +354,14 @@ void Jeu::loadSave(){
             ++j;
         }
         //_plateau[i] = plateau2[i];
+    }
+}
+
+
+void Jeu::finSuper(){
+    _pacman[0]->setEtat(0);
+    _timePacman = 0;
+    for(int j=0; j < _personnages.size(); ++j) {
+        _personnages[j]->setEtat(0);
     }
 }

@@ -170,11 +170,26 @@ public:
         }
         for(i=0; i < _personnages.size(); ++i){
             _personnages[i]->_program.use();
+            if(_personnages[i]->getEtat() == 0){
+                _personnages[i]->_program.sendUniform1i(_personnages[i]->_texture._texture, 0);
+            }
+            else{
+                _personnages[i]->_program.sendUniform1i(_personnages[i]->_texture2._texture, 0);
+            }
             modelViewMat = _personnages[i]->getViewMatrix(camViewMat);
             _personnages[i]->_program.sendUniformMatrix4fv("uMVMatrix", modelViewMat);
             _personnages[i]->_program.sendUniformMatrix4fv("uNormalMatrix", normalMat);
             _personnages[i]->_program.sendUniformMatrix4fv("uMVPMatrix", mvProjMat*modelViewMat);
-            _personnages[i]->draw();
+            if(_personnages[i]->getEtat() == 0){
+                _personnages[i]->_texture.bind();
+                _personnages[i]->draw();
+                _personnages[i]->_texture.debind();
+            }
+            else{
+                _personnages[i]->_texture2.bind();
+                _personnages[i]->draw();
+                _personnages[i]->_texture2.debind();
+            }
         }
         for(i=0; i < _pacman.size(); ++i){
             _pacman[i]->_program.use();
@@ -206,6 +221,8 @@ public:
     void retourPerso();
     void deplacementFantome(float time);
     glm::vec3 testNewtDir(int index, const glm::vec3 dir);
+
+    void finSuper();
 
     void restart(float time);
     std::string gameToString();

@@ -17,10 +17,14 @@ public:
         _randDirection = 1.f;
         _direction = glm::vec3(0,0,-0.3);
 
-        _program = Prog(appPath, "3D", "tex3D4");
+        _program = Prog(appPath, "3D", "tex3D3");
         _program.addUniform("uMVMatrix");
         _program.addUniform("uMVPMatrix");
         _program.addUniform("uNormalMatrix");
+        _program.addUniform("uTexture");
+        _texture = Texture("../../asset/Textures/fantome1.jpg");
+        _texture2 = Texture("../../asset/Textures/fantome2.jpg");
+
     }
 
     void deplacement(glm::vec3 dist) override;

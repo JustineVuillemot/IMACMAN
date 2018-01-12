@@ -184,9 +184,9 @@ int main(int argc, char** argv) {
         }
 
         if(windowManager.getTime() - jeu.getTimePacman() > 8.0 && jeu.getTimePacman() != 0){ //La superPacGomme dure 8 secondes
-            jeu._pacman[0]->setEtat(0);
-            jeu.setTimePacman(0);
+            jeu.finSuper();
             atmo.setEtat(0);
+
         }
 
         //FANTOMES

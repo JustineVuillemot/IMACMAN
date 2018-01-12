@@ -105,6 +105,8 @@ public:
     void rotatePerso(float newAngle);
 
     Prog _program;
+    Texture _texture;
+    Texture _texture2;
 protected:
     glimac::Sphere _PersoObj;
     int _etat;
@@ -119,7 +121,6 @@ protected:
     float _randDirection;
 
     std::string _texturePath;
-    Texture _texture;
     //Program _program;
 
 };
