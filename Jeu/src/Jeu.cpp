@@ -183,6 +183,10 @@ glm::vec3 Jeu::testNewtDir(int index, const glm::vec3 dir){
         }
     }
 
+    if(rand()%10 == 0){
+        newDir = newDir*-1.f;
+    }
+
     if(!collision){
         return newDir;
     }
